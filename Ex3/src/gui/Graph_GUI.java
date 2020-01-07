@@ -111,7 +111,9 @@ public class Graph_GUI{
 							double arrowY= (Dy*8+Sy)/9;
 							StdDraw.point(arrowX,arrowY);
 
-							String te = edges.getWeight()+"";
+							String dou = String.format("%.5g%n", edges.getWeight());
+
+							String te = dou+"";
 
 							StdDraw.setPenRadius(0.1);
 							StdDraw.setPenColor(Color.BLACK);
@@ -163,32 +165,31 @@ public class Graph_GUI{
 	}
 	
 	private void setPageSize() {
-		double xMax = 0;
-		double xMin = 0;
-		double yMax = 0;
-		double yMin = 0;
-		Collection <node_data> col = g.getV();
-		if(col != null && col.size() > 0) {
-			for(node_data nd: col) {
-				NodeData n = (NodeData)nd;
-				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
-				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
-				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
-				else if (n.getLocation().y() < yMin) yMin = n.getLocation().y();
-			}
-			
-			int xCanvas = 3 * (int)(Math.abs(xMax) + Math.abs(xMin));
-			int yCanvas = 3 * (int)(Math.abs(yMax) + Math.abs(yMin));
-			
-			StdDraw.setCanvasSize(xCanvas , yCanvas );
-			StdDraw.setXscale(xMin - 10, xMax + 10);
-			StdDraw.setYscale(yMin - 10, yMax + 10);
-		}else {
-			StdDraw.setCanvasSize(1000, 800);
-			StdDraw.setXscale(-100,100);
-			StdDraw.setYscale(-100,100);
-		}
-		
+		double xMax = 35.216;
+		double xMin = 35.1835;
+		double yMax = 32.11;
+		double yMin = 32.1;
+//		Collection <node_data> col = g.getV();
+//		if(col != null && col.size() > 0) {
+//			for(node_data nd: col) {
+//				NodeData n = (NodeData)nd;
+//				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
+//				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
+//				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
+//				else if (n.getLocation().y() < yMin) yMin = n.getLocation().y();
+//			}
+//			
+//			int xCanvas = 3 * (int)(Math.abs(xMax) + Math.abs(xMin));
+//			int yCanvas = 3 * (int)(Math.abs(yMax) + Math.abs(yMin));
+//			
+			StdDraw.setCanvasSize(1200 , 600 );
+			StdDraw.setXscale(xMin, xMax);
+			StdDraw.setYscale(yMin, yMax);
+//		}else {
+//			StdDraw.setCanvasSize(1000, 800);
+//			StdDraw.setXscale(-100,100);
+//			StdDraw.setYscale(-100,100);
+//		}	
 		
 	}
 
