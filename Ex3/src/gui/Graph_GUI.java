@@ -1,13 +1,12 @@
 package gui;
 
-import dataStructure.Node;
+import elements.NodeData;
 import dataStructure.edge_data;
 import dataStructure.graph;
 import dataStructure.node_data;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
-import algorithms.Graph_Algo;
 import dataStructure.DGraph;
 import utils.Point3D;
 import utils.StdDraw;
@@ -18,8 +17,7 @@ import utils.StdDraw;
  */ 
 public class Graph_GUI{
 
-
-	public Graph_Algo ga;
+	public DGraph g;
 	private boolean isDraw;
 
 
@@ -28,25 +26,22 @@ public class Graph_GUI{
 	 */
 	public Graph_GUI() {
 		
-		ga = new Graph_Algo();
+		g=new DGraph();
 		isDraw = false;
 	}
 
 	/*
 	 * Copy constructor using the init function from Graph_Algo class
 	 */
-	public Graph_GUI(graph g) {	
-		
-		this.ga = new Graph_Algo();
-		ga.init(g);
+	public Graph_GUI(graph gg) {	
+		g=(DGraph)gg;
 		isDraw = false;
 	}
 
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
-	public void addNode(Node a) {
-		ga.g.addNode(a);
+	public void addNode(NodeData a) {
 		if(isDraw) {
 			drawDGraph();
 		}
@@ -61,7 +56,7 @@ public class Graph_GUI{
 	 */
 	public void drawNodes() {
 		try {
-			Collection<node_data> n=ga.g.getV();
+			Collection<node_data> n=g.getV();
 			if(n != null && n.size() > 0) {
 				for (node_data a:n) {
 					double x=a.getLocation().x();
@@ -94,16 +89,16 @@ public class Graph_GUI{
 	 */
 	public void drawEdges() {
 		try {
-			Collection<node_data> allNodes=ga.g.getV();
+			Collection<node_data> allNodes=g.getV();
 			if(allNodes != null && allNodes.size() > 0) {
 				for(node_data n:allNodes) {
-					Collection<edge_data> allEdgesOfNode=ga.g.getE(n.getKey());
+					Collection<edge_data> allEdgesOfNode=g.getE(n.getKey());
 					if(allEdgesOfNode != null && allEdgesOfNode.size() > 0) {
 						for(edge_data edges:allEdgesOfNode) {
-							double Sx = ga.g.getNode(edges.getSrc()).getLocation().x();
-							double Sy = ga.g.getNode(edges.getSrc()).getLocation().y();
-							double Dx = ga.g.getNode(edges.getDest()).getLocation().x();
-							double Dy = ga.g.getNode(edges.getDest()).getLocation().y();
+							double Sx = g.getNode(edges.getSrc()).getLocation().x();
+							double Sy = g.getNode(edges.getSrc()).getLocation().y();
+							double Dx = g.getNode(edges.getDest()).getLocation().x();
+							double Dy = g.getNode(edges.getDest()).getLocation().y();
 
 							StdDraw.setPenRadius(0.005);
 							StdDraw.setPenColor(StdDraw.ORANGE);//paint the line between the nodes in orange
@@ -140,21 +135,14 @@ public class Graph_GUI{
 	 * Remove node from the drawing using removeNode from DGraph class
 	 */
 	public void removeNode(int x) {
-		ga.g.removeNode(x);
+		g.removeNode(x);
 	}
 	
 	/*
 	 * Remove edge from the drawing using removeEdge from DGraph class 
 	 */
 	public void removeEdge(int x,int y) {
-		ga.g.removeEdge(x,y);
-	}
-
-	/*
-	 * Reverse the graph using reverseGraph in DGraph class
-	 */
-	public void reversedGraph() {
-		ga.g.reversedGraph();
+		g.removeEdge(x,y);
 	}
 
 	/*
@@ -163,7 +151,7 @@ public class Graph_GUI{
 	public void drawDGraph() {
 		isDraw = true;
 		try {
-			if(ga.g.getV() != null) {
+			if(g.getV() != null) {
 				StdDraw.setGui(this);
 				setPageSize();
 				drawEdges();
@@ -179,10 +167,10 @@ public class Graph_GUI{
 		double xMin = 0;
 		double yMax = 0;
 		double yMin = 0;
-		Collection <node_data> col = ga.g.getV();
+		Collection <node_data> col = g.getV();
 		if(col != null && col.size() > 0) {
 			for(node_data nd: col) {
-				Node n = (Node)nd;
+				NodeData n = (NodeData)nd;
 				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
 				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
 				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
@@ -209,40 +197,9 @@ public class Graph_GUI{
 	 */
 	public void deleteGraph() {
 		StdDraw.clear();
-		ga.g = new DGraph();
+		g = new DGraph();
 	}
 	
-	public static void main (String [] args) {
-		Graph_GUI gg = new Graph_GUI();
-		Point3D p0=new Point3D(-50,50);
-		Point3D p1=new Point3D(50,50);
-		Point3D p2=new Point3D(0,0);
-		Point3D p3=new Point3D(0,-50);
-
-		Node a=new Node(0,p0 ,0, "", 0);
-		Node b=new Node(1,p1, 0, "", 0);
-		Node c=new Node(2,p2, 0, "", 0);
-		Node d=new Node(3,p3, 0, "", 0);
-		Node e=new Node(4, new Point3D(100, 100), 0, "", 0);
-
-
-		gg.addNode(a);
-		gg.addNode(b);
-		gg.addNode(c);
-		gg.addNode(d);
-
-		gg.ga.g.connect(c.getKey(),a.getKey(), 1);
-		gg.ga.g.connect(c.getKey(),d.getKey(),2);
-		gg.ga.g.connect(c.getKey(),b.getKey(), 3);
-		gg.ga.g.connect(a.getKey(), c.getKey(), 2.5);
-		gg.ga.g.connect(b.getKey(), c.getKey(), 1.5);
-		gg.ga.g.connect(d.getKey(), c.getKey(), 3);
-
-		
-		gg.drawDGraph();
-		
-
-
-	}
+	
 
 }
