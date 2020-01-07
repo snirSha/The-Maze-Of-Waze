@@ -43,7 +43,7 @@ public class SimpleGameClient {
 		// the list of fruits should be considered in your solution
 		Iterator<String> f_iter = game.getFruits().iterator();
 		while(f_iter.hasNext()) {System.out.println(f_iter.next());}
-		
+
 		int src_node = 0;  // arbitrary node, you should start at one of the fruits
 		game.addRobot(src_node);
 		game.startGame();
@@ -54,7 +54,7 @@ public class SimpleGameClient {
 			List<String> log = game.move();
 			if(log!=null) {
 				String robot_json = log.get(0);
-			//	System.out.println(robot_json);
+				//	System.out.println(robot_json);
 				JSONObject line;
 				try {
 					line = new JSONObject(robot_json);
@@ -62,7 +62,7 @@ public class SimpleGameClient {
 					int rid = ttt.getInt("id");
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
-					
+
 					if(dest==-1) {	
 						dest = nextNode(gg, src);
 						game.chooseNextEdge(rid, dest);
@@ -73,9 +73,9 @@ public class SimpleGameClient {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	
-				
-				}
+
+
+			}
 			i++;
 		}
 	}
