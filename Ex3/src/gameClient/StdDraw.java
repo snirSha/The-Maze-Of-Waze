@@ -1,4 +1,4 @@
-package utils;
+package gameClient;
 
 //package stdDraw;
 // https://introcs.cs.princeton.edu/java/stdlib/StdDraw.java.html
@@ -82,9 +82,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
-import elements.NodeData;
-import dataStructure.node_data;
-import gui.Graph_GUI;
+import oop_elements.OOP_NodeData;
+import oop_dataStructure.oop_node_data;
+import gameClient.MyGameGUI;
 
 
 /**
@@ -492,8 +492,8 @@ import gui.Graph_GUI;
  */
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
-	public static Graph_GUI gg;
-	public static void setGui(Graph_GUI g) {
+	public static MyGameGUI gg;
+	public static void setGui(MyGameGUI g) {
 		gg = g;
 	}
 
@@ -798,300 +798,300 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-//
-//		String str = e.getActionCommand();
-//		String file_name;
-//		switch (str) {
-//
-//		case "Save":
-//			file_name = JOptionPane.showInputDialog(null, "File name:");
-//			if (gg != null && file_name != null ) {
-//				gg.ga.save(file_name);
-//			}
-//			break;
-//
-//		case "Init":
-//
-//			file_name = JOptionPane.showInputDialog(null, "File name:");
-//			if (gg != null && file_name != null ) {
-//				gg.ga.init(file_name);
-//				gg.drawDGraph();
-//			}
-//			break;
-//
-//		case "Is connected":
-//			if(gg.ga.isConnected()) {
-//				JOptionPane.showMessageDialog(null, "The graph is connected");
-//			}
-//			else JOptionPane.showMessageDialog(null, "The graph isn't connected");
-//			break;
-//
-//		case "Shortest Path Dist":
-//			
-//			JTextField SPDSourceField = new JTextField(5);
-//			JTextField SPDDestField = new JTextField(5);
-//
-//			JPanel SPDEdgePanel = new JPanel();
-//			SPDEdgePanel.add(new JLabel("Source:"));
-//			SPDEdgePanel.add(SPDSourceField);
-//			SPDEdgePanel.add(new JLabel("Dest:"));
-//			SPDEdgePanel.add(SPDDestField);
-//
-//			int SPDEdgeRes = JOptionPane.showConfirmDialog(null, SPDEdgePanel, 
-//					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
-//			if (SPDEdgeRes == JOptionPane.OK_OPTION) {
-//
-//				try {
-//					int sourceInt = Integer.parseInt(SPDSourceField.getText());
-//					int destInt = Integer.parseInt(SPDDestField.getText());
-//
-//					if(gg.g.getNode(sourceInt) != null && gg.g.getNode(destInt) != null) {
-//						
-//						Double ans = gg.ga.shortestPathDist(sourceInt, destInt);
-//						JOptionPane.showMessageDialog(null, "Shortest Path Dist is: " + ans);
-//
-//					}else {
-//						JOptionPane.showMessageDialog(null, "Source or dest does not exist","Error",0);
-//					}
-//
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//			break;
-//
-//		case "Shortest Path":
-//			
-//			JTextField SPSourceField = new JTextField(5);
-//			JTextField SPDestField = new JTextField(5);
-//
-//			JPanel SPEdgePanel = new JPanel();
-//			SPEdgePanel.add(new JLabel("Source:"));
-//			SPEdgePanel.add(SPSourceField);
-//			SPEdgePanel.add(new JLabel("Dest:"));
-//			SPEdgePanel.add(SPDestField);
-//
-//			int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
-//					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
-//			if (SPEdgeRes == JOptionPane.OK_OPTION) {
-//
-//				try {
-//					int sourceInt = Integer.parseInt(SPSourceField.getText());
-//					int destInt = Integer.parseInt(SPDestField.getText());
-//
-//					List<node_data> shortestPath = gg.ga.shortestPath(sourceInt,destInt);
-//					if(shortestPath != null && gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
-//						String way = "";
-//						int i = 0;
-//						for(node_data nd: shortestPath) {
-//							Node n = (Node)nd;
-//							way += Integer.toString(n.getKey());
-//							if(i < shortestPath.size() - 1)way = way + ", ";
-//							i++;
-//						}
-//						JOptionPane.showMessageDialog(SPEdgePanel,"The Shortest path is :" + way);
-//					}
-//					else JOptionPane.showMessageDialog(null, "No path");
-//
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//
-//			break;
-//
-//		case "TSP":
-//
-//			JFrame tspFrame = new JFrame();
-//			JCheckBox checkBoxArr [] = new JCheckBox[gg.ga.g.getV().size()];
-//			int i = 0;
-//			for(node_data nd: gg.ga.g.getV()) {
-//				Node n = (Node)nd;
-//				checkBoxArr[i] = new JCheckBox(Integer.toString(n.getKey()));
-//				i++;
-//			}
-//			String message = "Which nodes?";
-//			Object[] params = {message, checkBoxArr};
-//			int ii = JOptionPane.showConfirmDialog(tspFrame, params, "Choose nodes", JOptionPane.DEFAULT_OPTION);
-//			if(ii == 0) {
-//				List<Integer> selectedNodes = new ArrayList<>();
-//
-//				for (int j = 0; j < checkBoxArr.length; j++) {
-//					if(checkBoxArr[j].isSelected()) {
-//						selectedNodes.add(Integer.parseInt(checkBoxArr[j].getText()));
-//					}
-//				}
-//
-//				StringBuilder ans = new StringBuilder();
-//				List<node_data> list = gg.ga.TSP(selectedNodes);
-//				if(list != null) {
-//					for(node_data nd: list) {
-//						ans.append(nd.getKey() + " ");
-//					}
-//					JOptionPane.showMessageDialog(null, "TSP: " + ans.toString());
-//				}
-//				else JOptionPane.showMessageDialog(null, "No route (The graph should be strongly connnected)");
-//			}
-//			
-//			break;
-//
-//		case "Add node":
-//
-//			JTextField keyField = new JTextField(5);
-//			JTextField xField = new JTextField(5);
-//			JTextField yField = new JTextField(5);
-//
-//			JPanel myPanel = new JPanel();
-//			myPanel.add(new JLabel("Key:"));
-//			myPanel.add(keyField);
-//			myPanel.add(new JLabel("x:"));
-//			myPanel.add(xField);
-//			myPanel.add(new JLabel("y:"));
-//			myPanel.add(yField);
-//
-//			int result = JOptionPane.showConfirmDialog(null, myPanel, 
-//					"Please Enter X and Y Values", JOptionPane.OK_CANCEL_OPTION);
-//			if (result == JOptionPane.OK_OPTION) {
-//
-//				try {
-//					int key = Integer.parseInt(keyField.getText());
-//					double x = Double.parseDouble(xField.getText());
-//					double y = Double.parseDouble(yField.getText());
-//					if(gg.ga.g.getNode(key) != null) {
-//						JOptionPane.showMessageDialog(null, "Key already exist","Error",0);
-//
-//					}else {
-//						gg.addNode(new Node(key, new Point3D(x, y)));
-//					}
-//
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//
-//			break;
-//
-//		case "Remove node":
-//
-//			JTextField removeKeyField = new JTextField(5);
-//			JPanel removeNodePanel = new JPanel();
-//			removeNodePanel.add(new JLabel("Key:"));
-//			removeNodePanel.add(removeKeyField);
-//
-//
-//			int removeNodeRes = JOptionPane.showConfirmDialog(null, removeNodePanel, 
-//					"Enter key to remove", JOptionPane.OK_CANCEL_OPTION);
-//			if (removeNodeRes == JOptionPane.OK_OPTION) {
-//				try {
-//					int key = Integer.parseInt(removeKeyField.getText());
-//					if(gg.ga.g.getNode(key) != null) {
-//						gg.removeNode(key);
-//						gg.drawDGraph();
-////						refreshDraw();
-//					}else {
-//						JOptionPane.showMessageDialog(null, "Key does not exist","Error",0);
-//					}
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//
-//			break;
-//
-//		case "Add edge":
-//
-//			JTextField sourceField = new JTextField(5);
-//			JTextField destField = new JTextField(5);
-//			JTextField weightFiels = new JTextField(5);
-//
-//			JPanel addEdgePanel = new JPanel();
-//			addEdgePanel.add(new JLabel("Source:"));
-//			addEdgePanel.add(sourceField);
-//			addEdgePanel.add(new JLabel("Dest:"));
-//			addEdgePanel.add(destField);
-//			addEdgePanel.add(new JLabel("Weight:"));
-//			addEdgePanel.add(weightFiels);
-//
-//			int addEdgeRes = JOptionPane.showConfirmDialog(null, addEdgePanel, 
-//					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
-//			if (addEdgeRes == JOptionPane.OK_OPTION) {
-//
-//				try {
-//					int sourceInt = Integer.parseInt(sourceField.getText());
-//					int destInt = Integer.parseInt(destField.getText());
-//					double weightDouble = Double.parseDouble(weightFiels.getText());
-//					if(gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
-//						Node n = (Node)gg.ga.g.getNode(sourceInt);
-//						if(n.getEdgesOf().containsKey(destInt)) {
-//							JOptionPane.showMessageDialog(null, "Edge already exist","Error",0);
-//						}
-//						else if(weightDouble < 0) {
-//							JOptionPane.showMessageDialog(null, "Weight can not be negative","Error",0);
-//						}
-//						else {
-//							gg.ga.g.connect(sourceInt, destInt, weightDouble);
-//							refreshDraw();
-//						}
-//					}else {
-//						JOptionPane.showMessageDialog(null, "Source ot dest does not exist","Error",0);
-//					}
-//
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//
-//			break;
-//
-//		case "Remove edge":
-//
-//			JTextField delSourceField = new JTextField(5);
-//			JTextField delDestField = new JTextField(5);
-//
-//			JPanel delEdgePanel = new JPanel();
-//			delEdgePanel.add(new JLabel("Source:"));
-//			delEdgePanel.add(delSourceField);
-//			delEdgePanel.add(new JLabel("Dest:"));
-//			delEdgePanel.add(delDestField);
-//
-//
-//			int delEdgeRes = JOptionPane.showConfirmDialog(null, delEdgePanel, 
-//					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
-//			if (delEdgeRes == JOptionPane.OK_OPTION) {
-//
-//				try {
-//					int sourceInt = Integer.parseInt(delSourceField.getText());
-//					int destInt = Integer.parseInt(delDestField.getText());
-//
-//					if(gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
-//						Node n = (Node)gg.ga.g.getNode(sourceInt);
-//						if(n.getEdgesOf().containsKey(destInt)) {
-//							gg.ga.g.removeEdge(sourceInt, destInt);
-//							refreshDraw();
-//						}else {
-//							JOptionPane.showMessageDialog(null, "Edge does not exist","Error",0);
-//						}
-//
-//					}else {
-//						JOptionPane.showMessageDialog(null, "Source ot dest does not exist","Error",0);
-//					}
-//
-//				}catch(Exception err) {
-//					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
-//				}
-//			}
-//
-//			break;
-//
-//		default:
-//			break;
-//		}
-//	}
-//	
-//	public void refreshDraw() {
-//		clear();
-//		gg.drawEdges();
-//		gg.drawNodes();
+/*
+		String str = e.getActionCommand();
+		String file_name;
+		switch (str) {
+
+		case "Save":
+			file_name = JOptionPane.showInputDialog(null, "File name:");
+			if (gg != null && file_name != null ) {
+				gg.ga.save(file_name);
+			}
+			break;
+
+		case "Init":
+
+			file_name = JOptionPane.showInputDialog(null, "File name:");
+			if (gg != null && file_name != null ) {
+				gg.ga.init(file_name);
+				gg.drawDGraph();
+			}
+			break;
+
+		case "Is connected":
+			if(gg.ga.isConnected()) {
+				JOptionPane.showMessageDialog(null, "The graph is connected");
+			}
+			else JOptionPane.showMessageDialog(null, "The graph isn't connected");
+			break;
+
+		case "Shortest Path Dist":
+			
+			JTextField SPDSourceField = new JTextField(5);
+			JTextField SPDDestField = new JTextField(5);
+
+			JPanel SPDEdgePanel = new JPanel();
+			SPDEdgePanel.add(new JLabel("Source:"));
+			SPDEdgePanel.add(SPDSourceField);
+			SPDEdgePanel.add(new JLabel("Dest:"));
+			SPDEdgePanel.add(SPDDestField);
+
+			int SPDEdgeRes = JOptionPane.showConfirmDialog(null, SPDEdgePanel, 
+					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
+			if (SPDEdgeRes == JOptionPane.OK_OPTION) {
+
+				try {
+					int sourceInt = Integer.parseInt(SPDSourceField.getText());
+					int destInt = Integer.parseInt(SPDDestField.getText());
+
+					if(gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
+						
+						Double ans = gg.ga.shortestPathDist(sourceInt, destInt);
+						JOptionPane.showMessageDialog(null, "Shortest Path Dist is: " + ans);
+
+					}else {
+						JOptionPane.showMessageDialog(null, "Source or dest does not exist","Error",0);
+					}
+
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+			break;
+
+		case "Shortest Path":
+			
+			JTextField SPSourceField = new JTextField(5);
+			JTextField SPDestField = new JTextField(5);
+
+			JPanel SPEdgePanel = new JPanel();
+			SPEdgePanel.add(new JLabel("Source:"));
+			SPEdgePanel.add(SPSourceField);
+			SPEdgePanel.add(new JLabel("Dest:"));
+			SPEdgePanel.add(SPDestField);
+
+			int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
+					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
+			if (SPEdgeRes == JOptionPane.OK_OPTION) {
+
+				try {
+					int sourceInt = Integer.parseInt(SPSourceField.getText());
+					int destInt = Integer.parseInt(SPDestField.getText());
+
+					List<node_data> shortestPath = gg.ga.shortestPath(sourceInt,destInt);
+					if(shortestPath != null && gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
+						String way = "";
+						int i = 0;
+						for(node_data nd: shortestPath) {
+							Node n = (Node)nd;
+							way += Integer.toString(n.getKey());
+							if(i < shortestPath.size() - 1)way = way + ", ";
+							i++;
+						}
+						JOptionPane.showMessageDialog(SPEdgePanel,"The Shortest path is :" + way);
+					}
+					else JOptionPane.showMessageDialog(null, "No path");
+
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+
+			break;
+
+		case "TSP":
+
+			JFrame tspFrame = new JFrame();
+			JCheckBox checkBoxArr [] = new JCheckBox[gg.ga.g.getV().size()];
+			int i = 0;
+			for(node_data nd: gg.ga.g.getV()) {
+				Node n = (Node)nd;
+				checkBoxArr[i] = new JCheckBox(Integer.toString(n.getKey()));
+				i++;
+			}
+			String message = "Which nodes?";
+			Object[] params = {message, checkBoxArr};
+			int ii = JOptionPane.showConfirmDialog(tspFrame, params, "Choose nodes", JOptionPane.DEFAULT_OPTION);
+			if(ii == 0) {
+				List<Integer> selectedNodes = new ArrayList<>();
+
+				for (int j = 0; j < checkBoxArr.length; j++) {
+					if(checkBoxArr[j].isSelected()) {
+						selectedNodes.add(Integer.parseInt(checkBoxArr[j].getText()));
+					}
+				}
+
+				StringBuilder ans = new StringBuilder();
+				List<node_data> list = gg.ga.TSP(selectedNodes);
+				if(list != null) {
+					for(node_data nd: list) {
+						ans.append(nd.getKey() + " ");
+					}
+					JOptionPane.showMessageDialog(null, "TSP: " + ans.toString());
+				}
+				else JOptionPane.showMessageDialog(null, "No route (The graph should be strongly connnected)");
+			}
+			
+			break;
+
+		case "Add node":
+
+			JTextField keyField = new JTextField(5);
+			JTextField xField = new JTextField(5);
+			JTextField yField = new JTextField(5);
+
+			JPanel myPanel = new JPanel();
+			myPanel.add(new JLabel("Key:"));
+			myPanel.add(keyField);
+			myPanel.add(new JLabel("x:"));
+			myPanel.add(xField);
+			myPanel.add(new JLabel("y:"));
+			myPanel.add(yField);
+
+			int result = JOptionPane.showConfirmDialog(null, myPanel, 
+					"Please Enter X and Y Values", JOptionPane.OK_CANCEL_OPTION);
+			if (result == JOptionPane.OK_OPTION) {
+
+				try {
+					int key = Integer.parseInt(keyField.getText());
+					double x = Double.parseDouble(xField.getText());
+					double y = Double.parseDouble(yField.getText());
+					if(gg.ga.g.getNode(key) != null) {
+						JOptionPane.showMessageDialog(null, "Key already exist","Error",0);
+
+					}else {
+						gg.addNode(new Node(key, new Point3D(x, y)));
+					}
+
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+
+			break;
+
+		case "Remove node":
+
+			JTextField removeKeyField = new JTextField(5);
+			JPanel removeNodePanel = new JPanel();
+			removeNodePanel.add(new JLabel("Key:"));
+			removeNodePanel.add(removeKeyField);
+
+
+			int removeNodeRes = JOptionPane.showConfirmDialog(null, removeNodePanel, 
+					"Enter key to remove", JOptionPane.OK_CANCEL_OPTION);
+			if (removeNodeRes == JOptionPane.OK_OPTION) {
+				try {
+					int key = Integer.parseInt(removeKeyField.getText());
+					if(gg.ga.g.getNode(key) != null) {
+						gg.removeNode(key);
+						gg.drawDGraph();
+//						refreshDraw();
+					}else {
+						JOptionPane.showMessageDialog(null, "Key does not exist","Error",0);
+					}
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+
+			break;
+
+		case "Add edge":
+
+			JTextField sourceField = new JTextField(5);
+			JTextField destField = new JTextField(5);
+			JTextField weightFiels = new JTextField(5);
+
+			JPanel addEdgePanel = new JPanel();
+			addEdgePanel.add(new JLabel("Source:"));
+			addEdgePanel.add(sourceField);
+			addEdgePanel.add(new JLabel("Dest:"));
+			addEdgePanel.add(destField);
+			addEdgePanel.add(new JLabel("Weight:"));
+			addEdgePanel.add(weightFiels);
+
+			int addEdgeRes = JOptionPane.showConfirmDialog(null, addEdgePanel, 
+					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
+			if (addEdgeRes == JOptionPane.OK_OPTION) {
+
+				try {
+					int sourceInt = Integer.parseInt(sourceField.getText());
+					int destInt = Integer.parseInt(destField.getText());
+					double weightDouble = Double.parseDouble(weightFiels.getText());
+					if(gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
+						Node n = (Node)gg.ga.g.getNode(sourceInt);
+						if(n.getEdgesOf().containsKey(destInt)) {
+							JOptionPane.showMessageDialog(null, "Edge already exist","Error",0);
+						}
+						else if(weightDouble < 0) {
+							JOptionPane.showMessageDialog(null, "Weight can not be negative","Error",0);
+						}
+						else {
+							gg.ga.g.connect(sourceInt, destInt, weightDouble);
+							refreshDraw();
+						}
+					}else {
+						JOptionPane.showMessageDialog(null, "Source ot dest does not exist","Error",0);
+					}
+
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+
+			break;
+
+		case "Remove edge":
+
+			JTextField delSourceField = new JTextField(5);
+			JTextField delDestField = new JTextField(5);
+
+			JPanel delEdgePanel = new JPanel();
+			delEdgePanel.add(new JLabel("Source:"));
+			delEdgePanel.add(delSourceField);
+			delEdgePanel.add(new JLabel("Dest:"));
+			delEdgePanel.add(delDestField);
+
+
+			int delEdgeRes = JOptionPane.showConfirmDialog(null, delEdgePanel, 
+					"Please enter source and dest keys", JOptionPane.OK_CANCEL_OPTION);
+			if (delEdgeRes == JOptionPane.OK_OPTION) {
+
+				try {
+					int sourceInt = Integer.parseInt(delSourceField.getText());
+					int destInt = Integer.parseInt(delDestField.getText());
+
+					if(gg.ga.g.getNode(sourceInt) != null && gg.ga.g.getNode(destInt) != null) {
+						Node n = (Node)gg.ga.g.getNode(sourceInt);
+						if(n.getEdgesOf().containsKey(destInt)) {
+							gg.ga.g.removeEdge(sourceInt, destInt);
+							refreshDraw();
+						}else {
+							JOptionPane.showMessageDialog(null, "Edge does not exist","Error",0);
+						}
+
+					}else {
+						JOptionPane.showMessageDialog(null, "Source ot dest does not exist","Error",0);
+					}
+
+				}catch(Exception err) {
+					JOptionPane.showMessageDialog(null, "Please enter valid data","Error",0);
+				}
+			}
+
+			break;
+
+		default:
+			break;
+		}*/
+	}
+	
+	public void refreshDraw() {
+		clear();
+		gg.drawEdges();
+		gg.drawNodes();
 	}
 
 

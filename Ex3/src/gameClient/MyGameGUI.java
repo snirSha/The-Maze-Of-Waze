@@ -1,47 +1,47 @@
-package gui;
+package gameClient;
 
-import elements.NodeData;
-import dataStructure.edge_data;
-import dataStructure.graph;
-import dataStructure.node_data;
+import oop_elements.OOP_NodeData;
+import oop_dataStructure.oop_edge_data;
+import oop_dataStructure.oop_graph;
+import oop_dataStructure.oop_node_data;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
-import dataStructure.DGraph;
-import utils.Point3D;
-import utils.StdDraw;
+import oop_dataStructure.OOP_DGraph;
+import oop_utils.OOP_Point3D;
+import oop_utils.OOP_Range;
 /*
  * This class draw graphs using stdDraw
  *
  * @authors Snir and Omer 
  */ 
-public class Graph_GUI{
+public class MyGameGUI{
 
-	public DGraph g;
+	public OOP_DGraph g;
 	private boolean isDraw;
 
 
 	/*
 	 * Default constructor
 	 */
-	public Graph_GUI() {
+	public MyGameGUI() {
 		
-		g=new DGraph();
+		g=new OOP_DGraph();
 		isDraw = false;
 	}
 
 	/*
 	 * Copy constructor using the init function from Graph_Algo class
 	 */
-	public Graph_GUI(graph gg) {	
-		g=(DGraph)gg;
+	public MyGameGUI(oop_graph gg) {	
+		g=(OOP_DGraph)gg;
 		isDraw = false;
 	}
 
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
-	public void addNode(NodeData a) {
+	public void addNode(OOP_NodeData a) {
 		if(isDraw) {
 			drawDGraph();
 		}
@@ -56,9 +56,9 @@ public class Graph_GUI{
 	 */
 	public void drawNodes() {
 		try {
-			Collection<node_data> n=g.getV();
+			Collection<oop_node_data> n=g.getV();
 			if(n != null && n.size() > 0) {
-				for (node_data a:n) {
+				for (oop_node_data a:n) {
 					double x=a.getLocation().x();
 					double y=a.getLocation().y();
 					StdDraw.setPenRadius(0.05);
@@ -89,12 +89,12 @@ public class Graph_GUI{
 	 */
 	public void drawEdges() {
 		try {
-			Collection<node_data> allNodes=g.getV();
+			Collection<oop_node_data> allNodes=g.getV();
 			if(allNodes != null && allNodes.size() > 0) {
-				for(node_data n:allNodes) {
-					Collection<edge_data> allEdgesOfNode=g.getE(n.getKey());
+				for(oop_node_data n:allNodes) {
+					Collection<oop_edge_data> allEdgesOfNode=g.getE(n.getKey());
 					if(allEdgesOfNode != null && allEdgesOfNode.size() > 0) {
-						for(edge_data edges:allEdgesOfNode) {
+						for(oop_edge_data edges:allEdgesOfNode) {
 							double Sx = g.getNode(edges.getSrc()).getLocation().x();
 							double Sy = g.getNode(edges.getSrc()).getLocation().y();
 							double Dx = g.getNode(edges.getDest()).getLocation().x();
@@ -111,7 +111,7 @@ public class Graph_GUI{
 							double arrowY= (Dy*8+Sy)/9;
 							StdDraw.point(arrowX,arrowY);
 
-							String dou = String.format("%.5g%n", edges.getWeight());
+							String dou = String.format("%.4g%n", edges.getWeight());
 
 							String te = dou+"";
 
@@ -198,7 +198,7 @@ public class Graph_GUI{
 	 */
 	public void deleteGraph() {
 		StdDraw.clear();
-		g = new DGraph();
+		g = new OOP_DGraph();
 	}
 	
 	
