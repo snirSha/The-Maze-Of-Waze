@@ -32,18 +32,26 @@ import oop_dataStructure.oop_graph;
 public class SimpleGameClient {
 	public static void main(String[] a) {
 		test1();
+		
+		
+		
 	}
 	
 	public static void test1() {
-		int scenario_num = 2;
+		int scenario_num = 5;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 		String g = game.getGraph();
+		
 		OOP_DGraph gg = new OOP_DGraph();
 		gg.init(g);
+		/*our sh*t*/
 		
 		MyGameGUI guiava=new MyGameGUI(gg);
-		guiava.drawDGraph();
 		
+		guiava.drawDGraph();
+		MyGameGUI.drawElements(game);
+		
+		/*done our sh*t*/
 		String info = game.toString();
 		JSONObject line;
 		try {
@@ -54,7 +62,9 @@ public class SimpleGameClient {
 			System.out.println(g);
 			// the list of fruits should be considered in your solution
 			Iterator<String> f_iter = game.getFruits().iterator();
-			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
+			while(f_iter.hasNext()) {
+				System.out.println(f_iter.next());
+				}	
 			int src_node = 0;  // arbitrary node, you should start at one of the fruits
 			for(int a = 0;a<rs;a++) {
 				game.addRobot(src_node+a);
@@ -83,12 +93,14 @@ public class SimpleGameClient {
 			for(int i=0;i<log.size();i++) {
 				String robot_json = log.get(i);
 				try {
+					
+					MyGameGUI.drawRobot(game);
 					JSONObject line = new JSONObject(robot_json);
 					JSONObject ttt = line.getJSONObject("Robot");
 					int rid = ttt.getInt("id");
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
-				
+					
 					if(dest==-1) {	
 						dest = nextNode(gg, src);
 						game.chooseNextEdge(rid, dest);

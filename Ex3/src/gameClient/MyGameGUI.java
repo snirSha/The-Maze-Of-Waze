@@ -5,11 +5,22 @@ import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
 import oop_dataStructure.oop_node_data;
 import java.awt.Color;
+import java.awt.Point;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import Server.Fruit;
+import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_utils.OOP_Point3D;
 import oop_utils.OOP_Range;
+import utils.Point3D;
 /*
  * This class draw graphs using stdDraw
  *
@@ -25,7 +36,7 @@ public class MyGameGUI{
 	 * Default constructor
 	 */
 	public MyGameGUI() {
-		
+
 		g=new OOP_DGraph();
 		isDraw = false;
 	}
@@ -46,7 +57,7 @@ public class MyGameGUI{
 			drawDGraph();
 		}
 	}
-	
+
 
 	/*
 	 * Draw the nodes
@@ -69,7 +80,7 @@ public class MyGameGUI{
 					StdDraw.text(x,y,abs);
 				}
 			}
-			
+
 		}catch(Exception e) {
 			System.out.println("No nodes to draw");
 		}
@@ -111,7 +122,8 @@ public class MyGameGUI{
 							double arrowY= (Dy*8+Sy)/9;
 							StdDraw.point(arrowX,arrowY);
 
-							String dou = String.format("%.4g%n", edges.getWeight());
+							double tmp = edges.getWeight();
+							String dou = String.format("%.4g%n", tmp);
 
 							String te = dou+"";
 
@@ -139,7 +151,7 @@ public class MyGameGUI{
 	public void removeNode(int x) {
 		g.removeNode(x);
 	}
-	
+
 	/*
 	 * Remove edge from the drawing using removeEdge from DGraph class 
 	 */
@@ -156,6 +168,7 @@ public class MyGameGUI{
 			if(g.getV() != null) {
 				StdDraw.setGui(this);
 				setPageSize();
+				//drawElements(game);
 				drawEdges();
 				drawNodes();
 			}
@@ -163,34 +176,34 @@ public class MyGameGUI{
 			System.out.println("Nothing to draw");
 		}
 	}
-	
+
 	private void setPageSize() {
 		double xMax = 35.216;
 		double xMin = 35.1835;
 		double yMax = 32.11;
 		double yMin = 32.1;
-//		Collection <node_data> col = g.getV();
-//		if(col != null && col.size() > 0) {
-//			for(node_data nd: col) {
-//				NodeData n = (NodeData)nd;
-//				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
-//				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
-//				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
-//				else if (n.getLocation().y() < yMin) yMin = n.getLocation().y();
-//			}
-//			
-//			int xCanvas = 3 * (int)(Math.abs(xMax) + Math.abs(xMin));
-//			int yCanvas = 3 * (int)(Math.abs(yMax) + Math.abs(yMin));
-//			
-			StdDraw.setCanvasSize(1200 , 600 );
-			StdDraw.setXscale(xMin, xMax);
-			StdDraw.setYscale(yMin, yMax);
-//		}else {
-//			StdDraw.setCanvasSize(1000, 800);
-//			StdDraw.setXscale(-100,100);
-//			StdDraw.setYscale(-100,100);
-//		}	
-		
+		//		Collection <node_data> col = g.getV();
+		//		if(col != null && col.size() > 0) {
+		//			for(node_data nd: col) {
+		//				NodeData n = (NodeData)nd;
+		//				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
+		//				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
+		//				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
+		//				else if (n.getLocation().y() < yMin) yMin = n.getLocation().y();
+		//			}
+		//			
+		//			int xCanvas = 3 * (int)(Math.abs(xMax) + Math.abs(xMin));
+		//			int yCanvas = 3 * (int)(Math.abs(yMax) + Math.abs(yMin));
+		//			
+		StdDraw.setCanvasSize(1200 , 600 );
+		StdDraw.setXscale(xMin, xMax);
+		StdDraw.setYscale(yMin, yMax);
+		//		}else {
+		//			StdDraw.setCanvasSize(1000, 800);
+		//			StdDraw.setXscale(-100,100);
+		//			StdDraw.setYscale(-100,100);
+		//		}	
+
 	}
 
 	/*
@@ -201,6 +214,56 @@ public class MyGameGUI{
 		g = new OOP_DGraph();
 	}
 	
+	public static void drawRobot(game_service game) {
+		List<String> log = game.move();
+		if(log!=null) {
+			
+			//StdDraw.refreshDraw();
+			long t = game.timeToEnd();
+			for(int i=0;i<log.size();i++) {
+				String robot_json = log.get(i);
+				try {
+					JSONObject line = new JSONObject(robot_json);
+					JSONObject ttt = line.getJSONObject("Robot");
+					int rid = ttt.getInt("id");
+					String pos = ttt.getString("pos");
+					Point3D posP = new Point3D(pos);
+					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
+
+				} 
+				catch (JSONException e) {e.printStackTrace();}
+			}
+		}
+	}
 	
+
+	public static void drawElements(game_service game) {
+
+		List<String> eStrList = new ArrayList<>();
+		eStrList = game.getFruits();
+
+		for(int i=0;i<eStrList.size();i++) {
+			String fruit_json = eStrList.get(i);
+			try {
+				JSONObject line = new JSONObject(fruit_json);
+				JSONObject ttt = line.getJSONObject("Fruit");
+				double value = ttt.getDouble("value");
+				int type = ttt.getInt("type");
+				String pos = ttt.getString("pos");
+				Point3D posP = new Point3D(pos);
+				if(type == -1) {
+					StdDraw.picture(posP.x(), posP.y(), "banana.jpg", 0.0007, 0.0007);
+				}else if(type == 1) {
+					StdDraw.picture(posP.x(), posP.y(), "apple.jpg", 0.0007, 0.0007);
+				}
+				drawRobot(game);
+				
+			} 
+			catch (JSONException e) {e.printStackTrace();}
+		}
+
+	}
+
+
 
 }
