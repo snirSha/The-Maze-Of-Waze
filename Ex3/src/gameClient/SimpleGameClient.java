@@ -38,9 +38,10 @@ public class SimpleGameClient {
 	}
 	
 	public static void test1() {
-		int scenario_num = 5;
+		int scenario_num = 23;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 		String g = game.getGraph();
+		//System.out.println(game.getRobots().size());
 		
 		OOP_DGraph gg = new OOP_DGraph();
 		gg.init(g);
@@ -48,7 +49,8 @@ public class SimpleGameClient {
 		
 		MyGameGUI guiava=new MyGameGUI(gg);
 		
-		guiava.drawDGraph();
+		
+		//guiava.drawDGraph();
 		MyGameGUI.drawElements(game);
 		
 		/*done our sh*t*/

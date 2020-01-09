@@ -1088,11 +1088,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 		}*/
 	}
 	
-	public static void refreshDraw() {
-		clear();
-		gg.drawEdges();
-		gg.drawNodes();
-	}
+	
 
 
 	/***************************************************************************

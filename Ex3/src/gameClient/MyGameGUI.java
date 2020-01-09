@@ -38,6 +38,7 @@ public class MyGameGUI{
 	public MyGameGUI() {
 
 		g=new OOP_DGraph();
+		drawDGraph();
 		isDraw = false;
 	}
 
@@ -46,16 +47,18 @@ public class MyGameGUI{
 	 */
 	public MyGameGUI(oop_graph gg) {	
 		g=(OOP_DGraph)gg;
-		isDraw = false;
+		
+		drawDGraph();
+		
+		
 	}
 
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
 	public void addNode(OOP_NodeData a) {
-		if(isDraw) {
-			drawDGraph();
-		}
+		this.g.addNode(a);
+		
 	}
 
 
@@ -176,6 +179,12 @@ public class MyGameGUI{
 			System.out.println("Nothing to draw");
 		}
 	}
+	
+	public void refreshDraw() {
+		//clear();
+		drawEdges();
+		drawNodes();
+	}
 
 	private void setPageSize() {
 		double xMax = 35.216;
@@ -256,8 +265,7 @@ public class MyGameGUI{
 				}else if(type == 1) {
 					StdDraw.picture(posP.x(), posP.y(), "apple.jpg", 0.0007, 0.0007);
 				}
-				drawRobot(game);
-				
+								
 			} 
 			catch (JSONException e) {e.printStackTrace();}
 		}
