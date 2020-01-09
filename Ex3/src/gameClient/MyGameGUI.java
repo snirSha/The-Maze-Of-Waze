@@ -29,7 +29,7 @@ import utils.Point3D;
 public class MyGameGUI{
 
 	public OOP_DGraph g;
-	private boolean isDraw;
+
 
 
 	/*
@@ -39,7 +39,6 @@ public class MyGameGUI{
 
 		g=new OOP_DGraph();
 		drawDGraph();
-		isDraw = false;
 	}
 
 	/*
@@ -47,10 +46,10 @@ public class MyGameGUI{
 	 */
 	public MyGameGUI(oop_graph gg) {	
 		g=(OOP_DGraph)gg;
-		
+
 		drawDGraph();
-		
-		
+
+
 	}
 
 	/*
@@ -58,7 +57,7 @@ public class MyGameGUI{
 	 */
 	public void addNode(OOP_NodeData a) {
 		this.g.addNode(a);
-		
+
 	}
 
 
@@ -166,12 +165,10 @@ public class MyGameGUI{
 	 * This function open a window and calls to drawNode and drawEdge
 	 */
 	public void drawDGraph() {
-		isDraw = true;
 		try {
 			if(g.getV() != null) {
 				StdDraw.setGui(this);
 				setPageSize();
-				//drawElements(game);
 				drawEdges();
 				drawNodes();
 			}
@@ -179,9 +176,9 @@ public class MyGameGUI{
 			System.out.println("Nothing to draw");
 		}
 	}
-	
+
 	public void refreshDraw() {
-		//clear();
+		StdDraw.clear();
 		drawEdges();
 		drawNodes();
 	}
@@ -222,12 +219,14 @@ public class MyGameGUI{
 		StdDraw.clear();
 		g = new OOP_DGraph();
 	}
-	
+
 	public static void drawRobot(game_service game) {
+
+
 		List<String> log = game.move();
 		if(log!=null) {
-			
-			//StdDraw.refreshDraw();
+
+
 			long t = game.timeToEnd();
 			for(int i=0;i<log.size();i++) {
 				String robot_json = log.get(i);
@@ -239,12 +238,16 @@ public class MyGameGUI{
 					Point3D posP = new Point3D(pos);
 					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
 
+
+					//StdDraw.clear();
+					//MyGameGUI.drawElements(game);;
+
 				} 
 				catch (JSONException e) {e.printStackTrace();}
 			}
 		}
 	}
-	
+
 
 	public static void drawElements(game_service game) {
 
@@ -265,7 +268,7 @@ public class MyGameGUI{
 				}else if(type == 1) {
 					StdDraw.picture(posP.x(), posP.y(), "apple.jpg", 0.0007, 0.0007);
 				}
-								
+
 			} 
 			catch (JSONException e) {e.printStackTrace();}
 		}

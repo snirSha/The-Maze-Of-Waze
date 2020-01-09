@@ -32,27 +32,28 @@ import oop_dataStructure.oop_graph;
 public class SimpleGameClient {
 	public static void main(String[] a) {
 		test1();
-		
-		
-		
+
+
+
 	}
-	
+
 	public static void test1() {
-		int scenario_num = 23;
+		int scenario_num = 2;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 		String g = game.getGraph();
-		//System.out.println(game.getRobots().size());
-		
+
 		OOP_DGraph gg = new OOP_DGraph();
+
 		gg.init(g);
+
 		/*our sh*t*/
-		
+
 		MyGameGUI guiava=new MyGameGUI(gg);
-		
-		
-		//guiava.drawDGraph();
-		MyGameGUI.drawElements(game);
-		
+
+		//StdDraw.enableDoubleBuffering();
+		//MyGameGUI.drawElements(game);
+		//MyGameGUI.drawRobot(game);
+		//StdDraw.show();
 		/*done our sh*t*/
 		String info = game.toString();
 		JSONObject line;
@@ -66,7 +67,7 @@ public class SimpleGameClient {
 			Iterator<String> f_iter = game.getFruits().iterator();
 			while(f_iter.hasNext()) {
 				System.out.println(f_iter.next());
-				}	
+			}	
 			int src_node = 0;  // arbitrary node, you should start at one of the fruits
 			for(int a = 0;a<rs;a++) {
 				game.addRobot(src_node+a);
@@ -76,7 +77,15 @@ public class SimpleGameClient {
 		game.startGame();
 		// should be a Thread!!!
 		while(game.isRunning()) {
+			
+			StdDraw.enableDoubleBuffering();
+			
+			guiava.refreshDraw();
+			MyGameGUI.drawElements(game);
+			MyGameGUI.drawRobot(game);
 			moveRobots(game, gg);
+			
+			StdDraw.show();
 		}
 		String results = game.toString();
 		System.out.println("Game Over: "+results);
@@ -96,13 +105,12 @@ public class SimpleGameClient {
 				String robot_json = log.get(i);
 				try {
 					
-					MyGameGUI.drawRobot(game);
 					JSONObject line = new JSONObject(robot_json);
 					JSONObject ttt = line.getJSONObject("Robot");
 					int rid = ttt.getInt("id");
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
-					
+
 					if(dest==-1) {	
 						dest = nextNode(gg, src);
 						game.chooseNextEdge(rid, dest);
