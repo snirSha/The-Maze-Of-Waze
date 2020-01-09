@@ -31,14 +31,22 @@ import oop_dataStructure.oop_graph;
  */
 public class SimpleGameClient {
 	public static void main(String[] a) {
-		test1();
+		
+		MyGameGUI mgg = new MyGameGUI();
+		
+		
+//		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
+//		List<String> listF = game.getFruits();
+		
+		
+		//test1();
 
 
 
 	}
 
 	public static void test1() {
-		int scenario_num = 2;
+		int scenario_num = 6;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 		String g = game.getGraph();
 
@@ -48,12 +56,9 @@ public class SimpleGameClient {
 
 		/*our sh*t*/
 
-		MyGameGUI guiava=new MyGameGUI(gg);
+		MyGameGUI guiava = new MyGameGUI(gg);
 
-		//StdDraw.enableDoubleBuffering();
-		//MyGameGUI.drawElements(game);
-		//MyGameGUI.drawRobot(game);
-		//StdDraw.show();
+		
 		/*done our sh*t*/
 		String info = game.toString();
 		JSONObject line;
@@ -97,7 +102,7 @@ public class SimpleGameClient {
 	 * @param gg
 	 * @param log
 	 */
-	private static void moveRobots(game_service game, oop_graph gg) {
+	public static void moveRobots(game_service game, oop_graph gg) {
 		List<String> log = game.move();
 		if(log!=null) {
 			long t = game.timeToEnd();

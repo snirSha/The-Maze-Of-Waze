@@ -12,10 +12,16 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import Server.Fruit;
+import Server.Game_Server;
 import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_utils.OOP_Point3D;
@@ -37,9 +43,53 @@ public class MyGameGUI{
 	 */
 	public MyGameGUI() {
 
-		g=new OOP_DGraph();
+		g = new OOP_DGraph();
+		int s = -1;
+		while(s == -1) {
+			s = pickScenario();
+			if(s == -1) JOptionPane.showMessageDialog(null, "choose a valid scenario");
+		}
+
+		game_service game = Game_Server.getServer(s); // you have [0,23] games
+		String g = game.getGraph();
+		this.g.init(g);
 		drawDGraph();
+
+		String info = game.toString();
+		JSONObject line;
+		try {
+			line = new JSONObject(info);
+			JSONObject ttt = line.getJSONObject("GameServer");
+			int rs = ttt.getInt("robots");
+			System.out.println(info);
+			System.out.println(g);
+			// the list of fruits should be considered in your solution
+			Iterator<String> f_iter = game.getFruits().iterator();
+			while(f_iter.hasNext()) {
+				System.out.println(f_iter.next());
+			}	
+			int src_node = 0;  // arbitrary node, you should start at one of the fruits
+			for(int a = 0;a<rs;a++) {
+				game.addRobot(src_node+a);
+			}
+		}
+		catch (JSONException e) {e.printStackTrace();}
+		game.startGame();
+		while(game.isRunning()) {
+
+			StdDraw.enableDoubleBuffering();
+
+			refreshDraw();
+			MyGameGUI.drawElements(game);
+			MyGameGUI.drawRobot(game);
+			SimpleGameClient.moveRobots(game, this.g);
+
+			StdDraw.show();
+		}
+
 	}
+
+
 
 	/*
 	 * Copy constructor using the init function from Graph_Algo class
@@ -50,6 +100,39 @@ public class MyGameGUI{
 		drawDGraph();
 
 
+	}
+
+	private int pickScenario() {
+
+		JTextField SPDestField = new JTextField(5);
+
+		JPanel SPEdgePanel = new JPanel();
+
+		SPEdgePanel.add(new JLabel("scenario:"));
+		SPEdgePanel.add(SPDestField);
+
+		int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
+				"Pick scenario (0 - 23)", JOptionPane.OK_CANCEL_OPTION);
+		if (SPEdgeRes == JOptionPane.OK_OPTION) {
+
+			try {
+
+				int sce = Integer.parseInt(SPDestField.getText());
+
+
+				if(sce <= 23 && sce >= 0) {
+					return sce;
+				}
+				else {
+					return -1;
+
+				}
+
+			}catch(Exception err) {
+				JOptionPane.showMessageDialog(null, "Please enter valid number","Error",0);
+			}
+		}
+		return -1;
 	}
 
 	/*
