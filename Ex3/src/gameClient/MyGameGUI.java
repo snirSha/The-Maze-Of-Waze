@@ -48,8 +48,58 @@ public class MyGameGUI{
 		while(s == -1) {
 			s = pickScenario();
 			if(s == -1) JOptionPane.showMessageDialog(null, "choose a valid scenario");
+			else if (s == -2) return;
 		}
+		runGameGUI(s);
+	}
+	public MyGameGUI(game_service game){
+		this.g.init(game.getGraph());
+	}
 
+
+
+
+
+
+	/*
+	 * Copy constructor using the init function from Graph_Algo class
+	 */
+	public MyGameGUI(oop_graph gg) {	
+		g=(OOP_DGraph)gg;
+
+		drawDGraph();
+	}
+
+	private int pickScenario() {
+
+		JTextField SPDestField = new JTextField(5);
+
+		JPanel SPEdgePanel = new JPanel();
+
+		SPEdgePanel.add(new JLabel("scenario:"));
+		SPEdgePanel.add(SPDestField);
+
+		int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
+				"Pick scenario (0 - 23)", JOptionPane.OK_CANCEL_OPTION);
+		if (SPEdgeRes == JOptionPane.OK_OPTION) {
+
+			try {
+
+				int sce = Integer.parseInt(SPDestField.getText());
+				if(sce <= 23 && sce >= 0) {
+					return sce;
+				}
+				else return -1;
+
+			}catch(Exception err) {
+				JOptionPane.showMessageDialog(null, "Please enter valid number","Error",0);
+			}
+		}
+		else return -2; //error happened or choose to cancel the game
+		return -2;
+	}
+
+	private void runGameGUI(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.g.init(g);
@@ -84,55 +134,41 @@ public class MyGameGUI{
 			MyGameGUI.drawRobot(game);
 			SimpleGameClient.moveRobots(game, this.g);
 
+			String results = game.toString();
+			long t = game.timeToEnd();
+			try {
+				JSONObject score = new JSONObject(results);
+				JSONObject ttt = score.getJSONObject("GameServer");
+				int scoreInt = ttt.getInt("grade");
+				//System.out.println("omer" + rid);
+				//System.out.println("Score: " + scoreInt + "\nTime: " + t / 1000);
+				String toScreen = "Score: " + scoreInt + "\nTime: " + t / 1000;
+
+				final double xMax = 35.1516;
+				final double xMin = 35.1335;
+				final double yMax = 32.15;
+				final double yMin = 32.1;
+
+				StdDraw.setPenRadius(0.1);
+				StdDraw.setPenColor(Color.BLACK);
+
+				StdDraw.text(xMax , yMax, toScreen);
+				
+			}catch (Exception e) {
+				System.out.println("Failed to print score");
+			}
+
 			StdDraw.show();
 		}
-
-	}
-
-
-
-	/*
-	 * Copy constructor using the init function from Graph_Algo class
-	 */
-	public MyGameGUI(oop_graph gg) {	
-		g=(OOP_DGraph)gg;
-
-		drawDGraph();
-
-
-	}
-
-	private int pickScenario() {
-
-		JTextField SPDestField = new JTextField(5);
-
-		JPanel SPEdgePanel = new JPanel();
-
-		SPEdgePanel.add(new JLabel("scenario:"));
-		SPEdgePanel.add(SPDestField);
-
-		int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
-				"Pick scenario (0 - 23)", JOptionPane.OK_CANCEL_OPTION);
-		if (SPEdgeRes == JOptionPane.OK_OPTION) {
-
-			try {
-
-				int sce = Integer.parseInt(SPDestField.getText());
-
-
-				if(sce <= 23 && sce >= 0) {
-					return sce;
-				}
-				else {
-					return -1;
-
-				}
-
-			}catch(Exception err) {
-				JOptionPane.showMessageDialog(null, "Please enter valid number","Error",0);
-			}
+		try {
+			String results = game.toString();
+			JSONObject score = new JSONObject(results);
+			System.out.println("Game Over: "+results);
+		}catch (Exception e) {
+			// TODO: handle exception
 		}
-		return -1;
+
+
 	}
 
 	/*
@@ -267,10 +303,10 @@ public class MyGameGUI{
 	}
 
 	private void setPageSize() {
-		double xMax = 35.216;
-		double xMin = 35.1835;
-		double yMax = 32.11;
-		double yMin = 32.1;
+		final double xMax = 35.216;
+		final double xMin = 35.1835;
+		final double yMax = 32.11;
+		final double yMin = 32.1;
 		//		Collection <node_data> col = g.getV();
 		//		if(col != null && col.size() > 0) {
 		//			for(node_data nd: col) {
@@ -309,8 +345,6 @@ public class MyGameGUI{
 		List<String> log = game.move();
 		if(log!=null) {
 
-
-			long t = game.timeToEnd();
 			for(int i=0;i<log.size();i++) {
 				String robot_json = log.get(i);
 				try {
@@ -320,10 +354,6 @@ public class MyGameGUI{
 					String pos = ttt.getString("pos");
 					Point3D posP = new Point3D(pos);
 					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
-
-
-					//StdDraw.clear();
-					//MyGameGUI.drawElements(game);;
 
 				} 
 				catch (JSONException e) {e.printStackTrace();}

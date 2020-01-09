@@ -39,7 +39,7 @@ public class SimpleGameClient {
 //		List<String> listF = game.getFruits();
 		
 		
-		//test1();
+//		test1();
 
 
 
