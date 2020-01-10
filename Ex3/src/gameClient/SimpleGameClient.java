@@ -12,6 +12,9 @@ import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
+import oop_dataStructure.oop_node_data;
+import oop_elements.OOP_NodeData;
+import oop_utils.OOP_Point3D;
 /**
  * This class represents a simple example for using the GameServer API:
  * the main file performs the following tasks:
@@ -30,6 +33,8 @@ import oop_dataStructure.oop_graph;
  *
  */
 public class SimpleGameClient {
+	public static final double ourEPS=0.00015;
+	
 	public static void main(String[] a) {
 		
 		MyGameGUI mgg = new MyGameGUI();
@@ -57,8 +62,8 @@ public class SimpleGameClient {
 		/*our sh*t*/
 
 		MyGameGUI guiava = new MyGameGUI(gg);
-
 		
+			
 		/*done our sh*t*/
 		String info = game.toString();
 		JSONObject line;
@@ -84,7 +89,6 @@ public class SimpleGameClient {
 		while(game.isRunning()) {
 			
 			StdDraw.enableDoubleBuffering();
-			
 			guiava.refreshDraw();
 			MyGameGUI.drawElements(game);
 			MyGameGUI.drawRobot(game);
@@ -135,13 +139,23 @@ public class SimpleGameClient {
 	 */
 	private static int nextNode(oop_graph g, int src) {
 		int ans = -1;
-		Collection<oop_edge_data> ee = g.getE(src);
-		Iterator<oop_edge_data> itr = ee.iterator();
-		int s = ee.size();
-		int r = (int)(Math.random()*s);
-		int i=0;
-		while(i<r) {itr.next();i++;}
-		ans = itr.next().getDest();
+		if(StdDraw.pointOfMouse!=null) {
+			OOP_Point3D dd=new OOP_Point3D(StdDraw.pointOfMouse);
+			System.out.println(dd.x()+"************************"+dd.y());
+			Collection<oop_node_data> nodes=g.getV();
+			for(oop_node_data n : nodes) {
+				if(dd.distance2D(n.getLocation())<ourEPS) {
+					ans=n.getKey();
+				}
+			}
+		}
+//		Collection<oop_edge_data> ee = g.getE(src);
+//		Iterator<oop_edge_data> itr = ee.iterator();
+//		int s = ee.size();
+//		int r = (int)(Math.random()*s);
+//		int i=0;
+//		while(i<r) {itr.next();i++;}
+//		ans = itr.next().getDest();
 		return ans;
 	}
 
