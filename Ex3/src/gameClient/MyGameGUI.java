@@ -35,6 +35,7 @@ public class MyGameGUI{
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
 	final double yMin = 32.1;
+	final static double robotIconSize = .0007;
 	
 
 	/*
@@ -124,7 +125,7 @@ public class MyGameGUI{
 			e.printStackTrace();
 		}
 		game.startGame();
-		int scoreInt=0;
+		int scoreInt = 0;
 		while(game.isRunning()) {
 
 			StdDraw.enableDoubleBuffering();
@@ -133,33 +134,21 @@ public class MyGameGUI{
 			MyGameGUI.drawElements(game);
 			MyGameGUI.drawRobot(game);
 			SimpleGameClient.moveRobots(game, this.g);
-
-			String results = game.toString();
-			long t = game.timeToEnd();
-			try {
-				JSONObject score = new JSONObject(results);
-				JSONObject ttt = score.getJSONObject("GameServer");
-				scoreInt = ttt.getInt("grade");
-
-				String countDown = "Time: " + t/1000+"." + t%1000;
-				String scoreStr = "Score: " + scoreInt;
-				double tmp1 = xMax-xMin;
-				double tmp2 = yMax-yMin;
-
-				StdDraw.setPenRadius(0.05);
-				StdDraw.setPenColor(Color.BLACK);
-				StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2/0.95, countDown);
-				StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2, scoreStr);
-
-			}catch (Exception e) {
-				System.out.println("Failed to print score");
-			}
+			printScore(game);
+			
 			StdDraw.show();
 		}
 		try {
 			String results = game.toString();
 			System.out.println("Game Over: "+results);
+			
+			JSONObject score = new JSONObject(results);
+			JSONObject ttt = score.getJSONObject("GameServer");
+			scoreInt = ttt.getInt("grade");
 			String endGame="Youre score is: "+scoreInt;
+			
+			
+			
 			JOptionPane.showMessageDialog(null, endGame);
 		}
 		catch (Exception e) {
@@ -168,13 +157,36 @@ public class MyGameGUI{
 	}
 
 
+	private void printScore(game_service game) {
+		String results = game.toString();
+		long t = game.timeToEnd();
+		try {
+			int scoreInt=0;
+			JSONObject score = new JSONObject(results);
+			JSONObject ttt = score.getJSONObject("GameServer");
+			scoreInt = ttt.getInt("grade");
+
+			String countDown = "Time: " + t/1000+"." + t%1000;
+			String scoreStr = "Score: " + scoreInt;
+			double tmp1 = xMax-xMin;
+			double tmp2 = yMax-yMin;
+
+			StdDraw.setPenRadius(0.05);
+			StdDraw.setPenColor(Color.BLACK);
+			StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2/0.95, countDown);
+			StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2, scoreStr);
+
+		}catch (Exception e) {
+			System.out.println("Failed to print score");
+		}
+	}
+
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
 	public void addNode(OOP_NodeData a) {
 		this.g.addNode(a);
 	}
-
 
 	/*
 	 * Draw the nodes
@@ -298,10 +310,10 @@ public class MyGameGUI{
 	}
 
 	private void setPageSize() {
-		double plus = 0.0015;
+		final double fixScale = 0.0015;
 		StdDraw.setCanvasSize(1200 , 600 );
-		StdDraw.setXscale(xMin - plus, xMax + plus);
-		StdDraw.setYscale(yMin - plus, yMax + plus);
+		StdDraw.setXscale(xMin - fixScale, xMax + fixScale);
+		StdDraw.setYscale(yMin - fixScale, yMax + fixScale);
 	}
 
 	/*
@@ -324,7 +336,14 @@ public class MyGameGUI{
 					int rid = ttt.getInt("id");
 					String pos = ttt.getString("pos");
 					OOP_Point3D posP = new OOP_Point3D(pos);
-					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
+					if(rid == 1) {
+						StdDraw.picture(posP.x(), posP.y(), "robot1.jpg", robotIconSize, robotIconSize);
+					}
+					else if(rid == 2) {
+						StdDraw.picture(posP.x(), posP.y(), "robot2.jpg", robotIconSize, robotIconSize);
+					}
+					else StdDraw.picture(posP.x(), posP.y(), "robot3.jpg", robotIconSize, robotIconSize);
+					
 				} 
 				catch (JSONException e) {e.printStackTrace();}
 			}
