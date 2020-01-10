@@ -10,10 +10,8 @@ import org.json.JSONObject;
 import Server.Game_Server;
 import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
-import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
 import oop_dataStructure.oop_node_data;
-import oop_elements.OOP_NodeData;
 import oop_utils.OOP_Point3D;
 /**
  * This class represents a simple example for using the GameServer API:
@@ -36,14 +34,10 @@ public class SimpleGameClient {
 	public static final double ourEPS=0.00015;
 	
 	public static void main(String[] a) {
-		
 		MyGameGUI mgg = new MyGameGUI();
-		
 		
 //		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 //		List<String> listF = game.getFruits();
-		
-		
 //		test1();
 
 
@@ -54,17 +48,13 @@ public class SimpleGameClient {
 		int scenario_num = 6;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 		String g = game.getGraph();
-
 		OOP_DGraph gg = new OOP_DGraph();
-
 		gg.init(g);
 
 		/*our sh*t*/
-
 		MyGameGUI guiava = new MyGameGUI(gg);
-		
-			
 		/*done our sh*t*/
+		
 		String info = game.toString();
 		JSONObject line;
 		try {
@@ -112,8 +102,7 @@ public class SimpleGameClient {
 			long t = game.timeToEnd();
 			for(int i=0;i<log.size();i++) {
 				String robot_json = log.get(i);
-				try {
-					
+				try {			
 					JSONObject line = new JSONObject(robot_json);
 					JSONObject ttt = line.getJSONObject("Robot");
 					int rid = ttt.getInt("id");
@@ -137,11 +126,10 @@ public class SimpleGameClient {
 	 * @param src
 	 * @return
 	 */
-	private static int nextNode(oop_graph g, int src) {
+	private static int nextNode(oop_graph g, int src) {//The manual moves
 		int ans = -1;
 		if(StdDraw.pointOfMouse!=null) {
 			OOP_Point3D dd=new OOP_Point3D(StdDraw.pointOfMouse);
-			System.out.println(dd.x()+"************************"+dd.y());
 			Collection<oop_node_data> nodes=g.getV();
 			for(oop_node_data n : nodes) {
 				if(dd.distance2D(n.getLocation())<ourEPS) {
@@ -149,6 +137,7 @@ public class SimpleGameClient {
 				}
 			}
 		}
+		/*boaz's random walk*/
 //		Collection<oop_edge_data> ee = g.getE(src);
 //		Iterator<oop_edge_data> itr = ee.iterator();
 //		int s = ee.size();

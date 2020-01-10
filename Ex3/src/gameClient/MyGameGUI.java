@@ -6,8 +6,6 @@ import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
 import oop_dataStructure.oop_node_data;
 import java.awt.Color;
-import java.awt.Point;
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -21,12 +19,10 @@ import javax.swing.JTextField;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import Server.Fruit;
 import Server.Game_Server;
 import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_utils.OOP_Point3D;
-import oop_utils.OOP_Range;
 /*
  * This class draw graphs using stdDraw
  *
@@ -35,30 +31,33 @@ import oop_utils.OOP_Range;
 public class MyGameGUI{
 
 	public OOP_DGraph g;
-
+	final double xMax = 35.216;
+	final double xMin = 35.1835;
+	final double yMax = 32.11;
+	final double yMin = 32.1;
 
 
 	/*
 	 * Default constructor
 	 */
 	public MyGameGUI() {
-
 		g = new OOP_DGraph();
 		int s = -1;
 		while(s == -1) {
 			s = pickScenario();
-			if(s == -1) JOptionPane.showMessageDialog(null, "choose a valid scenario");
+			if(s == -1) 
+				JOptionPane.showMessageDialog(null, "choose a valid scenario");
 			else if (s == -2) return;
 		}
 		runGameGUI(s);
 	}
+	
+	/*
+	 * parameter constructor
+	 */
 	public MyGameGUI(game_service game){
 		this.g.init(game.getGraph());
 	}
-
-
-
-
 
 
 	/*
@@ -66,14 +65,12 @@ public class MyGameGUI{
 	 */
 	public MyGameGUI(oop_graph gg) {	
 		g=(OOP_DGraph)gg;
-
 		drawDGraph();
 	}
 
+	
 	private int pickScenario() {
-
 		JTextField SPDestField = new JTextField(5);
-
 		JPanel SPEdgePanel = new JPanel();
 
 		SPEdgePanel.add(new JLabel("scenario:"));
@@ -82,7 +79,6 @@ public class MyGameGUI{
 		int SPEdgeRes = JOptionPane.showConfirmDialog(null, SPEdgePanel, 
 				"Pick scenario (0 - 23)", JOptionPane.OK_CANCEL_OPTION);
 		if (SPEdgeRes == JOptionPane.OK_OPTION) {
-
 			try {
 
 				int sce = Integer.parseInt(SPDestField.getText());
@@ -99,6 +95,7 @@ public class MyGameGUI{
 		return -2;
 	}
 
+	
 	private void runGameGUI(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
@@ -123,8 +120,11 @@ public class MyGameGUI{
 				game.addRobot(src_node+a);
 			}
 		}
-		catch (JSONException e) {e.printStackTrace();}
+		catch (JSONException e) {
+			e.printStackTrace();
+		}
 		game.startGame();
+		int scoreInt=0;
 		while(game.isRunning()) {
 
 			StdDraw.enableDoubleBuffering();
@@ -139,44 +139,38 @@ public class MyGameGUI{
 			try {
 				JSONObject score = new JSONObject(results);
 				JSONObject ttt = score.getJSONObject("GameServer");
-				int scoreInt = ttt.getInt("grade");
-				//System.out.println("omer" + rid);
-				//System.out.println("Score: " + scoreInt + "\nTime: " + t / 1000);
-				String toScreen = "Score: " + scoreInt + "\nTime: " + t / 1000;
+				scoreInt = ttt.getInt("grade");
 
-				final double xMax = 35.1516;
-				final double xMin = 35.1335;
-				final double yMax = 32.15;
-				final double yMin = 32.1;
-
-				StdDraw.setPenRadius(0.1);
+				String countDown = "Time: " + t/1000+"."+t%1000;			
+				double tmp1=xMax-xMin;
+				double tmp2=yMax-yMin;
+				
+				StdDraw.setPenRadius(0.05);
 				StdDraw.setPenColor(Color.BLACK);
-
-				StdDraw.text(xMax , yMax, toScreen);
+				StdDraw.text(xMin+tmp1/2 , yMin+tmp2/1.1, countDown);
 				
 			}catch (Exception e) {
 				System.out.println("Failed to print score");
 			}
-
 			StdDraw.show();
 		}
 		try {
 			String results = game.toString();
-			JSONObject score = new JSONObject(results);
 			System.out.println("Game Over: "+results);
-		}catch (Exception e) {
-			// TODO: handle exception
+			String endGame="Youre score is: "+scoreInt;
+			JOptionPane.showMessageDialog(null, endGame);
 		}
-
-
+		catch (Exception e) {
+			e.getMessage();
+		}
 	}
 
+	
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
 	public void addNode(OOP_NodeData a) {
 		this.g.addNode(a);
-
 	}
 
 
@@ -201,7 +195,6 @@ public class MyGameGUI{
 					StdDraw.text(x,y,abs);
 				}
 			}
-
 		}catch(Exception e) {
 			System.out.println("No nodes to draw");
 		}
@@ -303,32 +296,9 @@ public class MyGameGUI{
 	}
 
 	private void setPageSize() {
-		final double xMax = 35.216;
-		final double xMin = 35.1835;
-		final double yMax = 32.11;
-		final double yMin = 32.1;
-		//		Collection <node_data> col = g.getV();
-		//		if(col != null && col.size() > 0) {
-		//			for(node_data nd: col) {
-		//				NodeData n = (NodeData)nd;
-		//				if(n.getLocation().x() > xMax) xMax = n.getLocation().x();
-		//				else if (n.getLocation().x() < xMin) xMin = n.getLocation().x();
-		//				if(n.getLocation().y() > yMax) yMax = n.getLocation().y();
-		//				else if (n.getLocation().y() < yMin) yMin = n.getLocation().y();
-		//			}
-		//			
-		//			int xCanvas = 3 * (int)(Math.abs(xMax) + Math.abs(xMin));
-		//			int yCanvas = 3 * (int)(Math.abs(yMax) + Math.abs(yMin));
-		//			
 		StdDraw.setCanvasSize(1200 , 600 );
 		StdDraw.setXscale(xMin, xMax);
 		StdDraw.setYscale(yMin, yMax);
-		//		}else {
-		//			StdDraw.setCanvasSize(1000, 800);
-		//			StdDraw.setXscale(-100,100);
-		//			StdDraw.setYscale(-100,100);
-		//		}	
-
 	}
 
 	/*
@@ -339,12 +309,10 @@ public class MyGameGUI{
 		g = new OOP_DGraph();
 	}
 
+	
 	public static void drawRobot(game_service game) {
-
-
 		List<String> log = game.move();
 		if(log!=null) {
-
 			for(int i=0;i<log.size();i++) {
 				String robot_json = log.get(i);
 				try {
@@ -354,7 +322,6 @@ public class MyGameGUI{
 					String pos = ttt.getString("pos");
 					OOP_Point3D posP = new OOP_Point3D(pos);
 					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
-
 				} 
 				catch (JSONException e) {e.printStackTrace();}
 			}
@@ -363,10 +330,8 @@ public class MyGameGUI{
 
 
 	public static void drawElements(game_service game) {
-
 		List<String> eStrList = new ArrayList<>();
 		eStrList = game.getFruits();
-
 		for(int i=0;i<eStrList.size();i++) {
 			String fruit_json = eStrList.get(i);
 			try {
@@ -381,13 +346,11 @@ public class MyGameGUI{
 				}else if(type == 1) {
 					StdDraw.picture(posP.x(), posP.y(), "apple.jpg", 0.0007, 0.0007);
 				}
-
 			} 
 			catch (JSONException e) {e.printStackTrace();}
 		}
 
 	}
-
 
 
 }
