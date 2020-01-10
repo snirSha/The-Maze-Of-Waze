@@ -1,6 +1,7 @@
 package gameClient;
 
 import oop_elements.OOP_NodeData;
+
 import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
 import oop_dataStructure.oop_node_data;
@@ -26,7 +27,6 @@ import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_utils.OOP_Point3D;
 import oop_utils.OOP_Range;
-import utils.Point3D;
 /*
  * This class draw graphs using stdDraw
  *
@@ -352,7 +352,7 @@ public class MyGameGUI{
 					JSONObject ttt = line.getJSONObject("Robot");
 					int rid = ttt.getInt("id");
 					String pos = ttt.getString("pos");
-					Point3D posP = new Point3D(pos);
+					OOP_Point3D posP = new OOP_Point3D(pos);
 					StdDraw.picture(posP.x(), posP.y(), "robot.jpg", 0.0007, 0.0007);
 
 				} 
@@ -375,7 +375,7 @@ public class MyGameGUI{
 				double value = ttt.getDouble("value");
 				int type = ttt.getInt("type");
 				String pos = ttt.getString("pos");
-				Point3D posP = new Point3D(pos);
+				OOP_Point3D posP = new OOP_Point3D(pos);
 				if(type == -1) {
 					StdDraw.picture(posP.x(), posP.y(), "banana.jpg", 0.0007, 0.0007);
 				}else if(type == 1) {

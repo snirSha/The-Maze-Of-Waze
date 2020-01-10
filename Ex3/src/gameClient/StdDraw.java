@@ -27,6 +27,7 @@ package gameClient;
  *
  ******************************************************************************/
 import java.awt.Container;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.FileDialog;
@@ -83,6 +84,7 @@ import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import oop_elements.OOP_NodeData;
+import oop_utils.OOP_Point3D;
 import oop_dataStructure.oop_node_data;
 import gameClient.MyGameGUI;
 
@@ -493,6 +495,8 @@ import gameClient.MyGameGUI;
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
 	public static MyGameGUI gg;
+	public static OOP_Point3D pointOfMouse;
+	
 	public static void setGui(MyGameGUI g) {
 		gg = g;
 	}
@@ -648,8 +652,10 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	private static TreeSet<Integer> keysDown = new TreeSet<Integer>();
 
 
+
 	// singleton pattern: client can't instantiate
-	public StdDraw() { }
+	public StdDraw() {
+    }
 
 
 	// static initializer
@@ -2029,10 +2035,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 *
 	 * @return {@code true} if the mouse is being pressed; {@code false} otherwise
 	 */
-	public static boolean isMousePressed() {
-		synchronized (mouseLock) {
+	public static boolean isMousePressed() {//changes
 			return isMousePressed;
-		}
 	}
 
 	/**
@@ -2042,10 +2046,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 * @deprecated replaced by {@link #isMousePressed()}
 	 */
 	@Deprecated
-	public static boolean mousePressed() {
-		synchronized (mouseLock) {
+	public static boolean mousePressed() {//changes
 			return isMousePressed;
-		}
+		
 	}
 
 	/**
@@ -2053,10 +2056,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 *
 	 * @return the <em>x</em>-coordinate of the mouse
 	 */
-	public static double mouseX() {
-		synchronized (mouseLock) {
+	public static double mouseX() {//changes
 			return mouseX;
-		}
 	}
 
 	/**
@@ -2064,10 +2065,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 *
 	 * @return <em>y</em>-coordinate of the mouse
 	 */
-	public static double mouseY() {
-		synchronized (mouseLock) {
+	public static double mouseY() {//changes
 			return mouseY;
-		}
 	}
 
 
@@ -2099,22 +2098,21 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 * This method cannot be called directly.
 	 */
 	@Override
-	public void mousePressed(MouseEvent e) {
-		synchronized (mouseLock) {
+	public void mousePressed(MouseEvent e) {//Changes - David Bowie
 			mouseX = StdDraw.userX(e.getX());
 			mouseY = StdDraw.userY(e.getY());
 			isMousePressed = true;
-		}
+			pointOfMouse=new OOP_Point3D(mouseX,mouseY);
+			//System.out.println("********************************"+StdDraw.isMousePressed());
 	}
 
 	/**
 	 * This method cannot be called directly.
 	 */
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		synchronized (mouseLock) {
+	public void mouseReleased(MouseEvent e) {//changes
 			isMousePressed = false;
-		}
+			//System.out.println("********************************"+StdDraw.isMousePressed());
 	}
 
 	/**
