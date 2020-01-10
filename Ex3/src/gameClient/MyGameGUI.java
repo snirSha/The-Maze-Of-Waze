@@ -35,7 +35,7 @@ public class MyGameGUI{
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
 	final double yMin = 32.1;
-
+	
 
 	/*
 	 * Default constructor
@@ -51,7 +51,7 @@ public class MyGameGUI{
 		}
 		runGameGUI(s);
 	}
-	
+
 	/*
 	 * parameter constructor
 	 */
@@ -68,7 +68,7 @@ public class MyGameGUI{
 		drawDGraph();
 	}
 
-	
+
 	private int pickScenario() {
 		JTextField SPDestField = new JTextField(5);
 		JPanel SPEdgePanel = new JPanel();
@@ -95,7 +95,7 @@ public class MyGameGUI{
 		return -2;
 	}
 
-	
+
 	private void runGameGUI(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
@@ -141,14 +141,16 @@ public class MyGameGUI{
 				JSONObject ttt = score.getJSONObject("GameServer");
 				scoreInt = ttt.getInt("grade");
 
-				String countDown = "Time: " + t/1000+"."+t%1000;			
-				double tmp1=xMax-xMin;
-				double tmp2=yMax-yMin;
-				
+				String countDown = "Time: " + t/1000+"." + t%1000;
+				String scoreStr = "Score: " + scoreInt;
+				double tmp1 = xMax-xMin;
+				double tmp2 = yMax-yMin;
+
 				StdDraw.setPenRadius(0.05);
 				StdDraw.setPenColor(Color.BLACK);
-				StdDraw.text(xMin+tmp1/2 , yMin+tmp2/1.1, countDown);
-				
+				StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2/0.95, countDown);
+				StdDraw.text(xMin+tmp1/1.05 , yMin+tmp2, scoreStr);
+
 			}catch (Exception e) {
 				System.out.println("Failed to print score");
 			}
@@ -165,7 +167,7 @@ public class MyGameGUI{
 		}
 	}
 
-	
+
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
@@ -296,9 +298,10 @@ public class MyGameGUI{
 	}
 
 	private void setPageSize() {
+		double plus = 0.0015;
 		StdDraw.setCanvasSize(1200 , 600 );
-		StdDraw.setXscale(xMin, xMax);
-		StdDraw.setYscale(yMin, yMax);
+		StdDraw.setXscale(xMin - plus, xMax + plus);
+		StdDraw.setYscale(yMin - plus, yMax + plus);
 	}
 
 	/*
@@ -309,7 +312,7 @@ public class MyGameGUI{
 		g = new OOP_DGraph();
 	}
 
-	
+
 	public static void drawRobot(game_service game) {
 		List<String> log = game.move();
 		if(log!=null) {
