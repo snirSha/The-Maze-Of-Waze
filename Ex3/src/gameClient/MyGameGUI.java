@@ -8,7 +8,6 @@ import oop_dataStructure.oop_node_data;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JLabel;
@@ -43,14 +42,6 @@ public class MyGameGUI{
 	 */
 	public MyGameGUI() {
 		g = new OOP_DGraph();
-		int s = -1;
-		while(s == -1) {
-			s = pickScenario();
-			if(s == -1) 
-				JOptionPane.showMessageDialog(null, "choose a valid scenario");
-			else if (s == -2) return;
-		}
-		runGameGUI(s);
 	}
 
 	/*
@@ -70,7 +61,7 @@ public class MyGameGUI{
 	}
 
 
-	private int pickScenario() {
+	public int pickScenario() {
 		JTextField SPDestField = new JTextField(5);
 		JPanel SPEdgePanel = new JPanel();
 
@@ -95,28 +86,32 @@ public class MyGameGUI{
 		else return -2; //error happened or choose to cancel the game
 		return -2;
 	}
+	
+	public void manualGameManagement() {
+		int s = -1;
+		while(s == -1) {
+			s = pickScenario();
+			if(s == -1) 
+				JOptionPane.showMessageDialog(null, "choose a valid scenario");
+			else if (s == -2) return;
+		}
+		game_service game=startScenario(s);
+		runManualScenario(game);
+		displayFinalScore(game);
+	}
 
-
-	private void runGameGUI(int s) {
+	public game_service startScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.g.init(g);
 		drawDGraph();
-
 		String info = game.toString();
 		JSONObject line;
 		try {
 			line = new JSONObject(info);
 			JSONObject ttt = line.getJSONObject("GameServer");
 			int rs = ttt.getInt("robots");
-			System.out.println(info);
-			System.out.println(g);
-			// the list of fruits should be considered in your solution
-			Iterator<String> f_iter = game.getFruits().iterator();
-			while(f_iter.hasNext()) {
-				System.out.println(f_iter.next());
-			}	
-			int src_node = 0;  // arbitrary node, you should start at one of the fruits
+			int src_node = 0;  
 			for(int a = 0;a<rs;a++) {
 				game.addRobot(src_node+a);
 			}
@@ -124,20 +119,27 @@ public class MyGameGUI{
 		catch (JSONException e) {
 			e.printStackTrace();
 		}
+		return game;
+	}
+	
+	private void runManualScenario(game_service game) {
+		int x=0;//We in MyGameGUI (manual game)
 		game.startGame();
-		int scoreInt = 0;
 		while(game.isRunning()) {
-
 			StdDraw.enableDoubleBuffering();
 
 			refreshDraw();
 			MyGameGUI.drawElements(game);
 			MyGameGUI.drawRobot(game);
-			SimpleGameClient.moveRobots(game, this.g);
+			SimpleGameClient.moveRobots(game, this.g,x);
 			printScore(game);
 			
 			StdDraw.show();
 		}
+	}
+	
+	public void displayFinalScore(game_service game){
+		int scoreInt = 0;
 		try {
 			String results = game.toString();
 			System.out.println("Game Over: "+results);
@@ -147,8 +149,6 @@ public class MyGameGUI{
 			scoreInt = ttt.getInt("grade");
 			String endGame="Youre score is: "+scoreInt;
 			
-			
-			
 			JOptionPane.showMessageDialog(null, endGame);
 		}
 		catch (Exception e) {
@@ -157,7 +157,7 @@ public class MyGameGUI{
 	}
 
 
-	private void printScore(game_service game) {
+	public void printScore(game_service game) {
 		String results = game.toString();
 		long t = game.timeToEnd();
 		try {
@@ -359,7 +359,7 @@ public class MyGameGUI{
 			try {
 				JSONObject line = new JSONObject(fruit_json);
 				JSONObject ttt = line.getJSONObject("Fruit");
-				double value = ttt.getDouble("value");
+		//		double value = ttt.getDouble("value");
 				int type = ttt.getInt("type");
 				String pos = ttt.getString("pos");
 				OOP_Point3D posP = new OOP_Point3D(pos);

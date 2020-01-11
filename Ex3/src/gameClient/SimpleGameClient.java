@@ -1,5 +1,6 @@
 package gameClient;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -9,6 +10,7 @@ import org.json.JSONObject;
 
 import Server.Game_Server;
 import Server.game_service;
+import algorithms.Graph_Algo;
 import oop_dataStructure.OOP_DGraph;
 import oop_dataStructure.oop_graph;
 import oop_dataStructure.oop_node_data;
@@ -31,16 +33,20 @@ import oop_utils.OOP_Point3D;
  *
  */
 public class SimpleGameClient {
-	public static final double ourEPS=0.00015;
+	public static final double ourEPS=0.0002;
+	public static final double minEPS=0.00001;
 	
 	public static void main(String[] a) {
-		MyGameGUI mgg = new MyGameGUI();
+//		MyGameGUI mgg = new MyGameGUI();//manual game
+//		mgg.manualGameManagement();
+		
+		AutomaticGame ag=new AutomaticGame();//automatic
+		ag.automaticGameManagement();
+		
 		
 //		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
 //		List<String> listF = game.getFruits();
 //		test1();
-
-
 
 	}
 
@@ -75,6 +81,7 @@ public class SimpleGameClient {
 		}
 		catch (JSONException e) {e.printStackTrace();}
 		game.startGame();
+		int x=0;
 		// should be a Thread!!!
 		while(game.isRunning()) {
 			
@@ -82,7 +89,7 @@ public class SimpleGameClient {
 			guiava.refreshDraw();
 			MyGameGUI.drawElements(game);
 			MyGameGUI.drawRobot(game);
-			moveRobots(game, gg);
+			moveRobots(game, gg,x);
 			
 			StdDraw.show();
 		}
@@ -96,7 +103,7 @@ public class SimpleGameClient {
 	 * @param gg
 	 * @param log
 	 */
-	public static void moveRobots(game_service game, oop_graph gg) {
+	public static void moveRobots(game_service game, oop_graph gg,int x) {
 		List<String> log = game.move();
 		if(log!=null) {
 			long t = game.timeToEnd();
@@ -108,9 +115,15 @@ public class SimpleGameClient {
 					int rid = ttt.getInt("id");
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
-
+					
+					
 					if(dest==-1) {	
-						dest = nextNode(gg, src);
+						if(x==0) {//from MyGameGUI
+							dest = nextNode(gg, src);
+						}
+						else {//from Automatic
+							dest = nextNodeAuto(game, gg, src);
+						}
 						game.chooseNextEdge(rid, dest);
 						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
 						System.out.println(ttt);
@@ -137,7 +150,7 @@ public class SimpleGameClient {
 				}
 			}
 		}
-		/*boaz's random walk*/
+//		/boaz's random walk/
 //		Collection<oop_edge_data> ee = g.getE(src);
 //		Iterator<oop_edge_data> itr = ee.iterator();
 //		int s = ee.size();
@@ -147,5 +160,68 @@ public class SimpleGameClient {
 //		ans = itr.next().getDest();
 		return ans;
 	}
+	
+	private static int nextNodeAuto(game_service game, oop_graph g, int src) {//The manual moves
+		int nextNode = getNodeFruit(game, g, src);
+		System.out.println(nextNode);
+		Graph_Algo ga = new Graph_Algo(g);
+		List <oop_node_data> travel = ga.shortestPath(src, nextNode);
+		if (travel != null) {
+			int i = 0;
+			for (oop_node_data oop_node_data : travel) {
 
+				int ans = oop_node_data.getKey();
+				if(ans != src) {
+					return ans;
+				}
+
+			}
+		}
+		return -1;
+
+
+	}
+
+	private static int getNodeFruit(game_service game, oop_graph g, int src) {
+		int ans = -1;
+		List<String> eStrList = new ArrayList<>();
+		eStrList = game.getFruits();
+		for(int i=0;i<eStrList.size();i++) {
+			String fruit_json = eStrList.get(i);
+			try {
+				JSONObject line = new JSONObject(fruit_json);
+				JSONObject ttt = line.getJSONObject("Fruit");
+				double value = ttt.getDouble("value");
+				int type = ttt.getInt("type");
+				String pos = ttt.getString("pos");
+				OOP_Point3D posOfFruit = new OOP_Point3D(pos);
+
+				for(oop_node_data ni: g.getV()) {
+					for(oop_node_data nj: g.getV()) {
+						OOP_Point3D niP = ni.getLocation();
+						OOP_Point3D njP = nj.getLocation();
+						if(Math.abs(posOfFruit.distance2D(niP) + posOfFruit.distance2D(njP) - niP.distance2D(njP)) <= minEPS) {
+							int nextMin = Math.min(ni.getKey(), nj.getKey());
+							int nextMax = Math.max(ni.getKey(), nj.getKey());
+							if(type == 1) {
+								if(nextMin != src) {
+									return nextMin;
+								}else return nextMax;
+							}
+							else {
+								if(nextMax != src) {
+									return nextMax;
+								}else return nextMin;
+							}
+						}
+					}
+				}
+			} 
+			catch (JSONException e) {
+				e.printStackTrace();
+				return ans;
+			}
+		}
+		return ans;
+	}
 }
