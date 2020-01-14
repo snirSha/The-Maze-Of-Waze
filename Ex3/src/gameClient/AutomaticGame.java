@@ -2,7 +2,7 @@ package gameClient;
 
 import javax.swing.JOptionPane;
 import Server.game_service;
-import oop_dataStructure.OOP_DGraph;
+import dataStructure.DGraph;
 
 public class AutomaticGame {
 	MyGameGUI mgg;
@@ -14,7 +14,7 @@ public class AutomaticGame {
 	
 	public AutomaticGame(){
 		mgg=new MyGameGUI();
-		mgg.g = new OOP_DGraph();
+		mgg.g = new DGraph();
 	}
 	
 
@@ -27,6 +27,7 @@ public class AutomaticGame {
 			else if (s == -2) return;
 		}
 		game_service game=mgg.startScenario(s);
+		
 		runAutomaticScenario(game);
 		mgg.displayFinalScore(game);
 	}

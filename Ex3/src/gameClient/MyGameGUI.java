@@ -1,10 +1,5 @@
 package gameClient;
 
-import oop_elements.OOP_NodeData;
-
-import oop_dataStructure.oop_edge_data;
-import oop_dataStructure.oop_graph;
-import oop_dataStructure.oop_node_data;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +15,11 @@ import org.json.JSONObject;
 
 import Server.Game_Server;
 import Server.game_service;
-import oop_dataStructure.OOP_DGraph;
+import dataStructure.DGraph;
+import dataStructure.Node;
+import dataStructure.edge_data;
+import dataStructure.graph;
+import dataStructure.node_data;
 import oop_utils.OOP_Point3D;
 /*
  * This class draw graphs using stdDraw
@@ -29,7 +28,7 @@ import oop_utils.OOP_Point3D;
  */ 
 public class MyGameGUI{
 
-	public OOP_DGraph g;
+	public DGraph g;
 	final double xMax = 35.216;
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
@@ -41,7 +40,7 @@ public class MyGameGUI{
 	 * Default constructor
 	 */
 	public MyGameGUI() {
-		g = new OOP_DGraph();
+		g = new DGraph();
 	}
 
 	/*
@@ -55,8 +54,8 @@ public class MyGameGUI{
 	/*
 	 * Copy constructor using the init function from Graph_Algo class
 	 */
-	public MyGameGUI(oop_graph gg) {	
-		g=(OOP_DGraph)gg;
+	public MyGameGUI(graph gg) {	
+		g=(DGraph)gg;
 		drawDGraph();
 	}
 
@@ -123,7 +122,7 @@ public class MyGameGUI{
 	}
 	
 	private void runManualScenario(game_service game) {
-		int x=0;//We in MyGameGUI (manual game)
+		int x = 0;//We in MyGameGUI (manual game)
 		game.startGame();
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
@@ -184,7 +183,7 @@ public class MyGameGUI{
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
 	 */
-	public void addNode(OOP_NodeData a) {
+	public void addNode(Node a) {
 		this.g.addNode(a);
 	}
 
@@ -196,9 +195,9 @@ public class MyGameGUI{
 	 */
 	public void drawNodes() {
 		try {
-			Collection<oop_node_data> n=g.getV();
+			Collection<node_data> n=g.getV();
 			if(n != null && n.size() > 0) {
-				for (oop_node_data a:n) {
+				for (node_data a:n) {
 					double x=a.getLocation().x();
 					double y=a.getLocation().y();
 					StdDraw.setPenRadius(0.05);
@@ -228,12 +227,12 @@ public class MyGameGUI{
 	 */
 	public void drawEdges() {
 		try {
-			Collection<oop_node_data> allNodes=g.getV();
+			Collection<node_data> allNodes=g.getV();
 			if(allNodes != null && allNodes.size() > 0) {
-				for(oop_node_data n:allNodes) {
-					Collection<oop_edge_data> allEdgesOfNode=g.getE(n.getKey());
+				for(node_data n:allNodes) {
+					Collection<edge_data> allEdgesOfNode=g.getE(n.getKey());
 					if(allEdgesOfNode != null && allEdgesOfNode.size() > 0) {
-						for(oop_edge_data edges:allEdgesOfNode) {
+						for(edge_data edges:allEdgesOfNode) {
 							double Sx = g.getNode(edges.getSrc()).getLocation().x();
 							double Sy = g.getNode(edges.getSrc()).getLocation().y();
 							double Dx = g.getNode(edges.getDest()).getLocation().x();
@@ -321,7 +320,7 @@ public class MyGameGUI{
 	 */
 	public void deleteGraph() {
 		StdDraw.clear();
-		g = new OOP_DGraph();
+		g = new DGraph();
 	}
 
 
@@ -337,12 +336,12 @@ public class MyGameGUI{
 					String pos = ttt.getString("pos");
 					OOP_Point3D posP = new OOP_Point3D(pos);
 					if(rid == 1) {
-						StdDraw.picture(posP.x(), posP.y(), "robot1.jpg", robotIconSize, robotIconSize);
+						StdDraw.picture(posP.x(), posP.y(), "robot1.png", robotIconSize, robotIconSize);
 					}
 					else if(rid == 2) {
-						StdDraw.picture(posP.x(), posP.y(), "robot2.jpg", robotIconSize, robotIconSize);
+						StdDraw.picture(posP.x(), posP.y(), "robot2.png", robotIconSize, robotIconSize);
 					}
-					else StdDraw.picture(posP.x(), posP.y(), "robot3.jpg", robotIconSize, robotIconSize);
+					else StdDraw.picture(posP.x(), posP.y(), "robot3.png", robotIconSize, robotIconSize);
 					
 				} 
 				catch (JSONException e) {e.printStackTrace();}
@@ -364,9 +363,9 @@ public class MyGameGUI{
 				String pos = ttt.getString("pos");
 				OOP_Point3D posP = new OOP_Point3D(pos);
 				if(type == -1) {
-					StdDraw.picture(posP.x(), posP.y(), "banana.jpg", 0.0007, 0.0007);
+					StdDraw.picture(posP.x(), posP.y(), "banana.png", 0.0007, 0.0007);
 				}else if(type == 1) {
-					StdDraw.picture(posP.x(), posP.y(), "apple.jpg", 0.0007, 0.0007);
+					StdDraw.picture(posP.x(), posP.y(), "apple.png", 0.0007, 0.0007);
 				}
 			} 
 			catch (JSONException e) {e.printStackTrace();}

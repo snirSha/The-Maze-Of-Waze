@@ -3,11 +3,13 @@ package algorithms;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import oop_dataStructure.OOP_DGraph;
-import oop_dataStructure.oop_edge_data;
-import oop_dataStructure.oop_graph;
-import oop_dataStructure.oop_node_data;
-import oop_elements.OOP_NodeData;
+
+import dataStructure.DGraph;
+import dataStructure.Node;
+import dataStructure.edge_data;
+import dataStructure.graph;
+import dataStructure.node_data;
+
 /*
  * The implementation of graph_algorithms interface.
  * Algorithms:
@@ -23,17 +25,18 @@ import oop_elements.OOP_NodeData;
  * @authors Snir and Omer 
  */
 public class Graph_Algo implements graph_algorithms{
-	public OOP_DGraph g;
+	public DGraph g;
+	public static double minEPS = 0.0001;
 
 	/*
 	 * Default constructor
 	 */
 	public Graph_Algo() {
-		this.g = new OOP_DGraph();
+		this.g = new DGraph();
 	}
 	
-	public Graph_Algo(oop_graph g) {
-		this.g = (OOP_DGraph) g;
+	public Graph_Algo(graph g) {
+		this.g = (DGraph) g;
 	}
 
 	/*
@@ -84,8 +87,8 @@ public class Graph_Algo implements graph_algorithms{
 	 * @param a = Parameter that iterate through all the nodes
 	 */ 
 	private void zeroTags() {
-		Collection<oop_node_data> n = g.getV();
-		for(oop_node_data a: n) {
+		Collection<node_data> n = g.getV();
+		for(node_data a: n) {
 			a.setTag(0);
 		}		
 	}
@@ -103,7 +106,7 @@ public class Graph_Algo implements graph_algorithms{
 	public double shortestPathDist(int src, int dst) {
 		zeroTags();
 		maxValueWeight();
-		OOP_NodeData source = (OOP_NodeData)g.getNode(src);
+		Node source = (Node)g.getNode(src);
 		source.setWeight(0);
 		String str="";
 		int areWeInLoop=g.nodeSize();
@@ -130,14 +133,14 @@ public class Graph_Algo implements graph_algorithms{
 	 * @param oldWeight = The old weight 
 	 */
 	public void dijkstra(int src,int dst,String str,int areWeInLoop, int theFirstsrc) {
-		OOP_NodeData runner=(OOP_NodeData) g.getNode(src);
+		Node runner=(Node) g.getNode(src);
 		if(src==theFirstsrc)
 			areWeInLoop--;
 		if((runner.getTag()==1 && dst==src )||(areWeInLoop<0)) {
 			return;
 		}
-		Collection<oop_edge_data> edges=g.getE(src);
-		for(oop_edge_data e:edges) {
+		Collection<edge_data> edges=g.getE(src);
+		for(edge_data e:edges) {
 			double newWeight=runner.getWeight()+e.getWeight();
 			double oldWeight=g.getNode(e.getDest()).getWeight();
 			if(newWeight<oldWeight) {
@@ -155,8 +158,8 @@ public class Graph_Algo implements graph_algorithms{
 	 * @param nodes = A collection of all the nodes in the graph 
 	 */
 	private void maxValueWeight() {
-		Collection<oop_node_data> nodes = g.getV();
-		for(oop_node_data a: nodes)
+		Collection<node_data> nodes = g.getV();
+		for(node_data a: nodes)
 			a.setWeight(Double.MAX_VALUE);
 	}
 
@@ -177,25 +180,25 @@ public class Graph_Algo implements graph_algorithms{
 	 * @return a list of nodes in the shortest path between source node and destination node
 	 */
 	@Override
-	public List<oop_node_data> shortestPath(int src, int dest) {
+	public List<node_data> shortestPath(int src, int dest) {
 		String str="";
 		int k;
 		zeroTags();
 		maxValueWeight();
-		OOP_NodeData source = (OOP_NodeData)g.getNode(src);
+		Node source = (Node)g.getNode(src);
 		source.setWeight(0);
-		int areWeInLoop=g.nodeSize();
+		int areWeInLoop = g.nodeSize();
 
-		ArrayList<oop_node_data> arr=new ArrayList<>();
+		ArrayList<node_data> arr=new ArrayList<>();
 		dijkstra(src,dest,str,areWeInLoop,src);
-		if(g.getNode(dest).getWeight()==shortestPathDist(src,dest)) {
-
+		if(Math.abs(g.getNode(dest).getWeight() - shortestPathDist(src,dest)) <= minEPS) {
+		
 			String ans =g.getNode(dest).getInfo();
-			ans=ans.substring(1);
+			ans = ans.substring(1);
 			String[] strArray=ans.split(",");
 			for (int i = 0; i < strArray.length; i++) {
-				k=Integer.parseInt(strArray[i]);
-				oop_node_data tmp=g.getNode(k);
+				k = Integer.parseInt(strArray[i]);
+				node_data tmp=g.getNode(k);
 				arr.add(tmp);
 			}
 			arr.add(g.getNode(dest));
@@ -216,9 +219,9 @@ public class Graph_Algo implements graph_algorithms{
 	 *@param checkTargetsInAnswer = Check if all the targets's nodes are in the answer List
 	 */
 	@Override
-	public List<oop_node_data> TSP(List<Integer> targets) {
+	public List<node_data> TSP(List<Integer> targets) {
 		if((!targets.isEmpty()) && (targets.size()<=g.nodeSize()) && (checkTargetsInGraph(targets))) {
-			List<oop_node_data> array=new ArrayList<>();
+			List<node_data> array=new ArrayList<>();
 			if(targets.size()==1) {
 				array.add(g.getNode(targets.get(0)));
 				return array;
@@ -232,7 +235,7 @@ public class Graph_Algo implements graph_algorithms{
 			}
 			if(targets.size()==2)
 				return array;
-			List<oop_node_data> tmp = new ArrayList<>();
+			List<node_data> tmp = new ArrayList<>();
 			for (int i = 1; i < targets.size()-1; i++) {
 				int j=i+1;
 				if(shortestPath(targets.get(i),targets.get(j))!=null) {
@@ -266,10 +269,10 @@ public class Graph_Algo implements graph_algorithms{
 	 * @param counter = counts the nodes that are similar
 	 * @return if all the targets's nodes are in the answer list
 	 */
-	private boolean checkTargetsInAnswer(List<Integer> targets,List<oop_node_data> array) {
+	private boolean checkTargetsInAnswer(List<Integer> targets,List<node_data> array) {
 		int counter = 0;
 		for(Integer i:targets) {
-			for(oop_node_data n:array) {
+			for(node_data n:array) {
 				if(i==n.getKey()) {
 					counter++;
 					break;
@@ -285,7 +288,7 @@ public class Graph_Algo implements graph_algorithms{
 	 * @return if all the targets's nodes are in the graph
 	 */
 	private boolean checkTargetsInGraph(List<Integer> targets) {
-		Collection<oop_node_data> nod=g.getV();
+		Collection<node_data> nod=g.getV();
 		for(int a=0;a<targets.size();a++) {//check if there is a integer that repeats itself in targets
 			for(int b=0;b<targets.size();b++) {
 				if(a!=b&&targets.get(a)==targets.get(b))
@@ -294,7 +297,7 @@ public class Graph_Algo implements graph_algorithms{
 		}
 		int count = 0;
 		for(int i:targets) {
-			for(oop_node_data n:nod) {
+			for(node_data n:nod) {
 				if(i == n.getKey())
 					count++;
 			}
