@@ -30,6 +30,7 @@ public class DGraph implements graph, Serializable {
 	private HashMap<Integer, node_data> nodes;//1,a    2,b    3,c   4,d    |    data,Node
 	private int counterEdges;
 	private int changes;//every change in the graph the counter goes up by one
+	
 
 	/*
 	 * Default constructor
@@ -69,13 +70,13 @@ public class DGraph implements graph, Serializable {
 			if(s.getEdgesOf().get(dest)!=null)
 				return s.getEdgesOf().get(dest);
 		}
-		System.out.println("src ot dst doesnt exist");
+		//System.out.println("src ot dst doesnt exist");
 		return null;
 	}
 
 	/*
 	 * Add a vertex to the HashMap (if it not exist)
-	 * @param no = casting from node_data to Node
+	 * @param no = casting from node_data to Node11
 	 */
 	public void addNode(node_data n) {
 		Node no = (Node)n;

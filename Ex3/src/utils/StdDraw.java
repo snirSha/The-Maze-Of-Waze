@@ -69,7 +69,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
-import oop_utils.OOP_Point3D;
 import gameClient.MyGameGUI;
 
 
@@ -479,7 +478,8 @@ import gameClient.MyGameGUI;
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
 	public static MyGameGUI gg;
-	public static OOP_Point3D pointOfMouse;
+	public static Point3D pointOfMouse;
+	public static char keyPress;
 	
 	public static void setGui(MyGameGUI g) {
 		gg = g;
@@ -2088,7 +2088,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 			mouseX = StdDraw.userX(e.getX());
 			mouseY = StdDraw.userY(e.getY());
 			isMousePressed = true;
-			pointOfMouse=new OOP_Point3D(mouseX,mouseY);
+			pointOfMouse = new Point3D(mouseX,mouseY);
 			//System.out.println("********************************"+StdDraw.isMousePressed());
 	}
 
@@ -2196,9 +2196,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
-		synchronized (keyLock) {
-			keysDown.add(e.getKeyCode());
-		}
+		keysDown.add(e.getKeyCode());
+		keyPress = e.getKeyChar();
 	}
 
 	/**

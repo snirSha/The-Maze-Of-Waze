@@ -30,15 +30,18 @@ public class Node implements node_data, Serializable{
 	private String _info;
 	private int _tag;
 	
+	private static int count = 0;
+	
 	/*
 	 * Default constructor 
 	 */
 	public Node() {
-		this._data=0;
-		this._p=new Point3D(0, 0);
+		this._data=count;
+		this._p = new Point3D(0, 0);
 		this._weight=0;
 		this._tag=0;
 		this._info="";
+		count++;
 	}
 	
 	/*
@@ -46,7 +49,7 @@ public class Node implements node_data, Serializable{
 	 */
 	public Node(int d,Point3D p, double w, String s, int t) {
 		this._data = d;
-		this._p=new Point3D(p);
+		this._p = new Point3D(p);
 		this._weight=w;
 		this._info=s;
 		this._tag=t;
@@ -80,7 +83,7 @@ public class Node implements node_data, Serializable{
 	 * This function add a Edge to the HashMap
 	 */
 	public void addEdge(Edge e) {
-		if(this.getKey()==e.getSrc()) {
+		if(this.getKey() == e.getSrc()) {
 			_edges.put(e.getDest(), e);
 		}
 		else

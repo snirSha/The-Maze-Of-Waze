@@ -38,6 +38,9 @@ public class MyGameGUI{
 	final double yMax = 32.11;
 	final double yMin = 32.1;
 	final static double robotIconSize = .0007;
+	final static double ourEPS = 0.0002;
+	final static double minEPS = 0.00001;
+	static int rid = -1;
 
 	HashMap<Integer, Robot> robots;
 	HashMap<Point3D, Fruit> fruits;
