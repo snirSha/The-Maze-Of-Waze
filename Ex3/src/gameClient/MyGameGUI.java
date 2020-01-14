@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -37,7 +38,7 @@ public class MyGameGUI{
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
 	final double yMin = 32.1;
-	final static double robotIconSize = .0007;
+	final static double robotIconSize = .0008;
 	final static double ourEPS = 0.0002;
 	final static double minEPS = 0.00001;
 	static int rid = -1;
@@ -54,7 +55,7 @@ public class MyGameGUI{
 		this.robots = new HashMap<>();
 		this.fruits = new HashMap<>();
 		GameManagement();
-		
+
 	}
 
 	/*
@@ -65,7 +66,7 @@ public class MyGameGUI{
 		this.ga = new Graph_Algo();
 		ga.init(g);
 	}
-/*
+	/*
 	private void play() {
 		int scenario_num = -1;
 		while(scenario_num == -1) {
@@ -74,7 +75,7 @@ public class MyGameGUI{
 			else if (scenario_num == -2) return;
 		}
 		game = Game_Server.getServer(scenario_num); // you have [0,23] games
-		
+
 		String jsonSTR = game.getGraph();
 		//this.ga.g = new DGraph();
 		this.ga.g.init(jsonSTR);
@@ -82,7 +83,7 @@ public class MyGameGUI{
 		game.startGame();
 		System.out.println("asd");
 		while(game.isRunning()) {
-			
+
 			StdDraw.enableDoubleBuffering();
 			refreshDraw();
 			drawFruits();
@@ -91,10 +92,16 @@ public class MyGameGUI{
 			StdDraw.show();
 		}
 	}
-	*/
-	
+	 */
+
 	public void GameManagement() {
-		InstructionForManual();
+		int w = manualOrAuto(); //0 for manual, 1 for auto
+		if(w == 0) {
+			InstructionForManual();
+		}else if(w == -1) {
+			return;
+		}
+		
 		int s = -1;
 		while(s == -1) {
 			s = pickScenario();
@@ -108,26 +115,39 @@ public class MyGameGUI{
 		runManualScenario(game);
 		displayFinalScore(game);
 	}
+	private int manualOrAuto() {
+		Object[] options = {"Manual",
+		"Auto"};
+		int n = JOptionPane.showOptionDialog(null,
+				"How would you like to play?",
+				"Choose way of game",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null,     //do not use a custom Icon
+				options,  //the titles of buttons
+				options[0]); //default button title
+		return n;
+	}
 
 	private void InstructionForManual() {
 		JPanel Instructions = new JPanel();
-		JLabel info = new JLabel("<html>Hello player, in this manual game you can choose from 24 maps.<br>"
+		JLabel info = new JLabel("<html>Hello player, in this manual game you can choose from 24 maps (0-23).<br>"
 				+ "Some maps have one robot and some have more than one.<br>"
-				+ "The purpose of th erobot, tou, is to eat as many fruits as possible.<br><br>" 
-				+ "Banana-Bananas can be taken from high node to low node (number).<br>"
-				+ "Apple-Apples can be taken from low node to high node(number).<br><br>"
-				+ "Manual control of a single robot will be performed by right-clicking on the<br>"
+				+ "The purpose of the robot, is to eat as many fruits as possible.<br><br>" 
+				+ "Banana - Bananas can be taken from high node to low node (number).<br>"
+				+ "Apple - Apples can be taken from low node to high node(number).<br><br>"
+				+ "Manual control of a single robot will be performed by left-clicking on the<br>"
 				+ "neighboring node of the robot."
 				+ "In the game where there is more than one robot, control is done by clicking the<br>"
-				+ "key number of the robot in the keyboard, and than click on the neighoring nodes"
-				+ "to which tou want to go.<br><br>"
-				+  "Have a fun game!!!");
-		
+				+ "key number of the robot on the keyboard, and than click on the neighboring nodes"
+				+ "you wish to go.<br><br>"
+				+ "Good luck!");
+
 		JOptionPane.showInternalConfirmDialog(Instructions, 
 				info, null, JOptionPane.DEFAULT_OPTION);
-		
+
 	}
-	
+
 	public game_service startScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
@@ -149,9 +169,8 @@ public class MyGameGUI{
 		}
 		return game;
 	}
-	
+
 	private void runManualScenario(game_service game) {
-		int x = 0;//We in MyGameGUI (manual game)
 		game.startGame();
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
@@ -162,19 +181,17 @@ public class MyGameGUI{
 			moveRobots(game);
 			refreshElements(game);
 			printScore(game);
-			
+
 			StdDraw.show();
 		}
 	}
-	
+
 	void refreshElements(game_service game) {
-		fruits.clear();
 		initFruits(game);
-		robots.clear();
 		initRobots(game);
 	}
-	
-	
+
+
 	void moveRobots(game_service game) {
 		List<String> log = game.move();
 		if(log != null) {
@@ -187,21 +204,24 @@ public class MyGameGUI{
 					int rid = ttt.getInt("id");
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
-				
+
 					if(dest == -1) {
 						/* snir's shit */
-						if(game.getRobots().size()>1) {
-							rid=chooseRid();
-							if(rid==-1)
+						if(game.getRobots().size() > 1) {
+							rid = chooseRid();
+							if(rid == -1)
 								return;
-							src=robots.get(rid).getNode().getKey();
+							Robot r = robots.get(rid);
+							if(r.getNode() != null) {
+								src = robots.get(rid).getNode().getKey();
+							}
 						}
-						
-						
 						dest = nextNodeManual(ga.g,src);
 						////////////////////
-						
+
 						game.chooseNextEdge(rid, dest);
+						Robot r = robots.get(rid);
+						r.setNode(ga.g.getNode(dest));
 						System.out.println("Turn to node: " + dest + "  time to end:" + (t / 1000));
 						System.out.println(ttt);
 					}
@@ -219,9 +239,9 @@ public class MyGameGUI{
 	/*snir's shit*/
 	private static int nextNodeManual(graph g, int src) {//The manual moves
 		int ans = -1;
-		if(StdDraw.pointOfMouse!=null) {
+		if(StdDraw.pointOfMouse != null) {
 			Point3D mouseClick = new Point3D(StdDraw.pointOfMouse);
-			for (edge_data e:g.getE(src)) {
+			for (edge_data e: g.getE(src)) {
 				if(mouseClick.distance2D(g.getNode(e.getDest()).getLocation()) < ourEPS)
 					ans = e.getDest();
 			}
@@ -244,10 +264,16 @@ public class MyGameGUI{
 		case '2':
 			rid = 2;
 			break;
+		case '3':
+			rid = 3;
+			break;
+		case '4':
+			rid = 4;
+			break;
 
 		default:
 		}
-		
+
 		System.out.println(rid);
 		return rid;
 	}
@@ -451,15 +477,25 @@ public class MyGameGUI{
 			int rid = robot.getId();
 			Point3D pos = new Point3D(robot.getLocation());
 			String file = "";
-			if(rid == 1) {
+			if(rid == 0) {
+				file = "robot0.png";
+			}
+			else if(rid == 1) {
 				file = "robot1.png";
 			}
 			else if(rid == 2) {
 				file = "robot2.png";
 			}
-			else file = "robot3.png";
+			else if(rid == 3) {
+				file = "robot3.png";
+			}
+			else file = "robot4.png";
+			try {
+				StdDraw.picture(pos.x(), pos.y(), file, robotIconSize, robotIconSize);
+			}catch (Exception e) {
+				StdDraw.circle(pos.x(), pos.y(), robotIconSize * 0.3);
+			}
 
-			StdDraw.picture(pos.x(), pos.y(), file, robotIconSize, robotIconSize);
 		}
 	}
 
@@ -508,7 +544,7 @@ public class MyGameGUI{
 			JSONObject score = new JSONObject(results);
 			JSONObject ttt = score.getJSONObject("GameServer");
 			scoreInt = ttt.getInt("grade");
-			String endGame="Youre score is: "+scoreInt;
+			String endGame = "Youre score is: " + scoreInt;
 
 			JOptionPane.showMessageDialog(null, endGame);
 		}
@@ -542,6 +578,115 @@ public class MyGameGUI{
 		}
 	}
 
+
+	private void moveRobotsAuto(game_service game) {
+		List<String> log = game.move();
+		if(log!=null)
+		{
+			long t = game.timeToEnd();
+			//int dest = nextNodeManual(game);
+			ArrayList<Robot> botsToMove = new ArrayList<Robot>();
+			ArrayList<Fruit> fruitsWithoutBots = new ArrayList<Fruit>();
+			Set<Integer> botS = robots.keySet();
+			for (Integer integer : botS) {
+				Robot b = robots.get(integer);
+				if(b.getTrack() == null)
+				{
+					botsToMove.add(b);
+				}
+			}
+			Set<Point3D> fruitSet = fruits.keySet();
+			for (Point3D point3d : fruitSet) {
+				Fruit currF = fruits.get(point3d);
+				if(!currF.isTaken())
+				{
+					fruitsWithoutBots.add(currF);
+				}
+			}
+			Graph_Algo GA = new Graph_Algo(ga.g);
+			while(!botsToMove.isEmpty() && !fruitsWithoutBots.isEmpty())
+			{
+				int srcIndex = 0;
+				Robot SrcFrom=null;
+				Fruit DestTo=null;
+				int destIndex =0;
+				double dist = Integer.MAX_VALUE;
+				for(int i=0;i< botsToMove.size();i++)
+				{
+					//double distTemp = Integer.MAX_VALUE;
+					for(int j=0;j<fruitsWithoutBots.size();j++)
+					{
+						if(GA.shortestPathDist(botsToMove.get(i).getNode().getKey(), fruitsWithoutBots.get(j).getEdge().getSrc()) + fruitsWithoutBots.get(j).getEdge().getWeight() < dist)
+						{
+							srcIndex = i;
+							destIndex = j;
+							SrcFrom = botsToMove.get(i);
+							DestTo = fruitsWithoutBots.get(j);
+							dist = GA.shortestPathDist(botsToMove.get(i).getNode().getKey(), fruitsWithoutBots.get(j).getEdge().getSrc()) + fruitsWithoutBots.get(j).getEdge().getWeight();
+						}
+					}
+				}
+				List<node_data> path = GA.shortestPath(SrcFrom.getNode().getKey(), DestTo.getEdge().getSrc());
+				path.add(ga.g.getNode(DestTo.getEdge().getDest()));
+				path.remove(0);
+				SrcFrom.setTrack(path);
+				botsToMove.remove(srcIndex);
+				DestTo.setTaken(true);
+				fruitsWithoutBots.remove(destIndex);
+			}
+
+
+
+			for (Integer integer : botS) {
+				Robot b = robots.get(integer);
+				if(b.getTrack() != null)
+				{
+
+					if(b.getNode().getLocation().distance2D(b.getLocation())<= 0.00001)
+					{
+
+						//System.out.println(botidtoMove);
+						//System.out.println(b.getPos().toString());
+						List<node_data> path = b.getTrack();
+						//System.out.println(b.getId() + " " +path.get(0).getKey());
+						game.chooseNextEdge(b.getId(), path.get(0).getKey());
+						b.setNode(path.get(0));
+						path.remove(0);
+						if(path.size() == 0)
+						{
+							b.setTrack(null);
+						}
+						game.move();
+					}
+				}
+			}
+
+
+		}
+		Iterator<String> f_iter = game.getFruits().iterator();
+		fruits.clear();
+		if(f_iter.hasNext())
+		{
+			while(f_iter.hasNext())
+			{
+				String json = f_iter.next();
+				Fruit n = new Fruit(ga.g);
+				n.initJson(json);
+				//System.out.println(n.getEdge().getSrc() + " " + n.getEdge().getDest());
+				fruits.put(n.getP(),n);
+			}
+
+		}
+		//bots.clear();
+		List<String> botsStr = game.getRobots();
+		for (String string : botsStr) {
+			Robot ber = new Robot();
+			ber.setG(ga.g);
+			ber.initJson(string);
+
+			robots.put(ber.getId(), ber);
+		}
+	}
 
 
 }
