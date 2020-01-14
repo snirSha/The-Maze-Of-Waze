@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import utils.Point3D;
 import utils.StdDraw;
 
 
@@ -274,5 +278,31 @@ public class DGraph implements graph, Serializable {
 			}
 		}
 	}
+
+	public void init(final String jsonSTR) {
+        try {
+            //Node.resetCount();
+            //this.init();
+            //this.e_count = 0;
+            final JSONObject graph = new JSONObject(jsonSTR);
+            final JSONArray nodes = graph.getJSONArray("Nodes");
+            final JSONArray edges = graph.getJSONArray("Edges");
+            for (int i = 0; i < nodes.length(); ++i) {
+                final int id = nodes.getJSONObject(i).getInt("id");
+                final String pos = nodes.getJSONObject(i).getString("pos");
+                final Point3D p = new Point3D(pos);
+                this.addNode(new Node(id, p));
+            }
+            for (int i = 0; i < edges.length(); ++i) {
+                final int s = edges.getJSONObject(i).getInt("src");
+                final int d = edges.getJSONObject(i).getInt("dest");
+                final double w = edges.getJSONObject(i).getDouble("w");
+                this.connect(s, d, w);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
