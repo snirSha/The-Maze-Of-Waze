@@ -168,8 +168,10 @@ public class MyGameGUI{
 					int src = ttt.getInt("src");
 					int dest = ttt.getInt("dest");
 				
-					if(dest == -1) {	
-						dest = nextNode(src);
+					if(dest == -1) {
+						/* snir's shit */
+						dest = nextNodeManual(ga.g,src);
+						////////////////////
 						game.chooseNextEdge(rid, dest);
 						System.out.println("Turn to node: " + dest + "  time to end:" + (t / 1000));
 						System.out.println(ttt);
@@ -185,15 +187,16 @@ public class MyGameGUI{
 	 * @param src
 	 * @return
 	 */
-	private int nextNode(int src) {
+	/*snir's shit*/
+	private static int nextNodeManual(graph g, int src) {//The manual moves
 		int ans = -1;
-		Collection<edge_data> ee = ga.g.getE(src);
-		Iterator<edge_data> itr = ee.iterator();
-		int s = ee.size();
-		int r = (int)(Math.random()*s);
-		int i=0;
-		while(i<r) {itr.next();i++;}
-		ans = itr.next().getDest();
+		if(StdDraw.pointOfMouse!=null) {
+			Point3D mouseClick = new Point3D(StdDraw.pointOfMouse);
+			for (edge_data e:g.getE(src)) {
+				if(mouseClick.distance2D(g.getNode(e.getDest()).getLocation()) < ourEPS)
+					ans = e.getDest();
+			}
+		}
 		return ans;
 	}
 
