@@ -170,8 +170,17 @@ public class MyGameGUI{
 				
 					if(dest == -1) {
 						/* snir's shit */
+						if(game.getRobots().size()>1) {
+							rid=chooseRid();
+							if(rid==-1)
+								return;
+							src=robots.get(rid).getNode().getKey();
+						}
+						
+						
 						dest = nextNodeManual(ga.g,src);
 						////////////////////
+						
 						game.chooseNextEdge(rid, dest);
 						System.out.println("Turn to node: " + dest + "  time to end:" + (t / 1000));
 						System.out.println(ttt);
@@ -200,7 +209,28 @@ public class MyGameGUI{
 		return ans;
 	}
 
+	private int chooseRid() {
+		char p = StdDraw.keyPress;
+		int rid = -1;
+		switch (p) {
+		case '0':
+			rid = 0;
+			break;
+		case '1':
 
+			rid = 1;
+
+			break;
+		case '2':
+			rid = 2;
+			break;
+
+		default:
+		}
+		
+		System.out.println(rid);
+		return rid;
+	}
 
 	/*
 	 * Add a node to the drawing using addNode function from DGraph
@@ -439,6 +469,7 @@ public class MyGameGUI{
 		try {
 			for (String json : r_list) {
 				Robot r = new Robot();
+				r.setG(ga.g);
 				r.initJson(json);
 				robots.put(r.getId(),r);
 			}
