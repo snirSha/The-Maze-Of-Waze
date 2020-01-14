@@ -94,6 +94,7 @@ public class MyGameGUI{
 	*/
 	
 	public void GameManagement() {
+		InstructionForManual();
 		int s = -1;
 		while(s == -1) {
 			s = pickScenario();
@@ -108,6 +109,25 @@ public class MyGameGUI{
 		displayFinalScore(game);
 	}
 
+	private void InstructionForManual() {
+		JPanel Instructions = new JPanel();
+		JLabel info = new JLabel("<html>Hello player, in this manual game you can choose from 24 maps.<br>"
+				+ "Some maps have one robot and some have more than one.<br>"
+				+ "The purpose of th erobot, tou, is to eat as many fruits as possible.<br><br>" 
+				+ "Banana-Bananas can be taken from high node to low node (number).<br>"
+				+ "Apple-Apples can be taken from low node to high node(number).<br><br>"
+				+ "Manual control of a single robot will be performed by right-clicking on the<br>"
+				+ "neighboring node of the robot."
+				+ "In the game where there is more than one robot, control is done by clicking the<br>"
+				+ "key number of the robot in the keyboard, and than click on the neighoring nodes"
+				+ "to which tou want to go.<br><br>"
+				+  "Have a fun game!!!");
+		
+		JOptionPane.showInternalConfirmDialog(Instructions, 
+				info, null, JOptionPane.DEFAULT_OPTION);
+		
+	}
+	
 	public game_service startScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
