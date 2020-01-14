@@ -36,7 +36,7 @@ public class SimpleGameClient {
 		
 		
 		MyGameGUI mgg = new MyGameGUI();
-		mgg.GameManagement();
+		//mgg.GameManagement();
 		//test1();
 	}
 		
