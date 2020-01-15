@@ -53,7 +53,7 @@ public class Fruit {
 		catch (JSONException e) {e.printStackTrace();}
 	}
 	
-	private Edge getEdgeFruit() {
+	public Edge getEdgeFruit() {
 		for(node_data ni: g.getV()) {
 			for(node_data nj: g.getV()) {
 				Point3D niP = ni.getLocation();
