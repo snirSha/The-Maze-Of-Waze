@@ -82,6 +82,9 @@ public class Robot {
 	public node_data getNode() {
 		return node;
 	}
+	public int getNodeKey() {
+		return node.getKey();
+	}
 
 	public void setNode(node_data node) {
 		this.node = node;

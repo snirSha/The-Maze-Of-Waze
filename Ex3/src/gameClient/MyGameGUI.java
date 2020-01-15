@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import Server.Game_Server;
 import Server.game_service;
 import algorithms.Graph_Algo;
@@ -67,33 +68,6 @@ public class MyGameGUI{
 		this.ga = new Graph_Algo();
 		ga.init(g);
 	}
-	/*
-	private void play() {
-		int scenario_num = -1;
-		while(scenario_num == -1) {
-			scenario_num = pickScenario();
-			if(scenario_num == -1) JOptionPane.showMessageDialog(null, "choose valid scenario");
-			else if (scenario_num == -2) return;
-		}
-		game = Game_Server.getServer(scenario_num); // you have [0,23] games
-
-		String jsonSTR = game.getGraph();
-		//this.ga.g = new DGraph();
-		this.ga.g.init(jsonSTR);
-		drawDGraph();
-		game.startGame();
-		System.out.println("asd");
-		while(game.isRunning()) {
-
-			StdDraw.enableDoubleBuffering();
-			refreshDraw();
-			drawFruits();
-			drawRobots();
-			moveRobots(game);
-			StdDraw.show();
-		}
-	}
-	 */
 
 	public void GameManagement() {
 		int w = manualOrAuto(); //0 for manual, 1 for auto
@@ -152,57 +126,114 @@ public class MyGameGUI{
 	}
 
 	void moveRobotsAuto(game_service game) {
-		
-		for (int rid = 0; rid < robots.size(); rid++) {
-			Robot r = robots.get(rid);
-			while(r.getTrack() != null && r.getTrack().size() > 0) {
-				if(r.getTrack().size() > 1) {
-					//r.getTrack().remove(0);
-					System.out.println("ad");
-					game.chooseNextEdge(rid, r.getTrack().get(0).getKey());
+
+		List<String> log = game.move();
+		if(log != null)
+		{
+			long t = game.timeToEnd();
+			ArrayList<Robot> botsToMove = new ArrayList<Robot>();
+			ArrayList<Fruit> fruitsWithoutBots = new ArrayList<Fruit>();
+			Set<Integer> botS = robots.keySet();
+			for (Integer integer : botS) {
+				Robot b = robots.get(integer);
+				if(b.getTrack() == null)
+				{
+					botsToMove.add(b);
 				}
-				
-				
-			}r.setTrack(nextNodeAuto(r.getNode().getKey()));
-			r.getTrack().remove(0);
-			
-			
-			
+			}
+			Set<Point3D> fruitSet = fruits.keySet();
+			for (Point3D point3d : fruitSet) {
+				Fruit currF = fruits.get(point3d);
+				if(!currF.isTaken());
+				{
+					fruitsWithoutBots.add(currF);
+				}
+			}
+
+			while(!botsToMove.isEmpty() && !fruitsWithoutBots.isEmpty())
+			{
+				int srcIndex = 0;
+				Robot SrcFrom = null;
+				Fruit DestTo = null;
+				int destIndex = 0;
+				double dist = Integer.MAX_VALUE;
+				for(int i = 0; i < botsToMove.size(); i++)
+				{
+					//double distTemp = Integer.MAX_VALUE;
+					for(int j = 0; j < fruitsWithoutBots.size(); j++)
+					{
+						double tmp = ga.shortestPathDist(botsToMove.get(i).getNodeKey(), fruitsWithoutBots.get(j).getEdge().getSrc()) + fruitsWithoutBots.get(j).getEdge().getWeight();
+						if(tmp < dist)
+						{
+							srcIndex = i;
+							destIndex = j;
+							SrcFrom = botsToMove.get(i);
+							DestTo = fruitsWithoutBots.get(j);
+							dist = tmp;
+						}
+					}
+				}
+				List<node_data> path = ga.shortestPath(SrcFrom.getNodeKey(), DestTo.getEdge().getSrc());
+				path.add(ga.g.getNode(DestTo.getEdge().getDest()));
+				path.remove(0);
+				SrcFrom.setTrack(path);
+				botsToMove.remove(srcIndex);
+				DestTo.setTaken(true);
+				fruitsWithoutBots.remove(destIndex);
+			}
+
+			for (Integer integer : botS) {
+				Robot b = robots.get(integer);
+				if(b.getTrack() != null)
+				{
+					if(b.getNode().getLocation().distance2D(b.getLocation())<= 0.00001)
+					{
+						//System.out.println(botidtoMove);
+						//System.out.println(b.getPos().toString());
+						List<node_data> path = b.getTrack();
+						//System.out.println(b.getId() + " " +path.get(0).getKey());
+						game.chooseNextEdge(b.getId(), path.get(0).getKey());
+						b.setNode(path.get(0));
+						path.remove(0);
+						if(path.size() == 0)
+						{
+							b.setTrack(null);
+						}
+						game.move();
+					}
+				}
+			}
 
 
 		}
-		//		List<String> log = game.move();
-		//		if(log != null) {
-		//			long t = game.timeToEnd();
-		//			for(int i = 0; i < log.size(); i++) {
-		//				String robot_json = log.get(i);
-		//				try {
-		//					JSONObject line = new JSONObject(robot_json);
-		//					JSONObject ttt = line.getJSONObject("Robot");
-		//					int rid = ttt.getInt("id");
-		//					int src = ttt.getInt("src");
-		//					int dest = ttt.getInt("dest");
-		//
-		//					if(dest == -1) {
-		//						List<node_data> destList = nextNodeAuto(src);
-		//						if(destList!=null) {
-		//							for (node_data j : destList) {
-		//								game.chooseNextEdge(rid, j.getKey());
-		//								Robot r = robots.get(rid);
-		//								r.setNode(j);
-		//							}
-		//						}
-		//						
-		//						System.out.println("Turn to node: " + dest + "  time to end:" + (t / 1000));
-		//						System.out.println(ttt);
-		//					}
-		//				} 
-		//				catch (JSONException e) {e.printStackTrace();}
-		//			}
-		//		}
+//		Iterator<String> f_iter = game.getFruits().iterator();
+//		fruits.clear();
+//
+//		while(f_iter.hasNext())
+//		{
+//			String json = f_iter.next();
+//			Fruit n = new Fruit(ga.g);
+//			n.initJson(json);
+//			//System.out.println(n.getEdge().getSrc() + " " + n.getEdge().getDest());
+//			fruits.put(n.getP(),n);
+//		}
+		initFruits(game);
+		initRobots(game);
+
+//		List<String> botsStr = game.getRobots();
+//		for (String string : botsStr) {
+//			Robot r = new Robot();
+//			r.setG(ga.g);
+//			r.initJson(string);
+//
+//			robots.put(r.getId(), r);
+//		}
+
 	}
 
+
 	private List<node_data> nextNodeAuto(int src) {
+		System.out.println("nextNode");
 		Fruit f = new Fruit();
 		double dist = Integer.MAX_VALUE;
 		List <node_data> ans = null;

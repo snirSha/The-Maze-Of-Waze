@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -107,299 +108,294 @@ public class Graph_Algo implements graph_algorithms{
 	 * @function checkAllTags = check if all the node's tag is 1 
 	 * @return true if the graph is strongly connected
 	 */
+	private int amountNodes(node_data n)
+	{
+		int counter=0;
+		ArrayList<node_data> nd = new ArrayList<node_data>();
+		nd.add(n);
+		while(!nd.isEmpty())
+		{
+			node_data temp = nd.get(0);
+			if(temp.getTag()==0)
+			{
+				temp.setTag(1);
+				counter++;
+				nd.remove(0);
+				Collection<edge_data> edge = g.getE(temp.getKey());
+
+				for (edge_data edge_data : edge) {
+					node_data other = g.getNode(edge_data.getDest());
+					if(other.getTag() == 0)
+					{
+						nd.add(0,other);
+					}
+				}
+			}
+			else
+			{
+				nd.remove(0);
+			}
+		}
+		return counter;
+	}
+	// Should be faster then the org algo
 	@Override
-	public boolean isConnected() {
-		if(g.nodeSize()==0)
+	public boolean isConnected()
+	{
+		HashSet<node_data> allreayConnected = new HashSet<node_data>();
+		Collection<node_data> s = g.getV();
+		boolean firstNode = true;
+		node_data firstN=null;
+		boolean ansBool=true;
+		for (node_data node_data : s) {
+			cleanTags();
+			if(firstNode)
+			{
+				firstN=node_data;
+				firstNode= false;
+				int ans = amountNodes(node_data);
+				if(ans != s.size())
+				{
+					return false;
+				}
+			}
+			else
+			{
+				if( !canOthersGeToThis( node_data, firstN, allreayConnected ) )
+				{
+					return false;
+				}
+			}
+		}
+		return ansBool;
+	}
+	/**
+	 * Iterates over all the nodes and checks if there any way to get to the first node
+	 * @param n
+	 * @param first
+	 * @param allreadtconnected
+	 * @return
+	 */
+	private boolean canOthersGeToThis(node_data n,node_data first,HashSet<node_data> allreadtconnected)
+	{
+		if(n.getKey() == first.getKey())
+		{
+			allreadtconnected.add(n);
 			return true;
-		else {
-			int x=getFirstNode();
-			zeroTags();
-			DFS(x,g.nodeSize());			
-			if(!checkAllTags())
-				return false;
-			zeroTags();
-			g.reversedGraph();
-			zeroTags();
-			DFS(x,g.nodeSize());
-
-			boolean ans=true;
-			if(!checkAllTags()) {
-				ans= false; 
+		}
+		ArrayList<node_data> nodesToCheck = new ArrayList<node_data>();
+		nodesToCheck.add(n);
+		while(!nodesToCheck.isEmpty())
+		{
+			node_data currN = nodesToCheck.remove(0);
+			if(currN.getTag() == 0)
+			{
+				currN.setTag(1);
+				Collection<edge_data> edge = g.getE(currN.getKey());
+				for (edge_data edge_data : edge) {
+					node_data dest = g.getNode(edge_data.getDest());
+					if(first.getKey() == edge_data.getDest() || allreadtconnected.contains(dest))
+					{
+						allreadtconnected.add(currN);
+						return true;
+					}
+					else {
+						if(dest.getTag() == 0)
+						{
+							nodesToCheck.add(0,dest);
+						}
+					}
+				}
 			}
-			zeroTags();
-			g.reversedGraph();
-			return ans;
+		}
+		return false;
+	}
+	/**
+	 * Sets tag to 0 on all nodes
+	 */
+	private void cleanTags()
+	{
+		Collection<node_data> s = g.getV();
+		for (node_data node_data : s) {
+			node_data.setTag(0);
 		}
 	}
-
-	/*
-	 * A helper function that check if all tags are 1
-	 * @param nod = A collection of all the nodes in the graph
+	/**
+	 * sets tag to 0 and weight and MAX_VALUE on all nodes
 	 */
-	private boolean checkAllTags() {
-		Collection<node_data> nod=g.getV();
-		for(node_data a:nod) {
-			if(a.getTag()!=1)
-				return false;
+	private void cleanTagsSetweight()
+	{
+		Collection<node_data> s = g.getV();
+		for (node_data node_data : s) {
+			node_data.setTag(0);
+			node_data.setWeight(Integer.MAX_VALUE);
+			node_data.setInfo("");
 		}
-		return true;
 	}
-
-	/*
-	 * A recursive helper that start at first node and find all his neighbors and their neighbors and so on until it gets to any connects node
-	 * @param counter = The number of nodes in the graph
-	 * @param i = The data of the first node
-	 * @param edgesOf = The collection of all the edges that came out of the parameter's node
+	/**
+	 * Dijkstra algorithm from source 
+	 * @param src
 	 */
-	private void DFS(int i,int counter) {
-		if(g.getNode(i)==null || counter==0)
-			return;
-		g.getNode(i).setTag(1);
-		counter--;
-		Collection<edge_data> edgesOf = g.getE(i);
-		for(edge_data e:edgesOf) 
-			DFS(e.getDest(),counter);			
+	private void Dijksta(int src)
+	{
+		cleanTagsSetweight();
+		ArrayList<node_data> Mins = new ArrayList<node_data>();
+		Mins.add(g.getNode(src));
+		Mins.get(0).setWeight(0);
+		while(!Mins.isEmpty())
+		{
+			node_data currNode = Mins.get(0);
+			if(currNode.getTag() ==0)
+			{
+				currNode.setTag(1);
+				Mins.remove(0);
+				Collection<edge_data> edges = g.getE(currNode.getKey());
+				for (edge_data edge_data : edges) {
+					node_data destNode = g.getNode(edge_data.getDest());
+					if(destNode.getWeight() > currNode.getWeight()+edge_data.getWeight())
+					{
+						destNode.setWeight(currNode.getWeight()+edge_data.getWeight());
+						destNode.setInfo(currNode.getKey()+"");
+						if(destNode.getTag() == 0)
+						{
+
+							Mins.add(getPosInArray(Mins, destNode.getWeight()),destNode);
+						}
+					}
+				}
+			}
+			else
+			{
+				Mins.remove(0);
+			}
+		}
 	}
-
-
-	/*
-	 * A helper function that zero all tags in all the nodes.
-	 * @param n = A collection of all the nodes in the graph 
-	 * @param a = Parameter that iterate through all the nodes
-	 */ 
-	private void zeroTags() {
-		Collection<node_data> n=g.getV();
-		for(node_data a: n) {
-			a.setTag(0);
-		}		
-	}
-
-	/*
-	 * A helper function that return the first node in the graph
-	 * @param a = Parameter that iterate through all the nodes
+	/**
+	 * get the insert position in sorted array
+	 * @param Mins
+	 * @param destNodeW
+	 * @return
 	 */
-	private int getFirstNode() {
-		for(node_data a:g.getV())
-			return a.getKey();
-		return 0;
+	private int getPosInArray(ArrayList<node_data> Mins,double destNodeW)
+	{
+		int minIndex = 0;
+		int maxIndex = Mins.size()-1;
+		int middle = minIndex + (maxIndex-minIndex)/2;
+
+		while(minIndex <= maxIndex)
+		{
+			if(Mins.get(middle).getWeight() == destNodeW)
+			{
+				return middle;
+			}
+			if(destNodeW > Mins.get(middle).getWeight())
+			{
+				minIndex = middle +1;
+			}
+			if(destNodeW < Mins.get(middle).getWeight())
+			{
+				maxIndex = middle -1;
+			}
+			middle = minIndex+(maxIndex-minIndex)/2;
+		}
+		return middle;
 	}
-	
-	/*
-	 * @function zeroTags = Zero all the node's tags
-	 * @function maxValueWeight = Set all the node's weight to infinity
-	 * @param source = The source node
-	 * @param str = The information that will contain the list of nodes of the shortest path
-	 * @param areWeInLoop = the amount of nodes in the graph, will help us to detect if we are in a infinite loop
-	 * @function diakstra = A function that calculate the shortest path between 2 nodes   
-	 * @return the distance of the shortest path between source node and destination node (using the weights of node and edge)
-	 */
+
 	@Override
-	public double shortestPathDist(int src, int dst) {
-		zeroTags();
-		maxValueWeight();
-		Node source = (Node)g.getNode(src);
-		source.setWeight(0);
-		String str="";
-		int areWeInLoop=g.nodeSize();
-		diakstra(src,dst,str,areWeInLoop,src);
-		if(g.getNode(dst).getWeight()!=Double.MAX_VALUE)
-			return g.getNode(dst).getWeight();
-		else {
-			System.out.println("There is no path between src and dst");
-			return -1;
-		}
+	public double shortestPathDist(int src, int dest) {
+
+		Dijksta(src);
+		return g.getNode(dest).getWeight();
 	}
-
-	/*
-	 * A recursive function that calculate the shortest path between 2 nodes and update the weights and the information of the nodes
-	 * 
-	 * @param src = Source node
-	 * @param dst = Destination node
-	 * @param str = The string of the list of the shortest path
-	 * @param areWeInLoop = Tell us if we are in a loop
-	 * @param theFirstsrc = save the first source node and check if we in loop
-	 * @param runner = A node that start in source and move forward until it get to destination
-	 * @param edges = A collection of the edges that came of the source node
-	 * @param newWeight = Sum of the weight (last node and edge)
-	 * @param oldWeight = The old weight 
-	 */
-	public void diakstra(int src,int dst,String str,int areWeInLoop, int theFirstsrc) {
-		Node runner=(Node) g.getNode(src);
-		if(src==theFirstsrc)
-			areWeInLoop--;
-		if((runner.getTag()==1 && dst==src )||(areWeInLoop<0)) {
-			return;
-		}
-		Collection<edge_data> edges=g.getE(src);
-		for(edge_data e:edges) {
-			double newWeight=runner.getWeight()+e.getWeight();
-			double oldWeight=g.getNode(e.getDest()).getWeight();
-			if(newWeight<oldWeight) {
-				g.getNode(e.getDest()).setWeight(newWeight);
-				g.getNode(e.getDest()).setInfo(str+","+src);
-				diakstra(e.getDest(),dst,str+","+src,areWeInLoop,theFirstsrc);
-				runner.setTag(1);
-			}
-
-		}
-	}
-
-	/*
-	 * Sets all the node's weight to infinity
-	 * @param nodes = A collection of all the nodes in the graph 
-	 */
-	private void maxValueWeight() {
-		Collection<node_data> nodes = g.getV();
-		for(node_data a: nodes)
-			a.setWeight(Double.MAX_VALUE);
-	}
-
-
-	/*
-	 * @param src = Source node
-	 * @param dest = Destination node
-	 * @param str = The string of the list of the shortest path
-	 * @param k = Every node in the list of nodes from the shortest path
-	 * @function zeroTags = Zero all the node's tags
-	 * @function maxValueWeight = Set all the node's weight to infinity
-	 * @param areWeInLoop = the amount of nodes in the graph, will help us to detect if we are in a infinite loop
-	 * @function diakstra = A function that calculate the shortest path between 2 nodes
-	 * @param source = Source node
-	 * @param ans = The list of nodes in the shortest path 
-	 * @param strArray = array of all the nodes in the list of shortest path
-	 * @param tmp = A node from the list after casting
-	 * @return a list of nodes in the shortest path between source node and destination node
-	 */
 	@Override
 	public List<node_data> shortestPath(int src, int dest) {
-		String str="";
-		int k;
-		zeroTags();
-		maxValueWeight();
-		Node source = (Node)g.getNode(src);
-		source.setWeight(0);
-		int areWeInLoop=g.nodeSize();
-
-		ArrayList<node_data> arr=new ArrayList<>();
-		diakstra(src,dest,str,areWeInLoop,src);
-		if(g.getNode(dest).getWeight()==shortestPathDist(src,dest)) {
-
-			String ans = g.getNode(dest).getInfo();
-			ans=ans.substring(1);
-			String[] strArray=ans.split(",");
-			for (int i = 0; i < strArray.length; i++) {
-				k=Integer.parseInt(strArray[i]);
-				node_data tmp=g.getNode(k);
-				arr.add(tmp);
+		Dijksta(src);
+		List<node_data> ans = new ArrayList<node_data>();
+		node_data currNode = g.getNode(dest);
+		while(!currNode.getInfo().isEmpty())
+		{
+			ans.add(0, currNode);
+			currNode = g.getNode(Integer.parseInt(currNode.getInfo()));
+		}
+		ans.add(0, currNode);
+		return ans;
+	}
+	/**
+	 * Special shortest path for TSP algorithm
+	 * @param src
+	 * @param dest
+	 * @param wasNotThere
+	 * @return
+	 */
+	private List<node_data> shortestPathForTSP(int src, int dest,HashSet<Integer> wasNotThere) {
+		List<node_data> ans = new ArrayList<node_data>();
+		Dijksta(src);
+		node_data currNode = g.getNode(dest);
+		while(!currNode.getInfo().isEmpty())
+		{
+			ans.add(0, currNode);
+			currNode = g.getNode(Integer.parseInt(currNode.getInfo()));
+			if(wasNotThere.contains(currNode.getKey()))
+			{
+				wasNotThere.remove(currNode.getKey());
 			}
-			arr.add(g.getNode(dest));
-			return arr;
 		}
-		else {
-			System.out.println("There is no path between src and dst");
-			return null;
-		}
+		ans.add(0, currNode);
+		return ans;
 	}
 	
-	/*
-	 *@param targets = A list of nodes that we need to find a path between them
-	 *@function checkTargetsInGraph = Check if all the targets's nodes are in the graph
-	 *@function isConnected = Check if the graph is strongly connected,  if not return null
-	 *@param array = A list of the path's nodes 
-	 *@param tmp = Another list of the path's nodes 
-	 *@param checkTargetsInAnswer = Check if all the targets's nodes are in the answer List
-	 */
 	@Override
-	public List<node_data> TSP(List<Integer> targets) {
-		if((!targets.isEmpty()) && (targets.size()<=g.nodeSize()) && (checkTargetsInGraph(targets))) {
-			List<node_data> array=new ArrayList<>();
-			if(targets.size()==1) {
-				array.add(g.getNode(targets.get(0)));
-				return array;
+	public List<node_data> TSP(List<Integer> targets)
+	{
+		List<node_data> ans = new ArrayList<node_data>();
+		if(targets.size() == 0)
+		{
+			return ans;
+		}
+		if(targets.size() == 1)
+		{
+			ans.add(g.getNode(targets.get(0)));
+			return ans;
+		}
+		HashSet<Integer> wasNotThere = new HashSet<Integer>();
+		for (Integer integer : targets) {
+			wasNotThere.add(integer);
+		}
+		int dest = 1;
+		int from = 0;
+		boolean firstRun = true;
+		while(dest<targets.size())
+		{
+			if(wasNotThere.contains(targets.get(from)))
+			{
+				if(wasNotThere.contains(targets.get(dest)))
+				{
+					if(firstRun)
+					{
+						ans.addAll(shortestPathForTSP(targets.get(from), targets.get(dest),wasNotThere));
+						firstRun=false;
+					}
+					else
+					{
+						List<node_data> pre =shortestPathForTSP(targets.get(from), targets.get(dest),wasNotThere);
+						pre.remove(0);
+						ans.addAll(pre);
+					}
+					dest++;
+					from++;
+				}
+				else
+				{
+					dest++;
+				}
 			}
-			if(shortestPath(targets.get(0),targets.get(1))!=null){
-					array.addAll((shortestPath(targets.get(0),targets.get(1))));
-			}
-			else {
-				System.out.println("\nThere is no path between the nodes in 'targets'");
-				return null;				
-			}
-			if(targets.size()==2)
-				return array;
-			List<node_data> tmp = new ArrayList<>();
-			for (int i = 1; i < targets.size()-1; i++) {
-				int j=i+1;
-				if(shortestPath(targets.get(i),targets.get(j))!=null) {
-					tmp.addAll(shortestPath(targets.get(i),targets.get(j)));
-				}
-				else {
-					System.out.println("\nThere is no path between the nodes in 'targets'");
-					return null;						
-				}
-				if((tmp!=null) && checkTargetsInAnswer(targets,tmp) && tmp.containsAll(array)) {
-					return tmp;
-				}
-				else if(tmp!=null && checkTargetsInAnswer(targets,array) && array.containsAll(tmp)) {
-					return array;
-				}
-				else if((tmp!=null)){
-					tmp.remove(0);
-					array.addAll(tmp);
-					tmp.clear();
-					if(checkTargetsInAnswer(targets,array))
-						return array;
-				}
+			else
+			{
+				from++;
 			}
 		}
-		System.out.println("\nThere is no path between the nodes in 'targets'");
-		return null;
+		return ans;
 	}
-
-
-	/*
-	 * @param counter = counts the nodes that are similar
-	 * @return if all the targets's nodes are in the answer list
-	 */
-	private boolean checkTargetsInAnswer(List<Integer> targets,List<node_data> array) {
-		int counter = 0;
-		for(Integer i:targets) {
-			for(node_data n:array) {
-				if(i==n.getKey()) {
-					counter++;
-					break;
-				}
-			}
-		}
-		return (counter == targets.size());
-	}
-
-	/*
-	 * @param nod = A collection of all the nodes in the graph
-	 * @param count = counts the nodes that are similar
-	 * @return if all the targets's nodes are in the graph
-	 */
-	private boolean checkTargetsInGraph(List<Integer> targets) {
-		Collection<node_data> nod=g.getV();
-		for(int a=0;a<targets.size();a++) {//check if there is a integer that repeats itself in targets
-			for(int b=0;b<targets.size();b++) {
-				if(a!=b&&targets.get(a)==targets.get(b))
-					return false;
-			}
-		}
-		int count = 0;
-		for(int i:targets) {
-			for(node_data n:nod) {
-				if(i == n.getKey())
-					count++;
-			}
-		}
-		return (count == targets.size());
-	}
-
-	/*
-	 * Deep copy function
-	 * @param newG = A new DGraph 
-	 */
 	@Override
 	public graph copy() {
 		DGraph newG = new DGraph((DGraph) g);
