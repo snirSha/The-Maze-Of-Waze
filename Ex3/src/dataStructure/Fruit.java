@@ -8,7 +8,7 @@ import utils.StdDraw;
 
 public class Fruit {
 	
-	static final double EPS = Math.pow(10, -5);
+	static final double EPS = 0.001;//Math.pow(10, -4);
 	private graph g;
 	private edge_data edge;
 	private Point3D location;
@@ -47,18 +47,18 @@ public class Fruit {
 			this.value = value;
 			this.type = type;
 			this.location = posP;
-			this.edge = getEdgeFruit();
+//			this.edge = getEdgeFruit();
 			
 		} 
 		catch (JSONException e) {e.printStackTrace();}
 	}
 	
-	public Edge getEdgeFruit() {
+	public edge_data getEdgeFruit() {
 		for(node_data ni: g.getV()) {
 			for(node_data nj: g.getV()) {
 				Point3D niP = ni.getLocation();
 				Point3D njP = nj.getLocation();
-				if(ni == nj)continue;
+				if(ni == nj) continue;
 				double destFruitniP = this.location.distance2D(niP);
 				double destFruitnjP = this.location.distance2D(njP);
 				double destniPnjP = niP.distance2D(njP);
@@ -69,11 +69,11 @@ public class Fruit {
 					int nextMax = Math.max(niKey, njKey);
 					if(type == 1) {
 						Edge e = (Edge) g.getEdge(nextMin, nextMax);
-						return e;
+						if(e != null)return e;
 					}
 					else {
-						Edge e = (Edge) g.getEdge(nextMax, nextMin);
-						return e;
+						edge_data e = g.getEdge(nextMax, nextMin);
+						if(e != null)return e;
 					}
 				}
 			}

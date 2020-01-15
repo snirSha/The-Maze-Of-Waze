@@ -24,6 +24,7 @@ import Server.Game_Server;
 import Server.game_service;
 import algorithms.Graph_Algo;
 import dataStructure.DGraph;
+import dataStructure.Edge;
 import dataStructure.Fruit;
 import utils.Point3D;
 import utils.StdDraw;
@@ -118,14 +119,22 @@ public class MyGameGUI{
 
 		displayFinalScore(game);
 	}
-	private void auto(int s) {
-		this.game = startAutoScenario(s);
+	
+	private void manual(int s) {
+		this.game = gametManualScenario(s);
 		initFruits(game);
 		initRobots(game);
-		runAutoScenario(game);
+		runManualScenario(game);
+
+	}
+	private void auto(int s) {
+		this.game = gameAutoScenario(s);
+		initFruits(game);
+		initRobots(game);
+		runManualScenario(game);
 	}
 
-	private void runAutoScenario(game_service game2) {
+	private void runAutoScenario(game_service game) {
 		game.startGame();
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
@@ -142,25 +151,38 @@ public class MyGameGUI{
 		
 	}
 
-	private game_service startAutoScenario(int s) {
+	private game_service gameAutoScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
+		
+		
 		this.ga.g.init(g);
 		initFruits(game);
 		initRobots(game);
 		drawDGraph();
-		int robotSize = robots.size();
+		
+		String info = game.toString();
+		JSONObject line;
+		int rs = 0;
+		try {
+			line = new JSONObject(info);
+			JSONObject ttt = line.getJSONObject("GameServer");
+			rs = ttt.getInt("robots");
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		int i = 0;
 		Collection<Fruit> f = fruits.values();
 		for (Fruit fruit : f) {
-			if(i >= robotSize)break;
+			if(i >= rs)break;
 			if(!fruit.isTaken()) {
+				edge_data e = fruit.getEdge();
+				System.out.println(e);
 				if(fruit.getType() == -1) {
-
-					game.addRobot(fruit.getEdge().getDest());
-
+					game.addRobot(e.getDest());
 				}else {
-					game.addRobot(fruit.getEdge().getSrc());
+					game.addRobot(e.getSrc());
 				}
 				fruit.setTaken(true);
 				i++;
@@ -169,13 +191,7 @@ public class MyGameGUI{
 		return game;
 	}
 
-	private void manual(int s) {
-		this.game = startManualScenario(s);
-		initFruits(game);
-		initRobots(game);
-		runManualScenario(game);
 
-	}
 
 	private int manualOrAuto() {
 		Object[] options = {"Manual",
@@ -210,7 +226,7 @@ public class MyGameGUI{
 
 	}
 
-	public game_service startManualScenario(int s) {
+	public game_service gametManualScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.ga.g.init(g);
@@ -227,7 +243,7 @@ public class MyGameGUI{
 			for (int i = 0; i < ga.g.nodeSize(); i++) {
 				nodes[i] = "" + i;
 			}
-			for(int a = 0;a < rs ; a++) {
+			for(int a = 0; a < rs ; a++) {
 
 				String string = (String) JOptionPane.showInputDialog(
 						null, "Pick node for robot " + a + "\n",				                   
@@ -591,11 +607,18 @@ public class MyGameGUI{
 
 		for (String string : f_list) {
 			String json = string;
-			Fruit f = new Fruit(this.ga.g);
+			Fruit f = new Fruit(ga.g);
 			f.initJson(json);
-			f.setEdge(f.getEdgeFruit());
-			fruits.put(f.getP(),f);
+			edge_data e = f.getEdgeFruit();
+			if(e != null) {
+				f.setEdge(f.getEdgeFruit());
+				fruits.put(f.getP(),f);
+			}
+			else {
+				System.out.println("could not find edge to fruit");
 
+			}
+			
 		}
 	}
 
