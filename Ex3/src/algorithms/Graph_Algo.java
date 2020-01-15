@@ -284,7 +284,7 @@ public class Graph_Algo implements graph_algorithms{
 		diakstra(src,dest,str,areWeInLoop,src);
 		if(g.getNode(dest).getWeight()==shortestPathDist(src,dest)) {
 
-			String ans =g.getNode(dest).getInfo();
+			String ans = g.getNode(dest).getInfo();
 			ans=ans.substring(1);
 			String[] strArray=ans.split(",");
 			for (int i = 0; i < strArray.length; i++) {

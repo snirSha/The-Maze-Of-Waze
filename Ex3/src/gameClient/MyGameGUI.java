@@ -119,7 +119,7 @@ public class MyGameGUI{
 
 		displayFinalScore(game);
 	}
-	
+
 	private void manual(int s) {
 		this.game = gametManualScenario(s);
 		initFruits(game);
@@ -131,7 +131,7 @@ public class MyGameGUI{
 		this.game = gameAutoScenario(s);
 		initFruits(game);
 		initRobots(game);
-		runManualScenario(game);
+		runAutoScenario(game);
 	}
 
 	private void runAutoScenario(game_service game) {
@@ -142,25 +142,111 @@ public class MyGameGUI{
 			refreshDraw();
 			drawFruits(game);
 			drawRobots(game);
-			moveRobotsManual(game);
+			moveRobotsAuto(game);
 			refreshElements(game);
 			printScore(game);
 
 			StdDraw.show();
 		}
+
+	}
+
+	void moveRobotsAuto(game_service game) {
 		
+		for (int rid = 0; rid < robots.size(); rid++) {
+			Robot r = robots.get(rid);
+			while(r.getTrack() != null && r.getTrack().size() > 0) {
+				if(r.getTrack().size() > 1) {
+					//r.getTrack().remove(0);
+					System.out.println("ad");
+					game.chooseNextEdge(rid, r.getTrack().get(0).getKey());
+				}
+				
+				
+			}r.setTrack(nextNodeAuto(r.getNode().getKey()));
+			r.getTrack().remove(0);
+			
+			
+			
+
+
+		}
+		//		List<String> log = game.move();
+		//		if(log != null) {
+		//			long t = game.timeToEnd();
+		//			for(int i = 0; i < log.size(); i++) {
+		//				String robot_json = log.get(i);
+		//				try {
+		//					JSONObject line = new JSONObject(robot_json);
+		//					JSONObject ttt = line.getJSONObject("Robot");
+		//					int rid = ttt.getInt("id");
+		//					int src = ttt.getInt("src");
+		//					int dest = ttt.getInt("dest");
+		//
+		//					if(dest == -1) {
+		//						List<node_data> destList = nextNodeAuto(src);
+		//						if(destList!=null) {
+		//							for (node_data j : destList) {
+		//								game.chooseNextEdge(rid, j.getKey());
+		//								Robot r = robots.get(rid);
+		//								r.setNode(j);
+		//							}
+		//						}
+		//						
+		//						System.out.println("Turn to node: " + dest + "  time to end:" + (t / 1000));
+		//						System.out.println(ttt);
+		//					}
+		//				} 
+		//				catch (JSONException e) {e.printStackTrace();}
+		//			}
+		//		}
+	}
+
+	private List<node_data> nextNodeAuto(int src) {
+		Fruit f = new Fruit();
+		double dist = Integer.MAX_VALUE;
+		List <node_data> ans = null;
+		for (Fruit t : fruits.values()) {//finding the closest fruit
+			if(!t.isTaken()) {
+				if(t.getType() == -1) {
+					int startEdgeOfFruit = Math.max(t.getEdge().getSrc(), t.getEdge().getDest());
+					double tmpDist = ga.shortestPathDist(src, startEdgeOfFruit);
+					if(tmpDist < dist) {
+						dist = tmpDist;
+						ans = ga.shortestPath(src, startEdgeOfFruit);
+						int finalNode = Math.min(t.getEdge().getSrc(), t.getEdge().getDest());
+						ans.add(ga.g.getNode(finalNode));
+						f = t;
+					}
+				}
+				else {
+					int startEdgeOfFruit = Math.min(t.getEdge().getSrc(), t.getEdge().getDest());
+					double tmpDist = ga.shortestPathDist(src, startEdgeOfFruit);
+					if(tmpDist < dist) {
+						dist = tmpDist;
+						ans = ga.shortestPath(src, startEdgeOfFruit);
+						int finalNode = Math.max(t.getEdge().getSrc(), t.getEdge().getDest());
+						ans.add(ga.g.getNode(finalNode));
+						f = t;
+					}
+				}
+			}
+		}
+
+		f.setTaken(true);
+		return ans;
 	}
 
 	private game_service gameAutoScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
-		
-		
+
+
 		this.ga.g.init(g);
 		initFruits(game);
 		initRobots(game);
 		drawDGraph();
-		
+
 		String info = game.toString();
 		JSONObject line;
 		int rs = 0;
@@ -171,7 +257,7 @@ public class MyGameGUI{
 		}catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 		int i = 0;
 		Collection<Fruit> f = fruits.values();
 		for (Fruit fruit : f) {
@@ -618,7 +704,7 @@ public class MyGameGUI{
 				System.out.println("could not find edge to fruit");
 
 			}
-			
+
 		}
 	}
 
