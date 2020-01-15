@@ -75,7 +75,7 @@ public class SimpleGameClient {
 			mgg.refreshDraw();
 			mgg.drawFruits(game);
 			mgg.drawRobots(game);
-			mgg.moveRobots(game);
+			mgg.moveRobotsManual(game);
 			mgg.printScore(game);
 			
 			StdDraw.show();

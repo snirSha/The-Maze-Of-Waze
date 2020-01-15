@@ -38,7 +38,7 @@ public class MyGameGUI{
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
 	final double yMin = 32.1;
-	final static double robotIconSize = .0008;
+	final static double robotIconSize = .0015;
 	final static double ourEPS = 0.0002;
 	final static double minEPS = 0.00001;
 	static int rid = -1;
@@ -109,7 +109,7 @@ public class MyGameGUI{
 				JOptionPane.showMessageDialog(null, "choose a valid scenario");
 			else if (s == -2) return;
 		}
-		this.game = startScenario(s);
+		this.game = startManualScenario(s);
 		initFruits(game);
 		initRobots(game);
 		runManualScenario(game);
@@ -148,7 +148,7 @@ public class MyGameGUI{
 
 	}
 
-	public game_service startScenario(int s) {
+	public game_service startManualScenario(int s) {
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.ga.g.init(g);
@@ -160,8 +160,29 @@ public class MyGameGUI{
 			JSONObject ttt = line.getJSONObject("GameServer");
 			int rs = ttt.getInt("robots");
 			int src_node = 0;  
-			for(int a = 0;a<rs;a++) {
-				game.addRobot(src_node+a);
+			
+			String[] nodes = new String[ga.g.nodeSize()];
+			for (int i = 0; i < ga.g.nodeSize(); i++) {
+				nodes[i] = "" + i;
+			}
+			for(int a = 0;a < rs ; a++) {
+				
+				String string = (String) JOptionPane.showInputDialog(
+				                    null, "Pick node for robot " + a + "\n",				                   
+				                    "Pick starting noeds",
+				                    JOptionPane.PLAIN_MESSAGE,
+				                    null, nodes,
+				                    "ham");
+				int node = 0;
+				try {
+					node = Integer.parseInt(string);
+					src_node = node;
+				}catch (Exception e) {
+					e.getMessage();
+				}
+				
+				game.addRobot(src_node);
+				src_node = 0;
 			}
 		}
 		catch (JSONException e) {
@@ -171,6 +192,7 @@ public class MyGameGUI{
 	}
 
 	private void runManualScenario(game_service game) {
+		pickStartingNodes(game);
 		game.startGame();
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
@@ -178,12 +200,17 @@ public class MyGameGUI{
 			refreshDraw();
 			drawFruits(game);
 			drawRobots(game);
-			moveRobots(game);
+			moveRobotsManual(game);
 			refreshElements(game);
 			printScore(game);
 
 			StdDraw.show();
 		}
+	}
+
+	private void pickStartingNodes(game_service game) {
+		
+		
 	}
 
 	void refreshElements(game_service game) {
@@ -192,7 +219,7 @@ public class MyGameGUI{
 	}
 
 
-	void moveRobots(game_service game) {
+	void moveRobotsManual(game_service game) {
 		List<String> log = game.move();
 		if(log != null) {
 			long t = game.timeToEnd();
@@ -212,6 +239,7 @@ public class MyGameGUI{
 							if(rid == -1)
 								return;
 							Robot r = robots.get(rid);
+							System.out.println(rid);
 							if(r.getNode() != null) {
 								src = robots.get(rid).getNode().getKey();
 							}
