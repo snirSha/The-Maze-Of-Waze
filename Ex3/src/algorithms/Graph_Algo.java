@@ -30,17 +30,17 @@ import dataStructure.node_data;
  * @authors Snir and Omer 
  */
 public class Graph_Algo implements graph_algorithms{
-	public DGraph g;
+	public DGraph dg;
 
 	/*
 	 * Default constructor
 	 */
 	public Graph_Algo() {
-		this.g = new DGraph();
+		this.dg = new DGraph();
 	}
 
 	public Graph_Algo(graph _graph) {
-		this.g = new DGraph();
+		this.dg = new DGraph();
 		init(_graph);
 	}
 
@@ -48,7 +48,7 @@ public class Graph_Algo implements graph_algorithms{
 	 * Set this graph to the parameter's graph
 	 */
 	public void init(graph g) {
-		this.g = (DGraph) g;		
+		this.dg = (DGraph) g;		
 	}
 
 	/*
@@ -58,7 +58,7 @@ public class Graph_Algo implements graph_algorithms{
 		try{    
 			FileInputStream file = new FileInputStream(file_name); 
 			ObjectInputStream in = new ObjectInputStream(file);
-			this.g = (DGraph)in.readObject();
+			this.dg = (DGraph)in.readObject();
 			in.close(); 
 			file.close(); 
 			System.out.println("Object has been deserialized");
@@ -77,7 +77,7 @@ public class Graph_Algo implements graph_algorithms{
 		try{
 			FileOutputStream file = new FileOutputStream(file_name); 
 			ObjectOutputStream out = new ObjectOutputStream(file);
-			out.writeObject(this.g);
+			out.writeObject(this.dg);
 			out.close(); 
 			file.close(); 
 
@@ -92,7 +92,7 @@ public class Graph_Algo implements graph_algorithms{
 	 * sets tag to 0 and weight MAX_VALUE on all nodes
 	 */
 	private void zeroTagsMaxWeight(){
-		Collection<node_data> nodes = g.getV();
+		Collection<node_data> nodes = dg.getV();
 		for (node_data node_data : nodes) {
 			node_data.setTag(0);
 			node_data.setWeight(Integer.MAX_VALUE);
@@ -107,16 +107,16 @@ public class Graph_Algo implements graph_algorithms{
 	private void diaksta(int src){
 		zeroTagsMaxWeight();
 		ArrayList<node_data> nodes = new ArrayList<node_data>();
-		nodes.add(g.getNode(src));
+		nodes.add(dg.getNode(src));
 		nodes.get(0).setWeight(0);
 		while(!nodes.isEmpty()){
 			node_data currNode = nodes.get(0);
 			if(currNode.getTag() == 0){
 				currNode.setTag(1);
 				nodes.remove(0);
-				Collection<edge_data> edges = g.getE(currNode.getKey());
+				Collection<edge_data> edges = dg.getE(currNode.getKey());
 				for (edge_data edge_data : edges) {
-					node_data destNode = g.getNode(edge_data.getDest());
+					node_data destNode = dg.getNode(edge_data.getDest());
 					double dstNodeW = destNode.getWeight();
 					double edge_dataW = edge_data.getWeight();
 					if(dstNodeW > currNode.getWeight() + edge_dataW){
@@ -161,20 +161,20 @@ public class Graph_Algo implements graph_algorithms{
 
 	public double shortestPathDist(int src, int dest) {
 		diaksta(src);
-		node_data ans = g.getNode(dest);
+		node_data ans = dg.getNode(dest);
 		return ans.getWeight();
 	}
 	
 	public List<node_data> shortestPath(int src, int dest) {
 		diaksta(src);
-		node_data node = g.getNode(dest);
+		node_data node = dg.getNode(dest);
 		if(node.getWeight() >= Integer.MAX_VALUE) {
 			return null;
 		}
 		List<node_data> ans = new ArrayList<node_data>();
 		while(!node.getInfo().isEmpty()){
 			ans.add(0, node);
-			node = g.getNode(Integer.parseInt(node.getInfo()));
+			node = dg.getNode(Integer.parseInt(node.getInfo()));
 		}
 		ans.add(0, node);
 		return ans;
