@@ -5,12 +5,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import dataStructure.DGraph;
 import dataStructure.Node;
@@ -49,7 +47,6 @@ public class Graph_Algo implements graph_algorithms{
 	/*
 	 * Set this graph to the parameter's graph
 	 */
-	@Override
 	public void init(graph g) {
 		this.g = (DGraph) g;		
 	}
@@ -57,10 +54,8 @@ public class Graph_Algo implements graph_algorithms{
 	/*
 	 * Set the graph from a file (using Yael's algorithm)
 	 */
-	@Override
 	public void init(String file_name) {
-		try
-		{    
+		try{    
 			FileInputStream file = new FileInputStream(file_name); 
 			ObjectInputStream in = new ObjectInputStream(file);
 			this.g = (DGraph)in.readObject();
@@ -78,10 +73,8 @@ public class Graph_Algo implements graph_algorithms{
 	/*
 	 * Save a graph in a text file (using Yael's algorithm)
 	 */
-	@Override
 	public void save(String file_name) {	
-		try
-		{
+		try{
 			FileOutputStream file = new FileOutputStream(file_name); 
 			ObjectOutputStream out = new ObjectOutputStream(file);
 			out.writeObject(this.g);
@@ -90,315 +83,100 @@ public class Graph_Algo implements graph_algorithms{
 
 			System.out.println("Object has been serialized"); 
 		}   
-		catch(IOException ex) 
-		{
-			System.out.println("IOException is caught"); 
+		catch(IOException ex){
+			System.out.println(ex.getMessage()); 
 		}
 	}
 
-	/*
-	 * The function's steps: 
-	 * zero all tags in every node -> DFS -> check if all tags are 1 -> if true ,zero all tags and reverse the graph
-	 * -> DFS again -> check if all tags are 1-> if true, the graph is strongly connected 
-	 * 
-	 * @param x = get the first node in the graph and save it to future use
-	 * @function getFirtNode = return the first node in the graph  
-	 * @function zeroTags = sets all node's tag to 0
-	 * @function DFS = start at a node and keep going until it set all the node's tag to 1, if not the graph is not connected 
-	 * @function checkAllTags = check if all the node's tag is 1 
-	 * @return true if the graph is strongly connected
-	 */
-	private int amountNodes(node_data n)
-	{
-		int counter = 0;
-		ArrayList<node_data> nodesInGraph = new ArrayList<node_data>();
-		nodesInGraph.add(n);
-		while(!nodesInGraph.isEmpty())
-		{
-			node_data temp = nodesInGraph.get(0);
-			if(temp.getTag() == 0)
-			{
-				temp.setTag(1);
-				counter++;
-				nodesInGraph.remove(0);
-				Collection<edge_data> edge = g.getE(temp.getKey());
-
-				for (edge_data edge_data : edge) {
-					node_data other = g.getNode(edge_data.getDest());
-					if(other.getTag() == 0)
-					{
-						nodesInGraph.add(0,other);
-					}
-				}
-			}
-			else
-			{
-				nodesInGraph.remove(0);
-			}
-		}
-		return counter;
-	}
-	
-	@Override
-	public boolean isConnected()
-	{
-		HashSet<node_data> allreayConnected = new HashSet<node_data>();
-		Collection<node_data> s = g.getV();
-		boolean firstNode = true;
-		node_data firstN = null;
-		boolean ansBool = true;
-		for (node_data node_data: s) {
-			setTagsZero();
-			if(firstNode)
-			{
-				firstN = node_data;
-				firstNode = false;
-				int ans = amountNodes(node_data);
-				if(ans != s.size())
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if(!canOthersGeToThis(node_data, firstN, allreayConnected))
-				{
-					return false;
-				}
-			}
-		}
-		return ansBool;
-	}
 	/**
-	 * Iterates over all the nodes and checks if there any way to get to the first node
-	 * @param n
-	 * @param first
-	 * @param allreadtconnected
-	 * @return
+	 * sets tag to 0 and weight MAX_VALUE on all nodes
 	 */
-	private boolean canOthersGeToThis(node_data n,node_data first,HashSet<node_data> allreadtconnected)
-	{
-		if(n.getKey() == first.getKey())
-		{
-			allreadtconnected.add(n);
-			return true;
-		}
-		ArrayList<node_data> nodesToCheck = new ArrayList<node_data>();
-		nodesToCheck.add(n);
-		while(!nodesToCheck.isEmpty())
-		{
-			node_data currN = nodesToCheck.remove(0);
-			if(currN.getTag() == 0)
-			{
-				currN.setTag(1);
-				Collection<edge_data> edge = g.getE(currN.getKey());
-				for (edge_data edge_data : edge) {
-					node_data dest = g.getNode(edge_data.getDest());
-					if(first.getKey() == edge_data.getDest() || allreadtconnected.contains(dest))
-					{
-						allreadtconnected.add(currN);
-						return true;
-					}
-					else {
-						if(dest.getTag() == 0)
-						{
-							nodesToCheck.add(0,dest);
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
-	/**
-	 * Sets all tags to 0
-	 */
-	private void setTagsZero()
-	{
+	private void zeroTagsMaxWeight(){
 		Collection<node_data> nodes = g.getV();
 		for (node_data node_data : nodes) {
-			node_data.setTag(0);
-		}
-	}
-	/**
-	 * sets tag to 0 and weight and MAX_VALUE on all nodes
-	 */
-	private void cleanTagsSetweight()
-	{
-		Collection<node_data> s = g.getV();
-		for (node_data node_data : s) {
 			node_data.setTag(0);
 			node_data.setWeight(Integer.MAX_VALUE);
 			node_data.setInfo("");
 		}
 	}
+	
 	/**
-	 * Dijkstra algorithm from source 
+	 * Diakstra algorithm
 	 * @param src
 	 */
-	private void Dijksta(int src)
-	{
-		cleanTagsSetweight();
-		ArrayList<node_data> Mins = new ArrayList<node_data>();
-		Mins.add(g.getNode(src));
-		Mins.get(0).setWeight(0);
-		while(!Mins.isEmpty())
-		{
-			node_data currNode = Mins.get(0);
-			if(currNode.getTag() ==0)
-			{
+	private void diaksta(int src){
+		zeroTagsMaxWeight();
+		ArrayList<node_data> nodes = new ArrayList<node_data>();
+		nodes.add(g.getNode(src));
+		nodes.get(0).setWeight(0);
+		while(!nodes.isEmpty()){
+			node_data currNode = nodes.get(0);
+			if(currNode.getTag() == 0){
 				currNode.setTag(1);
-				Mins.remove(0);
+				nodes.remove(0);
 				Collection<edge_data> edges = g.getE(currNode.getKey());
 				for (edge_data edge_data : edges) {
 					node_data destNode = g.getNode(edge_data.getDest());
-					if(destNode.getWeight() > currNode.getWeight()+edge_data.getWeight())
-					{
+					double dstNodeW = destNode.getWeight();
+					double edge_dataW = edge_data.getWeight();
+					if(dstNodeW > currNode.getWeight() + edge_dataW){
 						destNode.setWeight(currNode.getWeight()+edge_data.getWeight());
-						destNode.setInfo(currNode.getKey()+"");
-						if(destNode.getTag() == 0)
-						{
-
-							Mins.add(getPosInArray(Mins, destNode.getWeight()),destNode);
+						destNode.setInfo(currNode.getKey() + "");
+						if(destNode.getTag() == 0){
+							nodes.add(getIndex(nodes, destNode.getWeight()),destNode);
 						}
 					}
 				}
 			}
-			else
-			{
-				Mins.remove(0);
+			else{
+				nodes.remove(0);
 			}
 		}
 	}
 	/**
 	 * get the insert position in sorted array
-	 * @param Mins
-	 * @param destNodeW
+	 * @param nodes
+	 * @param dstN
 	 * @return
 	 */
-	private int getPosInArray(ArrayList<node_data> Mins,double destNodeW)
-	{
-		int minIndex = 0;
-		int maxIndex = Mins.size()-1;
-		int middle = minIndex + (maxIndex-minIndex)/2;
+	private int getIndex(ArrayList<node_data> nodes,double dstN){
+		int minIn = 0;
+		int maxIn = nodes.size() - 1;
+		int mid = minIn + (maxIn - minIn) / 2;
 
-		while(minIndex <= maxIndex)
-		{
-			if(Mins.get(middle).getWeight() == destNodeW)
-			{
-				return middle;
+		while(minIn <= maxIn){
+			if(nodes.get(mid).getWeight() == dstN){
+				return mid;
 			}
-			if(destNodeW > Mins.get(middle).getWeight())
-			{
-				minIndex = middle +1;
+			if(dstN > nodes.get(mid).getWeight()){
+				minIn = mid + 1;
 			}
-			if(destNodeW < Mins.get(middle).getWeight())
-			{
-				maxIndex = middle -1;
+			if(dstN < nodes.get(mid).getWeight()){
+				maxIn = mid - 1;
 			}
-			middle = minIndex+(maxIndex-minIndex)/2;
+			mid = minIn + (maxIn - minIn) / 2 ;
 		}
-		return middle;
+		return mid;
 	}
 
-	@Override
 	public double shortestPathDist(int src, int dest) {
-
-		Dijksta(src);
-		return g.getNode(dest).getWeight();
-	}
-	@Override
-	public List<node_data> shortestPath(int src, int dest) {
-		Dijksta(src);
-		List<node_data> ans = new ArrayList<node_data>();
-		node_data currNode = g.getNode(dest);
-		while(!currNode.getInfo().isEmpty())
-		{
-			ans.add(0, currNode);
-			currNode = g.getNode(Integer.parseInt(currNode.getInfo()));
-		}
-		ans.add(0, currNode);
-		return ans;
-	}
-	/**
-	 * Special shortest path for TSP algorithm
-	 * @param src
-	 * @param dest
-	 * @param wasNotThere
-	 * @return
-	 */
-	private List<node_data> shortestPathForTSP(int src, int dest,HashSet<Integer> wasNotThere) {
-		List<node_data> ans = new ArrayList<node_data>();
-		Dijksta(src);
-		node_data currNode = g.getNode(dest);
-		while(!currNode.getInfo().isEmpty())
-		{
-			ans.add(0, currNode);
-			currNode = g.getNode(Integer.parseInt(currNode.getInfo()));
-			if(wasNotThere.contains(currNode.getKey()))
-			{
-				wasNotThere.remove(currNode.getKey());
-			}
-		}
-		ans.add(0, currNode);
-		return ans;
+		diaksta(src);
+		node_data ans = g.getNode(dest);
+		return ans.getWeight();
 	}
 	
-	@Override
-	public List<node_data> TSP(List<Integer> targets)
-	{
+	public List<node_data> shortestPath(int src, int dest) {
+		diaksta(src);
+		node_data node = g.getNode(dest);
+		if(node.getWeight() >= Integer.MAX_VALUE) {
+			return null;
+		}
 		List<node_data> ans = new ArrayList<node_data>();
-		if(targets.size() == 0)
-		{
-			return ans;
+		while(!node.getInfo().isEmpty()){
+			ans.add(0, node);
+			node = g.getNode(Integer.parseInt(node.getInfo()));
 		}
-		if(targets.size() == 1)
-		{
-			ans.add(g.getNode(targets.get(0)));
-			return ans;
-		}
-		HashSet<Integer> wasNotThere = new HashSet<Integer>();
-		for (Integer integer : targets) {
-			wasNotThere.add(integer);
-		}
-		int dest = 1;
-		int from = 0;
-		boolean firstRun = true;
-		while(dest<targets.size())
-		{
-			if(wasNotThere.contains(targets.get(from)))
-			{
-				if(wasNotThere.contains(targets.get(dest)))
-				{
-					if(firstRun)
-					{
-						ans.addAll(shortestPathForTSP(targets.get(from), targets.get(dest),wasNotThere));
-						firstRun=false;
-					}
-					else
-					{
-						List<node_data> pre =shortestPathForTSP(targets.get(from), targets.get(dest),wasNotThere);
-						pre.remove(0);
-						ans.addAll(pre);
-					}
-					dest++;
-					from++;
-				}
-				else
-				{
-					dest++;
-				}
-			}
-			else
-			{
-				from++;
-			}
-		}
+		ans.add(0, node);
 		return ans;
-	}
-	@Override
-	public graph copy() {
-		DGraph newG = new DGraph((DGraph) g);
-		return newG;
 	}
 }
