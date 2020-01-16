@@ -286,7 +286,7 @@ public class MyGameGUI{
 			JSONObject ttt = line.getJSONObject("GameServer");
 			rs = ttt.getInt("robots");
 		}catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 
 		int i = 0;
@@ -295,7 +295,7 @@ public class MyGameGUI{
 			if(i >= rs)break;
 			if(!fruit.isTaken()) {
 				edge_data e = fruit.getEdge();
-				System.out.println(e);
+				
 				if(fruit.getType() == -1) {
 					game.addRobot(e.getDest());
 				}else {
@@ -514,7 +514,7 @@ public class MyGameGUI{
 				for (node_data a:n) {
 					double x=a.getLocation().x();
 					double y=a.getLocation().y();
-					StdDraw.setPenRadius(0.05);
+					StdDraw.setPenRadius(0.03);
 					StdDraw.setPenColor(StdDraw.BLUE);//nodes in blue
 					StdDraw.point(x,y);
 					StdDraw.setPenColor(StdDraw.BLACK);
@@ -557,7 +557,7 @@ public class MyGameGUI{
 							StdDraw.setPenColor(StdDraw.ORANGE);//paint the line between the nodes in orange
 							StdDraw.line(Sx,Sy,Dx,Dy);
 
-							StdDraw.setPenRadius(0.02);
+							StdDraw.setPenRadius(0.01);
 							StdDraw.setPenColor(StdDraw.RED);
 
 							double arrowX= (Dx*8+Sx)/9;

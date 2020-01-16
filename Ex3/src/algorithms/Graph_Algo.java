@@ -110,49 +110,49 @@ public class Graph_Algo implements graph_algorithms{
 	 */
 	private int amountNodes(node_data n)
 	{
-		int counter=0;
-		ArrayList<node_data> nd = new ArrayList<node_data>();
-		nd.add(n);
-		while(!nd.isEmpty())
+		int counter = 0;
+		ArrayList<node_data> nodesInGraph = new ArrayList<node_data>();
+		nodesInGraph.add(n);
+		while(!nodesInGraph.isEmpty())
 		{
-			node_data temp = nd.get(0);
-			if(temp.getTag()==0)
+			node_data temp = nodesInGraph.get(0);
+			if(temp.getTag() == 0)
 			{
 				temp.setTag(1);
 				counter++;
-				nd.remove(0);
+				nodesInGraph.remove(0);
 				Collection<edge_data> edge = g.getE(temp.getKey());
 
 				for (edge_data edge_data : edge) {
 					node_data other = g.getNode(edge_data.getDest());
 					if(other.getTag() == 0)
 					{
-						nd.add(0,other);
+						nodesInGraph.add(0,other);
 					}
 				}
 			}
 			else
 			{
-				nd.remove(0);
+				nodesInGraph.remove(0);
 			}
 		}
 		return counter;
 	}
-	// Should be faster then the org algo
+	
 	@Override
 	public boolean isConnected()
 	{
 		HashSet<node_data> allreayConnected = new HashSet<node_data>();
 		Collection<node_data> s = g.getV();
 		boolean firstNode = true;
-		node_data firstN=null;
-		boolean ansBool=true;
-		for (node_data node_data : s) {
-			cleanTags();
+		node_data firstN = null;
+		boolean ansBool = true;
+		for (node_data node_data: s) {
+			setTagsZero();
 			if(firstNode)
 			{
-				firstN=node_data;
-				firstNode= false;
+				firstN = node_data;
+				firstNode = false;
 				int ans = amountNodes(node_data);
 				if(ans != s.size())
 				{
@@ -161,7 +161,7 @@ public class Graph_Algo implements graph_algorithms{
 			}
 			else
 			{
-				if( !canOthersGeToThis( node_data, firstN, allreayConnected ) )
+				if(!canOthersGeToThis(node_data, firstN, allreayConnected))
 				{
 					return false;
 				}
@@ -211,12 +211,12 @@ public class Graph_Algo implements graph_algorithms{
 		return false;
 	}
 	/**
-	 * Sets tag to 0 on all nodes
+	 * Sets all tags to 0
 	 */
-	private void cleanTags()
+	private void setTagsZero()
 	{
-		Collection<node_data> s = g.getV();
-		for (node_data node_data : s) {
+		Collection<node_data> nodes = g.getV();
+		for (node_data node_data : nodes) {
 			node_data.setTag(0);
 		}
 	}

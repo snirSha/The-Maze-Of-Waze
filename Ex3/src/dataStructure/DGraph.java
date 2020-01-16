@@ -222,7 +222,7 @@ public class DGraph implements graph, Serializable {
 	 * @param ed = cast the edge_data parameter to Edge
 	 */
 	public void reversedGraph() {
-		int saveTheChanges=changes;
+		int saveTheChanges = changes;
 		zeroEdgeTag();
 		Collection<node_data> nod=getV();
 		for(node_data a: nod) {
@@ -250,7 +250,7 @@ public class DGraph implements graph, Serializable {
 				}
 			}
 		}
-		changes=saveTheChanges+1;
+		changes = saveTheChanges + 1;
 	}
 
 	/*
@@ -258,7 +258,7 @@ public class DGraph implements graph, Serializable {
 	 * @param nDst = the destination node
 	 */
 	private boolean isBidirectional(int src,int dst) {
-		Node nDst=(Node)getNode(dst);
+		Node nDst = (Node)getNode(dst);
 		if(nDst.getEdgesOf().containsKey(src))
 			return true;
 		else
@@ -282,9 +282,6 @@ public class DGraph implements graph, Serializable {
 
 	public void init(final String jsonSTR) {
         try {
-            //Node.resetCount();
-            //this.init();
-            //this.e_count = 0;
             final JSONObject graph = new JSONObject(jsonSTR);
             final JSONArray nodes = graph.getJSONArray("Nodes");
             final JSONArray edges = graph.getJSONArray("Edges");
@@ -305,5 +302,4 @@ public class DGraph implements graph, Serializable {
             e.printStackTrace();
         }
     }
-
 }

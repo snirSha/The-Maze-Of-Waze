@@ -8,7 +8,7 @@ import utils.StdDraw;
 
 public class Fruit {
 	
-	static final double EPS = 0.001;//Math.pow(10, -4);
+	static final double EPS = Math.pow(10, -7);
 	private graph g;
 	private edge_data edge;
 	private Point3D location;
@@ -24,6 +24,7 @@ public class Fruit {
 		this.value = 0;
 		this.type = 0;
 	}
+	
 	public Fruit(graph g, edge_data edge, Point3D p, int value, int type, boolean taken){
 		this.g = g;
 		this.edge = edge;
@@ -31,6 +32,7 @@ public class Fruit {
 		this.value = value;
 		this.type = type;
 	}
+	
 	public Fruit(graph g) {
 		this();
 		this.g = g;
