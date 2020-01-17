@@ -32,10 +32,11 @@ import utils.StdDraw;
  *
  */
 public class SimpleGameClient {
+	
 	public static void main(String[] a) {
 		
 		Management ma = new Management();
-		
+
 	}
 		
 //	public static void test1() {

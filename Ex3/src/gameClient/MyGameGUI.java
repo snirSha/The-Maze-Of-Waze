@@ -30,6 +30,7 @@ import utils.StdDraw;
  *
  * @authors Snir and Omer 
  */ 
+
 public class MyGameGUI {
 	
 	final double xMax = 35.216;

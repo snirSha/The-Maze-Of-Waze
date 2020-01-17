@@ -18,6 +18,7 @@ import dataStructure.node_data;
 import utils.Point3D;
 import utils.StdDraw;
 
+
 public class Automat{
 	game_service game;
 	public Graph_Algo ga;
