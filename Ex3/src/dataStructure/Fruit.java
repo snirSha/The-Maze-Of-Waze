@@ -15,7 +15,6 @@ public class Fruit {
 	private int value;
 	private int type;
 	private boolean taken = false;
-
 	
 	public Fruit() {
 		this.g = null;

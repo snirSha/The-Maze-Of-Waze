@@ -47,10 +47,6 @@ public class Management {
 		}else {
 			auto(s);
 		}
-		
-		
-
-
 	}
 	
 	private void manual(int s) {

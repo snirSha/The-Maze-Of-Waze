@@ -15,8 +15,6 @@ public class Robot {
 	graph g;
 	int speed;
 	List <node_data> Track;
-
-
 	
 	public Robot() {	
 		this.id = -1;

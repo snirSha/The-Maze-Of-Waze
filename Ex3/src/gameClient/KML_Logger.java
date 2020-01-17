@@ -25,7 +25,6 @@ public class KML_Logger {
 	StringBuilder SBans;
 
 	public KML_Logger() {
-
 		SBans = new StringBuilder();
 		SBans.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
 				"<kml xmlns=\"http://earth.google.com/kml/2.2\">\n" +

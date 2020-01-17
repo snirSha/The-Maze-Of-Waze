@@ -37,7 +37,6 @@ public class Automat{
 	public void runAutoScenario(game_service game) {
 		game.startGame();
 		
-
 		Long tmpTime = game.timeToEnd();
 		KML_Logger kml = new KML_Logger();
 		kml.addNodes(ga.dg);

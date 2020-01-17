@@ -31,6 +31,7 @@ import utils.StdDraw;
  * @authors Snir and Omer 
  */ 
 public class MyGameGUI {
+	
 	final double xMax = 35.216;
 	final double xMin = 35.1835;
 	final double yMax = 32.11;
