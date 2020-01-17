@@ -64,7 +64,10 @@ public class MyGameGUI {
 		ga.init(g);
 	}
 
-
+	/*
+	 *If the user ask for the manual game this message will appear (instruction for the game)
+	 *@param Instructions - the JPanel message 
+	 */
 	public void InstructionForManual() {
 		JPanel Instructions = new JPanel();
 		JLabel info = new JLabel("<html>Hello player, in this manual game you can choose from 24 maps (0-23).<br>"
@@ -83,7 +86,9 @@ public class MyGameGUI {
 				info, null, JOptionPane.DEFAULT_OPTION);
 	}
 
-
+	/*
+	 *	 
+	 */
 	public game_service gameManualScenario(int s) {
 		scenario = s;
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
@@ -485,7 +490,11 @@ public class MyGameGUI {
 			String message = "Enter file name for scenario " + scenario + ": ";
 			String filename = JOptionPane.showInputDialog(frame, message);
 			if (filename == null) {
-				filename = "KML_" + scenario;
+				
+				return;
+				
+			}else if(filename.isEmpty()) {
+				filename = "" + scenario;
 			}
 			try {
 				kml.saveToFile(filename);

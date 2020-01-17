@@ -36,8 +36,7 @@ public class SimpleGameClient {
 		
 		
 		Management ma = new Management();
-		//mgg.GameManagement();
-		//test1();
+		
 	}
 		
 //	public static void test1() {

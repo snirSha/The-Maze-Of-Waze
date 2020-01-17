@@ -20,7 +20,7 @@ import utils.StdDraw;
 
 public class Automat{
 	game_service game;
-	Graph_Algo ga;
+	public Graph_Algo ga;
 	MyGameGUI mgg;
 	int scenario;
 	
@@ -130,10 +130,8 @@ public class Automat{
 				{
 					if(b.getNode().getLocation().distance2D(b.getLocation())<= 0.00001)
 					{
-						//System.out.println(botidtoMove);
-						//System.out.println(b.getPos().toString());
+				
 						List<node_data> path = b.getTrack();
-						//System.out.println(b.getId() + " " +path.get(0).getKey());
 						game.chooseNextEdge(b.getId(), path.get(0).getKey());
 						b.setNode(path.get(0));
 						path.remove(0);

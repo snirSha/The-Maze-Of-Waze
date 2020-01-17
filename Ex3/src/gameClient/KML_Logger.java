@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -86,65 +88,29 @@ public class KML_Logger {
 				typer = "#paddle-b";
 			}
 			SBans.append("<Placemark>\n" + "      <TimeStamp>\n" + "        <when>").append(finalDate).append("</when>\n").append("      </TimeStamp>\n").append("      <styleUrl>").append(typer).append("</styleUrl>\n").append("      <Point>\n").append("        <coordinates>").append(fruit.getP().x()).append(",").append(fruit.getP().y()).append(",0</coordinates>\n").append("      </Point>\n").append("    </Placemark>");
-
 		}
+		
 
 	}
 
 	public void saveToFile(String file_name){
 		
+		SBans.append("  </Document>\n" +
+				"</kml>");
+		
 		try {
-			SBans.append("  </Document>\n" +
-					"</kml>");
-			File file = new File(file_name + ".kml");
+			Path path = FileSystems.getDefault().getPath(".");
+			File file = new File(path.toString() +"//data//" +  file_name + ".kml");
 			FileWriter writer = new FileWriter(file);
 			writer.write(String.valueOf(SBans));
 			writer.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
 	}
 	
 	public String getLogOfGame() {
         return SBans.toString();
     }
-
 }
-
-//String kmlstart = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-//        "<kml xmlns=\"http://earth.google.com/kml/2.2\">\n" +
-//        "  <Document>\n" +
-//        "    <name>Test-KML</name>\n" +
-//        "    <Style id=\"paddle-a\">\n" +
-//        "      <IconStyle>\n" +
-//        "        <Icon>\n" +
-//        "          <href>http://maps.google.com/mapfiles/kml/paddle/A.png</href>\n" +
-//        "        </Icon>\n" +
-//        "        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
-//        "      </IconStyle>\n" +
-//        "    </Style>\n" +
-//        "    <Style id=\"paddle-b\">\n" +
-//        "      <IconStyle>\n" +
-//        "        <Icon>\n" +
-//        "          <href>http://maps.google.com/mapfiles/kml/paddle/B.png</href>\n" +
-//        "        </Icon>\n" +
-//        "        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
-//        "      </IconStyle>\n" +
-//        "    </Style>\n" +
-//        "    <Style id=\"hiker-icon\">\n" +
-//        "      <IconStyle>\n" +
-//        "        <Icon>\n" +
-//        "          <href>http://maps.google.com/mapfiles/ms/icons/hiker.png</href>\n" +
-//        "        </Icon>\n" +
-//        "        <hotSpot x=\"0\" y=\".5\" xunits=\"fraction\" yunits=\"fraction\"/>\n" +
-//        "      </IconStyle>\n" +
-//        "    </Style>\n" +
-//        "    <Style id=\"check-hide-children\">\n" +
-//        "      <ListStyle>\n" +
-//        "        <listItemType>checkHideChildren</listItemType>\n" +
-//        "      </ListStyle>\n" +
-//        "    </Style>\n" +
-//        " ";
 
