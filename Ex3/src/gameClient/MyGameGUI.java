@@ -5,10 +5,14 @@ import dataStructure.Robot;
 import dataStructure.edge_data;
 import dataStructure.graph;
 import dataStructure.node_data;
+
+
 import java.awt.Color;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -35,12 +39,13 @@ public class MyGameGUI {
 	final static double ourEPS = 0.0002;
 	final static double minEPS = 0.00001;
 	static int rid = -1;
+	private int scenario;
 
 	public Graph_Algo ga;
 	public HashMap<Integer, Robot> robots;
 	public HashMap<Point3D, Fruit> fruits;
 	public game_service game;
-	Management ma;
+
 	/*
 	 * Default constructor
 	 */
@@ -78,8 +83,9 @@ public class MyGameGUI {
 				info, null, JOptionPane.DEFAULT_OPTION);
 	}
 
-	
+
 	public game_service gameManualScenario(int s) {
+		scenario = s;
 		game_service game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.ga.dg.init(g);
@@ -122,6 +128,9 @@ public class MyGameGUI {
 	}
 
 	public void runManualScenario(game_service game) {
+		
+		Long tmpTime = game.timeToEnd();
+		KML_Logger kml = new KML_Logger();
 		game.startGame();
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
@@ -129,12 +138,20 @@ public class MyGameGUI {
 			refreshDraw();
 			drawFruits(game);
 			drawRobots(game);
+			
+			if (tmpTime - game.timeToEnd() > 200L) {
+				kml.addRobotsFruits(robots, fruits);
+				tmpTime = game.timeToEnd();
+			}
+			
 			moveRobotsManual(game);
 			refreshElements(game);
 			printScore(game);
 
 			StdDraw.show();
 		}
+		displayFinalScore(game);
+		askToSaveKml(kml, scenario);
 	}
 
 
@@ -378,7 +395,7 @@ public class MyGameGUI {
 		StdDraw.clear();
 		ga.dg = new DGraph();
 	}
-	
+
 
 	public void drawFruits(game_service game) {
 
@@ -423,24 +440,61 @@ public class MyGameGUI {
 		}
 	}
 
-	
+
 
 	public void displayFinalScore(game_service game){
+
+
+
+
 		int scoreInt = 0;
+		int movesInt = 0;
 		try {
 			String results = game.toString();
-			System.out.println("Game Over: "+results);
+			System.out.println("Game Over: " + results);
 
 			JSONObject score = new JSONObject(results);
 			JSONObject ttt = score.getJSONObject("GameServer");
 			scoreInt = ttt.getInt("grade");
-			String endGame = "Youre score is: " + scoreInt;
+			movesInt = ttt.getInt("moves");
+			String endGame = "Youre score is: " + scoreInt + "\n"
+					+ "amount of moves:   " + movesInt	;
 
 			JOptionPane.showMessageDialog(null, endGame);
 		}
 		catch (Exception e) {
 			e.getMessage();
 		}
+	}
+
+	public void askToSaveKml(KML_Logger kml, int scenario) {
+
+		Object[] options = {"Yes",
+		"No"};
+		int n = JOptionPane.showOptionDialog(null,
+				"Would you like to save KML log of the game?",
+				"Save KML",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null,     //do not use a custom Icon
+				options,  //the titles of buttons
+				options[0]); //default button title
+
+		if (n == 0) {
+			JFrame frame = new JFrame();
+			String message = "Enter file name for scenario " + scenario + ": ";
+			String filename = JOptionPane.showInputDialog(frame, message);
+			if (filename == null) {
+				filename = "KML_" + scenario;
+			}
+			try {
+				kml.saveToFile(filename);
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+
 	}
 
 
@@ -468,7 +522,7 @@ public class MyGameGUI {
 		}
 	}
 
-	
+
 	public void initFruits(game_service game) {
 		List<String> f_list = game.getFruits();
 		if(fruits != null)
@@ -513,6 +567,8 @@ public class MyGameGUI {
 		}
 
 	}
+
+
 
 
 }

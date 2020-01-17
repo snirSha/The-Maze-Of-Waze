@@ -2,7 +2,8 @@ package dataStructure;
 
 import java.util.List;
 import org.json.JSONObject;
-import gameClient.Time;
+
+import Server.game_service;
 import utils.Point3D;
 
 public class Robot {
@@ -14,7 +15,7 @@ public class Robot {
 	graph g;
 	int speed;
 	List <node_data> Track;
-	private Time time;
+
 
 	
 	public Robot() {	
@@ -26,7 +27,6 @@ public class Robot {
 		this.g = null;
 		this.speed = -1;
 		Track = null;
-		time=new Time();
 	}
 
 	public Robot(int id, node_data node, edge_data edge, Point3D location, int value, graph g, int speed,
@@ -44,10 +44,9 @@ public class Robot {
 		this.value = value;
 		this.g = g;
 		this.speed = speed;
-		Track = track;
-		time=new Time();		
+		Track = track;	
 	}
-	
+
 	public void initJson (String robot_json) {
 		try {
 			JSONObject line = new JSONObject(robot_json);
@@ -137,15 +136,5 @@ public class Robot {
 
 	public void setTrack(List<node_data> track) {
 		Track = track;
-	}
-	
-	
-	public Time getTime() {
-		return time;
-	}
-	public void setTime(Time time) {
-		this.time = time;
-	}
-	
-		
+	}	
 }

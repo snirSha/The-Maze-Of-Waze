@@ -1,5 +1,6 @@
 package gameClient;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -21,6 +22,7 @@ public class Automat{
 	game_service game;
 	Graph_Algo ga;
 	MyGameGUI mgg;
+	int scenario;
 	
 	public Automat(int s, game_service game, MyGameGUI mgg) {	
 		this.game=game;
@@ -34,19 +36,35 @@ public class Automat{
 	
 	public void runAutoScenario(game_service game) {
 		game.startGame();
+		
+
+		Long tmpTime = game.timeToEnd();
+		KML_Logger kml = new KML_Logger();
+		kml.addNodes(ga.dg);
+		
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
 
 			mgg.refreshDraw();
 			mgg.drawFruits(game);
 			mgg.drawRobots(game);
+			
+			if (tmpTime - game.timeToEnd() > 300L) {
+				kml.addRobotsFruits(mgg.robots, mgg.fruits);
+				tmpTime = game.timeToEnd();
+			}
+			
 			moveRobotsAuto(game);
 			mgg.refreshElements(game);
 			mgg.printScore(game);
 
 			StdDraw.show();
 		}
+		
+		
 		mgg.displayFinalScore(game);
+		mgg.askToSaveKml(kml, scenario);
+		
 	}
 
 	public void moveRobotsAuto(game_service game) {
@@ -133,6 +151,7 @@ public class Automat{
 	}
 	
 	public game_service gameAutoScenario(int s) {
+		scenario = s;
 		game = Game_Server.getServer(s); // you have [0,23] games
 		String g = game.getGraph();
 		this.ga.dg.init(g);

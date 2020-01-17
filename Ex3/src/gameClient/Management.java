@@ -15,8 +15,8 @@ public class Management {
 	
 	public Management() {
 		
-		mgg=new MyGameGUI();
-		game= mgg.game;
+		mgg = new MyGameGUI();
+		game = mgg.game;
 		
 		ManagementGame();
 	}
@@ -33,18 +33,22 @@ public class Management {
 		int s = -1;
 		while(s == -1) {
 			s = pickScenario();
-			if(s == -1) 
+			if(s == -1)
 				JOptionPane.showMessageDialog(null, "choose a valid scenario");
-			else if (s == -2) return;
+			else if (s == -2) {
+				System.out.println("Exit");
+				System.exit(-2);
+			}
 		}
 
 		if(w == 0) {
 			manual(s);
+			
 		}else {
 			auto(s);
 		}
 		
-		mgg.displayFinalScore(game);
+		
 
 
 	}
@@ -94,11 +98,10 @@ public class Management {
 				else return -1;
 
 			}catch(Exception err) {
-				JOptionPane.showMessageDialog(null, "Please enter valid number","Error",0);
+				return -1;
 			}
 		}
-		else return -2; //error happened or choose to cancel the game
-		return -2;
+		return -2;	 //error happened or choose to cancel the game
 	}
 
 	

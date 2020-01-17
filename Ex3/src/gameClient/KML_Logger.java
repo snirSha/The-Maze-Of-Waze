@@ -4,104 +4,147 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 
 import Server.game_service;
 import dataStructure.Fruit;
 import dataStructure.Robot;
 import dataStructure.graph;
+import dataStructure.node_data;
+import utils.Point3D;
 
 public class KML_Logger {
-	game_service game;
-	graph g;
-	MyGameGUI mgg;
-	ArrayList<String> content;
-	BufferedWriter bw;
-	
-	public KML_Logger(graph g) {
-		this.g = g;
-		mgg = new MyGameGUI();
+
+	StringBuilder SBans;
+
+	public KML_Logger() {
+
+		SBans = new StringBuilder();
+		SBans.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+				"<kml xmlns=\"http://earth.google.com/kml/2.2\">\n" +
+				"  <Document>\n" +
+				"    <name>Points with TimeStamps</name>\n" +
+				"    <Style id=\"paddle-a\">\n" +
+				"      <IconStyle>\n" +
+				"        <Icon>\n" +
+				"          <href>http://maps.google.com/mapfiles/kml/paddle/A.png</href>\n" +
+				"        </Icon>\n" +
+				"        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
+				"      </IconStyle>\n" +
+				"    </Style>\n" +
+				"    <Style id=\"paddle-b\">\n" +
+				"      <IconStyle>\n" +
+				"        <Icon>\n" +
+				"          <href>http://maps.google.com/mapfiles/kml/paddle/B.png</href>\n" +
+				"        </Icon>\n" +
+				"        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
+				"      </IconStyle>\n" +
+				"    </Style>\n" +
+				"    <Style id=\"hiker-icon\">\n" +
+				"      <IconStyle>\n" +
+				"        <Icon>\n" +
+				"          <href>http://maps.google.com/mapfiles/ms/icons/hiker.png</href>\n" +
+				"        </Icon>\n" +
+				"        <hotSpot x=\"0\" y=\".5\" xunits=\"fraction\" yunits=\"fraction\"/>\n" +
+				"      </IconStyle>\n" +
+				"    </Style>\n" +
+				"    <Style id=\"check-hide-children\">\n" +
+				"      <ListStyle>\n" +
+				"        <listItemType>checkHideChildren</listItemType>\n" +
+				"      </ListStyle>\n" +
+				"    </Style>\n" +
+				" ");
 	}
 
-	public void setGame(game_service game){
-		this.game = game;
-		mgg.game = game;
-	}
-
-	public KML_Logger(game_service game) {
-		Time time = new Time();
-		Time maxtime = new Time();
-		maxtime.setHour(1);
-		content = new ArrayList<>();
-
-		
-		Collection<Fruit> fru = mgg.fruits.values();
-		Collection<Robot> rob = mgg.robots.values();
-
-
-		String kmlstart = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-				"<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n<Document><Style id=\"red\">\r\n" + 
-				"<IconStyle><Icon><href>http://maps.google.com/mapfiles/ms/icons/red-dot.png</href></Icon></IconStyle>\r\n" + 
-				"</Style><Style id=\"Robot\"><IconStyle><Icon><href>https://png2.cleanpng.com/sh/95fe9b063e89c606ea787537f2ab125a/L0KzQYm3VcExN6Z8iZH0aYP2gLBuTgJqa5wyi9N3Y3join70jCJ1gV54hdt9aD3vccj1jf94baMyfNHwLYPmebb1lPl0fF5zRadqZkTpSYPpg8E1PJM6RqY5NkK6SYGAUcUzPmE1TKI6MUe8QYe1kP5o/kisspng-rick-sanchez-morty-smith-lawnmower-dog-scientist-n-5af4f92bc144b5.4062790715260040117916.png</href></Icon></IconStyle>\r\n" + 
-				"</Style><Style id=\"Fruit\"><IconStyle><Icon><href></href>https://i7.pngguru.com/preview/440/9/227/snout-clip-art-sticker-forehead-rick-and-morty.jpg</Icon></IconStyle></Style>";
-		content.add(kmlstart);
-
-		String kmlend = "\n</Document></kml>";
-		try{
-			FileWriter fw = new FileWriter("data\\myKml.kml");
-			bw = new BufferedWriter(fw);
-
-			for(Fruit f : fru) {
-				Fruit tmp = f;
-				String kmlFruit ="<Placemark>\n" +
-						"<value>Fruit"+tmp.getValue()+"</value>\n" +
-						"<description>Type: Fruit\nlat: "+tmp.getP().y()+"\nlon :"+tmp.getP().x()+"\nAlt: "+tmp.getP().z()+"\nType: "+tmp.getType()+ "</description>\n" +
-						"<styleUrl>"+"Fruit"+"</styleUrl>"+"<Point>\n" +
-						"<coordinates>"+tmp.getP().y()+","+tmp.getP().x()+","+tmp.getP().z()+"</coordinates>" +
-						"</Point>\n" +
-						"<TimeSpan>"
-						+"<begin>"+time+"</begin>"
-						+"<end>"+tmp.getTime()+"</end>"
-						+"</TimeSpan>"+
-						"</Placemark>";
-				content.add(kmlFruit);
-			}
-
-			for(Robot r : rob) {
-				Robot tmp = r;
-				String kmlRobot ="<Placemark>\n" +
-						"<name>Robot"+tmp.getId()+"</name>\n" +
-						"<description>Type: Packman\nlat: "+tmp.getLocation().y()+"\nlon :"+tmp.getLocation().x()+"\nAlt: "+tmp.getLocation().z()+"\nSpeed: "+tmp.getSpeed()+"\nValue: "+tmp.getValue()+
-						"</description>\n" +
-						"<styleUrl>"+"Packman"+
-						"</styleUrl>"+"<Point>\n" +
-						"<coordinates>"+tmp.getLocation().y()+","+tmp.getLocation().x()+","+tmp.getLocation().z()+"</coordinates>" +
-						"</Point>\n" +
-						"<TimeSpan>"
-						+"<begin>"+time+"</begin>"
-						+"<end>"+tmp.getTime()+"</end>"
-						+"</TimeSpan>"
-						+"</Placemark>";
-				content.add(kmlRobot);
-			}
-
-			content.add(kmlend);
-			
-		}catch (Exception e) {
-			e.printStackTrace();
-			//return false;
+	void addNodes(graph g) {
+		for (node_data node_data : g.getV()) {
+			SBans.append("<Placemark>\n" + "    <description>" + "place num:").append(node_data.getKey()).append("</description>\n").append("    <Point>\n").append("      <coordinates>").append(node_data.getLocation().x()).append(",").append(node_data.getLocation().y()).append(",0</coordinates>\n").append("    </Point>\n").append("  </Placemark>\n");
 		}
-		//return true;
+	}
+
+	public void addRobotsFruits(HashMap<Integer, Robot> robots,
+			HashMap<Point3D, Fruit> fruits) {
+		Date date = new Date(0);
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		DateFormat df2 = new SimpleDateFormat("HH:mm:ss");
+		String timeStr = df.format(date);
+		String timeStr2 = df2.format(date);
+		String finalDate = timeStr+"T"+timeStr2+"Z";
+
+
+		for (Robot robot : robots.values()) {		
+			SBans.append("<Placemark>\n" + "      <TimeStamp>\n" + "        <when>").append(finalDate).append("</when>\n").append("      </TimeStamp>\n").append("      <styleUrl>#hiker-icon</styleUrl>\n").append("      <Point>\n").append("        <coordinates>").append(robot.getLocation().x()).append(",").append(robot.getLocation().y()).append(",0</coordinates>\n").append("      </Point>\n").append("    </Placemark>");
+		}
+		for (Fruit fruit : fruits.values()) {
+			String typer = "#paddle-a";
+			if (fruit.getType() == -1){
+				typer = "#paddle-b";
+			}
+			SBans.append("<Placemark>\n" + "      <TimeStamp>\n" + "        <when>").append(finalDate).append("</when>\n").append("      </TimeStamp>\n").append("      <styleUrl>").append(typer).append("</styleUrl>\n").append("      <Point>\n").append("        <coordinates>").append(fruit.getP().x()).append(",").append(fruit.getP().y()).append(",0</coordinates>\n").append("      </Point>\n").append("    </Placemark>");
+
+		}
+
+	}
+
+	public void saveToFile(String file_name){
+		
+		try {
+			SBans.append("  </Document>\n" +
+					"</kml>");
+			File file = new File(file_name + ".kml");
+			FileWriter writer = new FileWriter(file);
+			writer.write(String.valueOf(SBans));
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 	
-	
-    public void saveToFile() throws IOException {
-    	
-    	String csv = content.toString().replaceAll("</Placemark>, <Placemark>", "</Placemark><Placemark>").replaceAll("</Placemark>, ", "</Placemark>").replaceAll(", <Placemark>", "<Placemark>");
-		csv = csv.substring(1, csv.length()-1);
-		bw.write(csv);
-		bw.close();
+	public String getLogOfGame() {
+        return SBans.toString();
     }
-	
+
 }
+
+//String kmlstart = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+//        "<kml xmlns=\"http://earth.google.com/kml/2.2\">\n" +
+//        "  <Document>\n" +
+//        "    <name>Test-KML</name>\n" +
+//        "    <Style id=\"paddle-a\">\n" +
+//        "      <IconStyle>\n" +
+//        "        <Icon>\n" +
+//        "          <href>http://maps.google.com/mapfiles/kml/paddle/A.png</href>\n" +
+//        "        </Icon>\n" +
+//        "        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
+//        "      </IconStyle>\n" +
+//        "    </Style>\n" +
+//        "    <Style id=\"paddle-b\">\n" +
+//        "      <IconStyle>\n" +
+//        "        <Icon>\n" +
+//        "          <href>http://maps.google.com/mapfiles/kml/paddle/B.png</href>\n" +
+//        "        </Icon>\n" +
+//        "        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\n" +
+//        "      </IconStyle>\n" +
+//        "    </Style>\n" +
+//        "    <Style id=\"hiker-icon\">\n" +
+//        "      <IconStyle>\n" +
+//        "        <Icon>\n" +
+//        "          <href>http://maps.google.com/mapfiles/ms/icons/hiker.png</href>\n" +
+//        "        </Icon>\n" +
+//        "        <hotSpot x=\"0\" y=\".5\" xunits=\"fraction\" yunits=\"fraction\"/>\n" +
+//        "      </IconStyle>\n" +
+//        "    </Style>\n" +
+//        "    <Style id=\"check-hide-children\">\n" +
+//        "      <ListStyle>\n" +
+//        "        <listItemType>checkHideChildren</listItemType>\n" +
+//        "      </ListStyle>\n" +
+//        "    </Style>\n" +
+//        " ";
+
