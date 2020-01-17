@@ -35,6 +35,10 @@ public class Automat{
 		runAutoScenario(game);
 	}
 	
+	/**
+	 * starting the auto game
+	 * @param game
+	 */
 	public void runAutoScenario(game_service game) {
 		game.startGame();
 		
@@ -60,12 +64,15 @@ public class Automat{
 			StdDraw.show();
 		}
 		
-		
 		mgg.displayFinalScore(game);
 		mgg.askToSaveKml(kml, scenario);
 		
 	}
 
+	/**
+	 * this func moves the robots by graph algorithms to get much fruits as possible
+	 * @param game
+	 */
 	public void moveRobotsAuto(game_service game) {
 
 		List<String> log = game.move();
@@ -146,6 +153,11 @@ public class Automat{
 		}
 	}
 	
+	/**
+	 * returns the relevant game server to the game
+	 * @param s is the scenario number
+	 * @return
+	 */
 	public game_service gameAutoScenario(int s) {
 		scenario = s;
 		game = Game_Server.getServer(s); // you have [0,23] games
@@ -184,5 +196,4 @@ public class Automat{
 		}
 		return game;
 	}
-
 }

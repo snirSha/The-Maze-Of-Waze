@@ -16,6 +16,8 @@ public class Fruit {
 	private int type;
 	private boolean taken = false;
 	
+	
+	/*contructors*/
 	public Fruit() {
 		this.g = null;
 		this.edge = null;
@@ -38,6 +40,10 @@ public class Fruit {
 		this.g = g;
 	}
 	
+	/**
+	 * initializing fruit from json string
+	 * @param fruit_json - the json string
+	 */
 	public void initJson (String fruit_json) {
 		try {
 			JSONObject line = new JSONObject(fruit_json);
@@ -54,6 +60,10 @@ public class Fruit {
 		catch (JSONException e) {e.printStackTrace();}
 	}
 	
+	/**
+	 * 
+	 * @return the edge that the robot need to pass to eat the fruit
+	 */
 	public edge_data getEdgeFruit() {
 		for(node_data ni: g.getV()) {
 			for(node_data nj: g.getV()) {

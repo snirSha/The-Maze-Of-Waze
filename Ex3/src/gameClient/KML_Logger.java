@@ -62,13 +62,22 @@ public class KML_Logger {
 				"    </Style>\n" +
 				" ");
 	}
-
+	
+	
+	/**
+	 * add the location of the nodes to the kml file
+	 * @param g the graph that held the nodes
+	 */
 	void addNodes(graph g) {
 		for (node_data node_data : g.getV()) {
 			SBans.append("<Placemark>\n" + "    <description>" + "place num:").append(node_data.getKey()).append("</description>\n").append("    <Point>\n").append("      <coordinates>").append(node_data.getLocation().x()).append(",").append(node_data.getLocation().y()).append(",0</coordinates>\n").append("    </Point>\n").append("  </Placemark>\n");
 		}
 	}
-
+	/**
+	 * add the location of the fruits and robots to the kml file
+	 * @param robots
+	 * @param fruits
+	 */
 	public void addRobotsFruits(HashMap<Integer, Robot> robots,
 			HashMap<Point3D, Fruit> fruits) {
 		Date date = new Date(0);
@@ -91,7 +100,10 @@ public class KML_Logger {
 		
 
 	}
-
+	/**
+	 * save the kml file, add the finished format to the file
+	 * @param file_name
+	 */
 	public void saveToFile(String file_name){
 		
 		SBans.append("  </Document>\n" +
@@ -108,6 +120,10 @@ public class KML_Logger {
 		}
 	}
 	
+	/**
+	 * 
+	 * @return the string of the kml file
+	 */
 	public String getLogOfGame() {
         return SBans.toString();
     }

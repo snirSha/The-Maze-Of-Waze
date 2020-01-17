@@ -20,7 +20,9 @@ public class Management {
 		ManagementGame();
 	}
 	
-	
+	/**
+	 * responsible of the player option, to play manual or automaticly
+	 */
 	public void ManagementGame() {
 		int w = manualOrAuto(); //0 for manual, 1 for auto
 		if(w == 0) {
@@ -39,7 +41,6 @@ public class Management {
 				System.exit(-2);
 			}
 		}
-
 		if(w == 0) {
 			manual(s);
 			
@@ -48,6 +49,10 @@ public class Management {
 		}
 	}
 	
+	/**
+	 * run manual game
+	 * @param s
+	 */
 	private void manual(int s) {
 		game = mgg.gameManualScenario(s);
 		mgg.initFruits(game);
@@ -55,10 +60,18 @@ public class Management {
 		mgg.runManualScenario(game);
 	}
 	
+	/**
+	 * run auto game
+	 * @param s
+	 */
 	private void auto(int s) {
 		new Automat(s,game,mgg);
 	}
 	
+	/**
+	 * jframe of the option on the screen
+	 * @return
+	 */
 	private int manualOrAuto() {
 		Object[] options = {"Manual",
 		"Auto"};
@@ -73,7 +86,10 @@ public class Management {
 		return n;
 	}
 	
-	/*new staff*/
+	/**
+	 * let the user pick scenario
+	 * @return
+	 */
 	public int pickScenario() {
 		JTextField SPDestField = new JTextField(5);
 		JPanel SPEdgePanel = new JPanel();

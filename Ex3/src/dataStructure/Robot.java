@@ -45,6 +45,10 @@ public class Robot {
 		Track = track;	
 	}
 
+	/**
+	 * initializing robot from json string
+	 * @param robot_json the json string
+	 */
 	public void initJson (String robot_json) {
 		try {
 			JSONObject line = new JSONObject(robot_json);

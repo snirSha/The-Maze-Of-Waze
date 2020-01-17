@@ -88,8 +88,10 @@ public class MyGameGUI {
 				info, null, JOptionPane.DEFAULT_OPTION);
 	}
 
-	/*
-	 *	 
+	/**
+	 * start the procces of the manual scenario given
+	 * @param s
+	 * @return
 	 */
 	public game_service gameManualScenario(int s) {
 		scenario = s;
@@ -134,6 +136,10 @@ public class MyGameGUI {
 		return game;
 	}
 
+	/**
+	 * by given game, run the game manualy
+	 * @param game
+	 */
 	public void runManualScenario(game_service game) {
 		
 		Long tmpTime = game.timeToEnd();
@@ -161,13 +167,19 @@ public class MyGameGUI {
 		askToSaveKml(kml, scenario);
 	}
 
-
+	/**
+	 * update the fruits tnd robots in the list (by location and value)
+	 * @param game
+	 */
 	public void refreshElements(game_service game) {
 		initFruits(game);
 		initRobots(game);
 	}
 
-
+	/**
+	 * move the robots using graph algorithms to get the most fruits 
+	 * @param game
+	 */
 	public void moveRobotsManual(game_service game) {
 		List<String> log = game.move();
 		if(log != null) {
@@ -207,12 +219,11 @@ public class MyGameGUI {
 		}
 	}
 	/**
-	 * a very simple random walk implementation!
+	 * by clicking the node the player want to go to, moves the chosen robot to him
 	 * @param g
 	 * @param src
 	 * @return
 	 */
-	/*snir's shit*/
 	private static int nextNodeManual(graph g, int src) {//The manual moves
 		int ans = -1;
 		if(StdDraw.pointOfMouse != null) {
@@ -224,7 +235,10 @@ public class MyGameGUI {
 		}
 		return ans;
 	}
-
+	/**
+	 * by clicking on numbers 0 - 4 the player can choose robot to move
+	 * @return
+	 */
 	private int chooseRid() {
 		char p = StdDraw.keyPress;
 		int rid = -1;
@@ -382,6 +396,9 @@ public class MyGameGUI {
 		}
 	}
 
+	/**
+	 * set the page size
+	 */
 	private void setPageSize() {
 		final double fixScale = 0.0015;
 		StdDraw.setCanvasSize(1200 , 600 );
@@ -389,6 +406,9 @@ public class MyGameGUI {
 		StdDraw.setYscale(yMin - fixScale, yMax + fixScale);
 	}
 
+	/**
+	 * refresh a already drawed graph
+	 */
 	public void refreshDraw() {
 		StdDraw.clear();
 		drawEdges();
@@ -403,7 +423,10 @@ public class MyGameGUI {
 		ga.dg = new DGraph();
 	}
 
-
+	/**
+	 * draw the fruits in the HashMap
+	 * @param game
+	 */
 	public void drawFruits(game_service game) {
 
 		Collection<Fruit> f_list = fruits.values();
@@ -418,6 +441,10 @@ public class MyGameGUI {
 		}
 	}
 
+	/**
+	 * draw the robots in the HashMap
+	 * @param game
+	 */
 	public void drawRobots(game_service game) {
 
 		Collection<Robot> r_list = robots.values();
@@ -448,11 +475,11 @@ public class MyGameGUI {
 	}
 
 
-
+	/**
+	 * when game over, prints the final score
+	 * @param game
+	 */
 	public void displayFinalScore(game_service game){
-
-
-
 
 		int scoreInt = 0;
 		int movesInt = 0;
@@ -473,7 +500,13 @@ public class MyGameGUI {
 			e.getMessage();
 		}
 	}
-
+	
+	
+	/**
+	 * ask the player if he wants to save the kml log of the game
+	 * @param kml
+	 * @param scenario
+	 */
 	public void askToSaveKml(KML_Logger kml, int scenario) {
 
 		Object[] options = {"Yes",
@@ -508,7 +541,10 @@ public class MyGameGUI {
 
 	}
 
-
+	/**
+	 * while the game is running, it shows the current score on the game window
+	 * @param game
+	 */
 	public void printScore(game_service game) {
 		String results = game.toString();
 		long t = game.timeToEnd();
@@ -533,7 +569,10 @@ public class MyGameGUI {
 		}
 	}
 
-
+	/**
+	 * initialize the fruits of the game
+	 * @param game
+	 */
 	public void initFruits(game_service game) {
 		List<String> f_list = game.getFruits();
 		if(fruits != null)
@@ -553,12 +592,15 @@ public class MyGameGUI {
 			}
 			else {
 				System.out.println("could not find edge to fruit");
-				System.out.println();
 			}
 
 		}
 	}
 
+	/**
+	 * initialize the robots of the game
+	 * @param game
+	 */
 	public void initRobots(game_service game) {
 		List<String> r_list = game.getRobots();
 		if(robots != null)
@@ -578,8 +620,4 @@ public class MyGameGUI {
 		}
 
 	}
-
-
-
-
 }
