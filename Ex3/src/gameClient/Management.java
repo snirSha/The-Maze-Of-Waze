@@ -1,33 +1,22 @@
 package gameClient;
 
-import java.util.HashMap;
-import java.util.List;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import Server.game_service;
-import algorithms.Graph_Algo;
-import dataStructure.Fruit;
-import dataStructure.Robot;
-import dataStructure.edge_data;
-import utils.Point3D;
+
 
 public class Management {
 	private MyGameGUI mgg;
 	private game_service game;
-//	HashMap<Integer, Robot> robots;
-//	HashMap<Point3D, Fruit> fruits;
-//	Graph_Algo ga;
-//	private Automat a;
+
 	
 	public Management() {
 		
 		mgg=new MyGameGUI();
 		game= mgg.game;
-		//		a=new Automat();
 		
 		ManagementGame();
 	}
@@ -54,8 +43,10 @@ public class Management {
 		}else {
 			auto(s);
 		}
-
+		
 		mgg.displayFinalScore(game);
+
+
 	}
 	
 	private void manual(int s) {

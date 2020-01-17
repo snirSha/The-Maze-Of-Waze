@@ -3,6 +3,7 @@ package dataStructure;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import gameClient.Time;
 import utils.Point3D;
 import utils.StdDraw;
 
@@ -15,7 +16,8 @@ public class Fruit {
 	private int value;
 	private int type;
 	private boolean taken = false;
-	
+	private Time time;
+
 	
 	public Fruit() {
 		this.g = null;
@@ -23,6 +25,7 @@ public class Fruit {
 		this.location = null;
 		this.value = 0;
 		this.type = 0;
+		time=new Time();
 	}
 	
 	public Fruit(graph g, edge_data edge, Point3D p, int value, int type, boolean taken){
@@ -31,6 +34,8 @@ public class Fruit {
 		this.location = p;
 		this.value = value;
 		this.type = type;
+		time=new Time();
+
 	}
 	
 	public Fruit(graph g) {
@@ -121,5 +126,12 @@ public class Fruit {
 	}
 	public static double getEps() {
 		return EPS;
+	}
+	
+	public Time getTime() {
+		return time;
+	}
+	public void setTime(Time time) {
+		this.time = time;
 	}
 }
