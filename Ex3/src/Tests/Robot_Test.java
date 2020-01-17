@@ -17,7 +17,6 @@ class Robot_Test {
 	game_service game;
 	MyGameGUI mgg;
 	
-	
 	private List<String> initRobots(int Scenario) {
 		game_service game = Game_Server.getServer(16); // you have [0,23] games
 		String g = game.getGraph();

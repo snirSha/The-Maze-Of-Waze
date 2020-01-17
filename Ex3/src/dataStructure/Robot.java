@@ -63,7 +63,6 @@ public class Robot {
 				this.node = g.getNode(src);
 			}
 			
-			
 		}catch (Exception e) {
 			
 		}

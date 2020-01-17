@@ -12,7 +12,6 @@ public class Management {
 	private MyGameGUI mgg;
 	private game_service game;
 
-	
 	public Management() {
 		
 		mgg = new MyGameGUI();

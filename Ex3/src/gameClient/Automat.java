@@ -43,7 +43,6 @@ public class Automat{
 		
 		while(game.isRunning()) {
 			StdDraw.enableDoubleBuffering();
-
 			mgg.refreshDraw();
 			mgg.drawFruits(game);
 			mgg.drawRobots(game);
@@ -71,7 +70,6 @@ public class Automat{
 		List<String> log = game.move();
 		if(log != null)
 		{
-	//		long t = game.timeToEnd();
 			ArrayList<Robot> botsToMove = new ArrayList<Robot>();
 			ArrayList<Fruit> fruitsWithoutBots = new ArrayList<Fruit>();
 			Set<Integer> botS = mgg.robots.keySet();

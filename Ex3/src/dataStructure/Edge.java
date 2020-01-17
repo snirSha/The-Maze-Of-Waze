@@ -10,7 +10,6 @@ import dataStructure.edge_data;
  * @authors Snir and Omer
  */
 public class Edge implements edge_data, Serializable{
-	
 	/*
 	 * @_src = The vertex that the edge came out of.
 	 * @_dst = The vertex that the edge came in to. 

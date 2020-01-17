@@ -49,7 +49,6 @@ public class Fruit {
 			this.value = value;
 			this.type = type;
 			this.location = posP;
-//			this.edge = getEdgeFruit();
 			
 		} 
 		catch (JSONException e) {e.printStackTrace();}

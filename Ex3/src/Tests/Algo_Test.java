@@ -14,6 +14,7 @@ import dataStructure.node_data;
 import utils.Point3D;
 
 class Algo_Test {
+	
 
 	@Test
 	void initTest() {

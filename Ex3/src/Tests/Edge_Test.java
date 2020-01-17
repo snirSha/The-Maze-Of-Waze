@@ -12,7 +12,7 @@ class Edge_Test {
 	Node n0=new Node(0,new Point3D(0,0));
 	Node n1=new Node(1,new Point3D(1,1));
 	Edge e=new Edge(0,1,2.5);
-
+	
 	@Test
 	void testCopy() {
 		Edge eCopy=new Edge(e);

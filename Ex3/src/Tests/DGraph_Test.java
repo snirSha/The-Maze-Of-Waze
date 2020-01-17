@@ -123,7 +123,6 @@ class DGraph_Test {
 		assertEquals(dg3.getMC(),35);
 		dg3.removeEdge(5, 6);
 		assertEquals(dg3.getMC(),35);//nothing changed
-
 	}
 
 	@Test

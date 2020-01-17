@@ -72,7 +72,6 @@ class KML_Logger_Test {
 
 		Long tmpTime = game.timeToEnd();
 		KML_Logger kml = new KML_Logger();
-
 		while(game.isRunning()) {
 
 			if (tmpTime - game.timeToEnd() > 300L) {

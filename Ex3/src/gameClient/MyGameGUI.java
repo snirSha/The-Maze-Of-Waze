@@ -552,7 +552,7 @@ public class MyGameGUI {
 			}
 			else {
 				System.out.println("could not find edge to fruit");
-
+				System.out.println();
 			}
 
 		}

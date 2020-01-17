@@ -77,7 +77,6 @@ public class KML_Logger {
 		String timeStr2 = df2.format(date);
 		String finalDate = timeStr+"T"+timeStr2+"Z";
 
-
 		for (Robot robot : robots.values()) {		
 			SBans.append("<Placemark>\n" + "      <TimeStamp>\n" + "        <when>").append(finalDate).append("</when>\n").append("      </TimeStamp>\n").append("      <styleUrl>#hiker-icon</styleUrl>\n").append("      <Point>\n").append("        <coordinates>").append(robot.getLocation().x()).append(",").append(robot.getLocation().y()).append(",0</coordinates>\n").append("      </Point>\n").append("    </Placemark>");
 		}

@@ -31,7 +31,6 @@ public class DGraph implements graph, Serializable {
 	private int counterEdges;
 	private int changes;//every change in the graph the counter goes up by one
 	
-
 	/*
 	 * Default constructor
 	 */

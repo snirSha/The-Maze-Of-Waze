@@ -17,7 +17,6 @@ class Fruit_Test {
 	game_service game;
 	MyGameGUI mgg;
 	
-	
 	@Test
 	void initJsonTest() {
 		int scenario_num = 13;
