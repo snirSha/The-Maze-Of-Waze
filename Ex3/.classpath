@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="lib/GameServer_v0.27.jar"/>
 	<classpathentry kind="lib" path="src/lib/GameServer_v0.27.jar"/>
 	<classpathentry kind="lib" path="src/lib/java-json.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

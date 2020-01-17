@@ -458,7 +458,7 @@ public class MyGameGUI {
 			scoreInt = ttt.getInt("grade");
 			movesInt = ttt.getInt("moves");
 			String endGame = "Youre score is: " + scoreInt + "\n"
-					+ "amount of moves:   " + movesInt	;
+					+ "Amount of moves:   " + movesInt	;
 
 			JOptionPane.showMessageDialog(null, endGame);
 		}
