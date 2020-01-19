@@ -25,6 +25,18 @@ You can play the manual game or watch the automatic game based on navigation alg
 Continued explanations on Wikipedia ...
 
 
+## How to use the project:
+
+* Download the project zip to your eclipse or intellij 
+
+* Your system should work with jdk13 if your using eclipse
+
+* Open the simpleGameClient class in src package
+
+* Run the program with the green key
+
+* Enjoy...
+
 
 ## Sources:
 
