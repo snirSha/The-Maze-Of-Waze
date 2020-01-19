@@ -31,7 +31,7 @@ Continued explanations on Wikipedia ...
 
 * Your system should work with jdk13 if your using eclipse
 
-* Open the simpleGameClient class in src package
+* Open the SimpleGameClient class in gameClient package
 
 * Run the program with the green key
 
