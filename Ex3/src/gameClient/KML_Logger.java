@@ -86,7 +86,7 @@ public class KML_Logger {
 	 * @param fruits
 	 */
 	public void addRobotsFruits(HashMap<Integer, Robot> robots,
-			HashMap<Point3D, Fruit> fruits) {
+			HashMap<Point3D, Fruit> fruits) { 
 		Date date = new Date();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		DateFormat df2 = new SimpleDateFormat("HH:mm:ss");
