@@ -20,15 +20,16 @@ import utils.StdDraw;
 
 
 public class Automat{
+	private static final double EPS = 0.00001;
 	game_service game;
 	public Graph_Algo ga;
 	MyGameGUI mgg;
 	int scenario;
 	
 	public Automat(int s, game_service game, MyGameGUI mgg) {	
-		this.game=game;
-		this.mgg=mgg;
-		ga=mgg.ga;
+		this.game = game;
+		this.mgg = mgg;
+		ga = mgg.ga;
 		game = gameAutoScenario(s);
 		mgg.initFruits(game);
 		mgg.initRobots(game);
@@ -52,7 +53,7 @@ public class Automat{
 			mgg.drawFruits(game);
 			mgg.drawRobots(game);
 			
-			if (tmpTime - game.timeToEnd() > 300L) {
+			if (tmpTime - game.timeToEnd() > 1000L) {
 				kml.addRobotsFruits(mgg.robots, mgg.fruits);
 				tmpTime = game.timeToEnd();
 			}
@@ -76,42 +77,35 @@ public class Automat{
 	public void moveRobotsAuto(game_service game) {
 
 		List<String> log = game.move();
-		if(log != null)
-		{
+		if(log != null){
 			ArrayList<Robot> botsToMove = new ArrayList<Robot>();
 			ArrayList<Fruit> fruitsWithoutBots = new ArrayList<Fruit>();
 			Set<Integer> botS = mgg.robots.keySet();
 			for (Integer integer : botS) {
 				Robot b = mgg.robots.get(integer);
-				if(b.getTrack() == null)
-				{
+				if(b.getTrack() == null){
 					botsToMove.add(b);
 				}
 			}
 			Set<Point3D> fruitSet = mgg.fruits.keySet();
 			for (Point3D point3d : fruitSet) {
 				Fruit currF = mgg.fruits.get(point3d);
-				if(!currF.isTaken());
-				{
+				if(!currF.isTaken());{
 					fruitsWithoutBots.add(currF);
 				}
 			}
 
-			while(!botsToMove.isEmpty() && !fruitsWithoutBots.isEmpty())
-			{
+			while(!botsToMove.isEmpty() && !fruitsWithoutBots.isEmpty()){
 				int srcIndex = 0;
 				Robot SrcFrom = null;
 				Fruit DestTo = null;
 				int destIndex = 0;
 				double dist = Integer.MAX_VALUE;
-				for(int i = 0; i < botsToMove.size(); i++)
-				{
-					//double distTemp = Integer.MAX_VALUE;
-					for(int j = 0; j < fruitsWithoutBots.size(); j++)
-					{
+				for(int i = 0; i < botsToMove.size(); i++){
+		
+					for(int j = 0; j < fruitsWithoutBots.size(); j++){
 						double tmp = ga.shortestPathDist(botsToMove.get(i).getNodeKey(), fruitsWithoutBots.get(j).getEdge().getSrc()) + fruitsWithoutBots.get(j).getEdge().getWeight();
-						if(tmp < dist)
-						{
+						if(tmp < dist){
 							srcIndex = i;
 							destIndex = j;
 							SrcFrom = botsToMove.get(i);
@@ -131,25 +125,20 @@ public class Automat{
 
 			for (Integer integer : botS) {
 				Robot b = mgg.robots.get(integer);
-				if(b.getTrack() != null)
-				{
-					if(b.getNode().getLocation().distance2D(b.getLocation())<= 0.00001)
-					{
+				if(b.getTrack() != null){
+					if(b.getNode().getLocation().distance2D(b.getLocation())<= EPS){
 				
 						List<node_data> path = b.getTrack();
 						game.chooseNextEdge(b.getId(), path.get(0).getKey());
 						b.setNode(path.get(0));
 						path.remove(0);
-						if(path.size() == 0)
-						{
+						if(path.size() == 0){
 							b.setTrack(null);
 						}
-						game.move();
 					}
 				}
 			}
-			mgg.initFruits(game);
-			mgg.initRobots(game);
+			mgg.refreshElements(game);
 		}
 	}
 	
@@ -175,12 +164,12 @@ public class Automat{
 			JSONObject ttt = line.getJSONObject("GameServer");
 			rs = ttt.getInt("robots");
 		}catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 
 		int i = 0;
 		Collection<Fruit> f = mgg.fruits.values();
-		for (Fruit fruit : f) {
+		for (Fruit fruit : f) {//placing the robots near to fruits
 			if(i >= rs)break;
 			if(!fruit.isTaken()) {
 				edge_data e = fruit.getEdge();

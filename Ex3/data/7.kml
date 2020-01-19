@@ -135,4731 +135,1596 @@
   </Placemark>
 <Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:11Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18936172394194,32.10621608194823,0</coordinates>
+        <coordinates>35.18875918619258,32.10504596802274,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:11Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:11Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.188900353135324,32.105320110855615,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:12Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.1890819742726,32.10567281476854,0</coordinates>
+        <coordinates>35.18933256853575,32.10615946284539,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.188900353135324,32.105320110855615,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:12Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.188822022272156,32.10516799418926,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.188900353135324,32.105320110855615,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18879685062768,32.10511911145659,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:12Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:13Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18899716827104,32.10550812353801,0</coordinates>
+        <coordinates>35.18954599298879,32.10706304818134,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:13Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18919946273325,32.105900974554444,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:13Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:14Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18939780355776,32.10628614770086,0</coordinates>
+        <coordinates>35.18951103580617,32.107761373846614,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:14Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:14Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:15Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18956701618952,32.10664307610292,0</coordinates>
+        <coordinates>35.192558568152606,32.10658899823155,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:15Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:15Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:16Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18955643474463,32.10685445739821,0</coordinates>
+        <coordinates>35.19559342831997,32.10560782655383,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:16Z</when>
+      </TimeStamp>
+      <styleUrl>#paddle-b</styleUrl>
+      <Point>
+        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:16Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:17Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.19754745609708,32.105141254606025,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:17Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189545713610705,32.107068629205635,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:17Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:18Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.189535132165815,32.10728001050092,0</coordinates>
+        <coordinates>35.197965200338885,32.105233550750754,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:18Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189524585643184,32.10749069416817,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:18Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:19Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18951407404282,32.10770068020738,0</coordinates>
+        <coordinates>35.199409068434704,32.10552209373685,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:19Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189594892168905,32.10785094653878,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:19Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:20Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19074576126918,32.107360900622524,0</coordinates>
+        <coordinates>35.20116938267825,32.105871294148336,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:20Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:20Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:21Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19188534733905,32.10687565907799,0</coordinates>
+        <coordinates>35.20414047392716,32.10617978238869,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:21Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:21Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:22Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.193021172398794,32.106392018990704,0</coordinates>
+        <coordinates>35.20646077597669,32.10586211867268,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:22Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19397865990639,32.10605354023266,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19482408839517,32.105820182285626,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.195675153073886,32.10558526861895,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.1965177634677,32.105352688531745,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19739137290611,32.10511155198648,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19752332346159,32.10513592275703,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19764939567799,32.105163777071624,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19777588397432,32.10519172331465,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19790195619073,32.10521957762924,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19802761232721,32.1052473400154,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19843773965889,32.10532940745402,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.1989724964759,32.10543548925233,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19950549999187,32.10554122324147,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20004025680888,32.105647305039774,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20057326032486,32.10575303902891,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20110626384083,32.10585877301804,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20170500269114,32.105959746248445,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20271017011603,32.10605055954043,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.2037087462791,32.10614077733542,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.204707322442175,32.10623099513041,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20571578549796,32.10632210617089,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206679711961414,32.10571613186106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20616011165912,32.106062602047515,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:22Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:23Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.2065824401424,32.105780992841936,0</coordinates>
+        <coordinates>35.20786900373382,32.104923110493814,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:23Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:23Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:24Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.207004768625666,32.10549938363636,0</coordinates>
+        <coordinates>35.210519486977624,32.10570452512439,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:24Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.207429893986316,32.10521590946915,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:24Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:25Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20785921466302,32.104929637859506,0</coordinates>
+        <coordinates>35.21237668928318,32.105809997711425,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.208563878379174,32.10505198726464,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20939923028403,32.10533072338012,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21024288038661,32.105612228397405,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21107546622555,32.105890041545614,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.211910818130406,32.1061687776611,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212669424769075,32.105340746955505,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21224959020004,32.10601373570602,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:25Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:25Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:26Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.21244023882476,32.10570812871413,0</coordinates>
+        <coordinates>35.213006521868486,32.10480038517383,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:26Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.212632775059625,32.105399495910426,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:26Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:27Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.212824052887726,32.105092880314594,0</coordinates>
+        <coordinates>35.21173434364186,32.10302350908367,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.213015330715834,32.10478626471876,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21286326406581,32.104348241486434,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21120742821597,32.10240519983585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21236555024386,32.10376419887967,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2107064115802,32.10181728154006,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.211866188362904,32.10317822235699,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:27Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21136353036391,32.10258837800247,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:27Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:28Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.21007639627471,32.10107798967173,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:28Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21085922430591,32.10199659973204,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:28Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:29Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.20832286532758,32.102098575050405,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:29Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21036151048396,32.10141255712527,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:29Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:30Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.209861207879364,32.10119860003157,0</coordinates>
+        <coordinates>35.20453051488268,32.1029921116187,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:30Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.209327208510814,32.10151100515306,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.208793209142264,32.101823410274534,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20825567335405,32.102137884304106,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.207716369356014,32.102453392787716,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.206149967510925,32.10276103191955,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20649470396582,32.102711841474026,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:30Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:31Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.204826789213655,32.10294983623375,0</coordinates>
+        <coordinates>35.20682049953681,32.10266535370327,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:31Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:31Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:32Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20319591121872,32.10318254621849,0</coordinates>
+        <coordinates>35.20794662512301,32.10472443238454,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20465247655079,32.102974708908,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20610423473655,32.102767557529226,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20752617756255,32.1025646605042,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20767676339094,32.10333819582304,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20704629752213,32.105471692111855,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20782635525347,32.1041066252982,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:32Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.207763649946,32.10378451816153,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20797194027441,32.104854472268904,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:32Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:33Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20781461833812,32.104046334641005,0</coordinates>
+        <coordinates>35.207454852260646,32.10257483791169,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:33Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20766694805436,32.10328777600868,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:33Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:34Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20750423131581,32.1025677920142,0</coordinates>
+        <coordinates>35.201487531731885,32.10279563431341,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:34Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20584180312533,32.102805003896414,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:34Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:35Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20419034805822,32.10304065002364,0</coordinates>
+        <coordinates>35.19351613720059,32.10248447893368,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.202255518840644,32.10296956718817,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.199881028086004,32.10243179513661,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19749870072822,32.1018922482598,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19491365572973,32.10194840365014,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19515654610468,32.10184442956571,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:35Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:35Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:36Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.191274742476,32.10297567715286,0</coordinates>
+        <coordinates>35.189551545628184,32.10695212532342,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:36Z</when>
+      </TimeStamp>
+      <styleUrl>#paddle-b</styleUrl>
+      <Point>
+        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:36Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:37Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18798892316885,32.10419166715977,0</coordinates>
+        <coordinates>35.19786284467804,32.10521093635673,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:37Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18898464841833,32.10548381028292,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18954683112304,32.10704630510845,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19157396552351,32.10700824703875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.190482490559965,32.10747300262951,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:37Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:38Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19540461595747,32.105659943162,0</coordinates>
+        <coordinates>35.20736556580674,32.10525880358656,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:38Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:38Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:39Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19772137750452,32.105179680690185,0</coordinates>
+        <coordinates>35.21087570489605,32.1020159388912,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19922497182557,32.1054855737735,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20213343470831,32.10599845355323,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20625380705111,32.106000125833035,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20871877807014,32.10510367343175,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.212564308024035,32.10550924757961,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.212281050369135,32.10596330550934,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:39Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.212845135416664,32.10432696841136,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:39Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:40Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.21034832601186,32.10139708579794,0</coordinates>
+        <coordinates>35.19767110599753,32.10193129441536,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:40Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20913097343556,32.101625808364695,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20774819713295,32.10243477261491,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20435397084091,32.10301730268841,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20385018123377,32.10308918842858,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:40Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19195229299344,32.10282719299524,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:41Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.1982784427417,32.10206884337244,0</coordinates>
+        <coordinates>35.20419339407814,32.10304021538705,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19195229299344,32.10282719299524,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19438253120096,32.102175762130734,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19454605420629,32.10210576283675,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19195229299344,32.10282719299524,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:41Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.2077323384361,32.103623675942494,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19526367757169,32.10179856979791,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2077323384361,32.103623675942494,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:41Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:42Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20208738068805,32.10293148744451,0</coordinates>
+        <coordinates>35.20754968047608,32.10268539121242,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:42Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.2077323384361,32.103623675942494,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.2063325741863,32.10273497577263,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20730193748248,32.1053012310395,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.207769699199225,32.103815592207944,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:42Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19788351693127,32.10197940100975,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:43Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.207809068637914,32.10401782671855,0</coordinates>
+        <coordinates>35.203460304265796,32.10314481997401,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19788351693127,32.10197940100975,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:43Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20667576050141,32.10268600651656,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19788351693127,32.10197940100975,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.202373067887905,32.10299618956696,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19788351693127,32.10197940100975,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19637806647768,32.10163844824867,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:43Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20773597178484,32.10364233987396,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:44Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.203364161339586,32.10315853860837,0</coordinates>
+        <coordinates>35.19673071361945,32.10171831538504,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:44Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20773597178484,32.10364233987396,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20699355680399,32.102640660161434,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.1982425077326,32.10206070485115,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20405592729695,32.10305983052236,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.1982425077326,32.10206070485115,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.198572315359854,32.102135399319415,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:44Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:45Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19465705273327,32.10205824769656,0</coordinates>
+        <coordinates>35.18877049304303,32.1050679256564,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:45Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:45Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:46Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19016396278947,32.103219102819004,0</coordinates>
+        <coordinates>35.19584142067668,32.10553937488937,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:46Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.188164348442356,32.10437362642032,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18912632043584,32.105758933958924,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18954106895008,32.107161413734595,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19112186228234,32.10720075489825,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19488656646015,32.10580293688502,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19588369210111,32.10552770699202,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:46Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:47Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.197802513089336,32.10519760673423,0</coordinates>
+        <coordinates>35.19978015566053,32.105595707759136,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:47Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20056273533305,32.10575095114518,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.199566865528254,32.105553396562584,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:47Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.195721535871655,32.10557246588684,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:48Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.200733997601084,32.105784925110164,0</coordinates>
+        <coordinates>35.1906918295299,32.10738386503141,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.195721535871655,32.10557246588684,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19791833148297,32.105223195575796,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.195721535871655,32.10557246588684,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19629760641331,32.10541345700468,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:48Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.189367746909724,32.106227778407884,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.192664939575856,32.10654370473852,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:48Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.189367746909724,32.106227778407884,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:49Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18951834829204,32.107883539310855,0</coordinates>
+        <coordinates>35.18971983498789,32.10331643274614,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:49Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.189367746909724,32.106227778407884,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18956508356142,32.10668168344209,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:49Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19466982375362,32.10205278080579,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:50Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18834781841137,32.10456393001358,0</coordinates>
+        <coordinates>35.19024330419565,32.103201715271425,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19466982375362,32.10205278080579,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19001875011539,32.10325092595401,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19466982375362,32.10205278080579,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19429700417307,32.102212373686136,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:50Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.1909235067253,32.103052649929396,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:50Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:51Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19533890082757,32.101766368978254,0</coordinates>
+        <coordinates>35.201435434664305,32.10278383542691,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.1909235067253,32.103052649929396,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:51Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.191790461616165,32.102862658093585,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.1909235067253,32.103052649929396,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.188989153565124,32.103476560460244,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:51Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:52Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19387137931846,32.10239457092051,0</coordinates>
+        <coordinates>35.21235895800781,32.103756463216,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:52Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
+        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.196397669935365,32.10164288801818,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20398909035995,32.103069367485055,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20752617756255,32.1025646605042,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21103568107671,32.10220366304403,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21107799112656,32.10225331179944,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:52Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20762592099062,32.103077026543296,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.211753893651434,32.103046450055075,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:53Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.21202934620519,32.10336968003271,0</coordinates>
+        <coordinates>35.20127594344682,32.10274771403159,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20762592099062,32.103077026543296,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:53Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20956061220833,32.101374457219165,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20762592099062,32.103077026543296,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20663461128878,32.1026918780978,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20055727437521,32.102584950651575,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.202255518840644,32.10296956718817,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:53Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:54Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19629970044617,32.10162069999615,0</coordinates>
+        <coordinates>35.18805302086494,32.1042581522742,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:54Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19373432606759,32.10243666317783,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:54Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:55Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.192551046132344,32.106592201146036,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:00:55Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.187744049900964,32.10374942302024,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:55Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:56Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.188582670248394,32.1048075292724,0</coordinates>
+        <coordinates>35.19649232221646,32.10535971090944,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18955792588452,32.10659710143699,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18951697259043,32.10764277708029,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19357285423178,32.10616555204723,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.197570253263606,32.105146291397375,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19587175800415,32.10553100108064,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19745092555514,32.10511992721003,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:56Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.18954034842793,32.10717580731747,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19804367807241,32.10525088957084,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:56Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18954034842793,32.10717580731747,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:57Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19681684855504,32.10527013408404,0</coordinates>
+        <coordinates>35.18933590089554,32.10616593420857,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18954034842793,32.10717580731747,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19309071595419,32.10636240699111,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18954034842793,32.10717580731747,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18994412467038,32.107702241563445,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:57Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19496889611361,32.10192475689865,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18955644704204,32.106854211737875,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19496889611361,32.10192475689865,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:57Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:58Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.18855004154135,32.10477368525843,0</coordinates>
+        <coordinates>35.19550895291164,32.10169357478149,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19022139854128,32.10320651586201,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19496889611361,32.10192475689865,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189271462296645,32.10341469293434,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:58Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20124177092355,32.10273997467615,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19496889611361,32.10192475689865,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19397237504668,32.102351337678456,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:58Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20124177092355,32.10273997467615,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:59Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19681254467775,32.10173684839302,0</coordinates>
+        <coordinates>35.20385689383641,32.10308823060729,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20124177092355,32.10273997467615,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20164818209647,32.10283201823109,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.198910926039126,32.102212087493214,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19589389346247,32.10152879327731,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:59Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.21246684076011,32.105665486195974,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.203796804507526,32.10309680475377,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21246684076011,32.105665486195974,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:00:59Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:00Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20741418210615,32.10258064113612,0</coordinates>
+        <coordinates>35.21213004155747,32.10620537045342,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:00Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21246684076011,32.105665486195974,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.2078765505296,32.104364470404484,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21246684076011,32.105665486195974,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21100078244598,32.10586512142933,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21246684076011,32.105665486195974,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21279070510849,32.10514633632308,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:00Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20631993761975,32.10595602988015,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:01Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.212257226749365,32.106001494427744,0</coordinates>
+        <coordinates>35.20723165720672,32.105348094022716,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:01Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:01Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20631993761975,32.10595602988015,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:02Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20903236492185,32.10520830955026,0</coordinates>
+        <coordinates>35.21272149273648,32.10525728275578,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:02Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20631993761975,32.10595602988015,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.206107853995526,32.1060974475285,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20631993761975,32.10595602988015,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20757533160969,32.10511893146458,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21277516225094,32.10517125129924,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.211291219366544,32.10596203299266,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.21277516225094,32.10517125129924,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21286306349741,32.105030346870706,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:02Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.207678204588035,32.103345599022035,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:03Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.207632925979176,32.10311301004927,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:01:03Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.21216114901395,32.10615550564997,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.207678204588035,32.103345599022035,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20873403153676,32.10510876313347,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.207678204588035,32.103345599022035,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20769204235094,32.10341668139718,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:03Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:04Z</when>
+      </TimeStamp>
+      <styleUrl>#hiker-icon</styleUrl>
+      <Point>
+        <coordinates>35.201494800101294,32.10593584847348,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:01:04Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20771875844869,32.1035539177189,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:04Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:05Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.20712462832946,32.10541946102327,0</coordinates>
+        <coordinates>35.19228070235638,32.106707314900824,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.203577973979534,32.106128962524544,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.199666603048556,32.10557318188402,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19759916341284,32.10515267878719,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19766763830408,32.10516780758572,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:05Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19499950105898,32.10577176430628,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:05Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:06Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.19159530623515,32.10699916005519,0</coordinates>
+        <coordinates>35.187726352207065,32.10391931633428,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:06Z</when>
       </TimeStamp>
       <styleUrl>#paddle-a</styleUrl>
       <Point>
         <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.18927656681179,32.10605070883435,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18952416291007,32.1074991389388,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:06Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:07Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.1892240010278,32.105948627336694,0</coordinates>
+        <coordinates>35.1884983311746,32.104720048858674,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.187834862179244,32.10403186792908,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19177927390265,32.102865109863856,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.191729208900504,32.10287608153236,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:07Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:07Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:08Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.1904416577111,32.10315824640247,0</coordinates>
+        <coordinates>35.19458736841832,32.105885522510796,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.18812386568693,32.10433163582173,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189106552247345,32.105720544608786,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.189540545116174,32.10717187815515,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19117827743431,32.107176733039616,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19477683786962,32.10583322453082,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19591187305074,32.10551992839378,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:08Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20662554066413,32.105752253355575,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:08Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:09Z</when>
       </TimeStamp>
       <styleUrl>#hiker-icon</styleUrl>
       <Point>
-        <coordinates>35.1977962718905,32.10519622780777,0</coordinates>
+        <coordinates>35.20266073565251,32.106046093312955,0</coordinates>
       </Point>
-    </Placemark><Placemark>
+    </Placemark>
+<Placemark>
       <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
+        <when>2020-01-19T18:01:09Z</when>
+      </TimeStamp>
+      <styleUrl>#paddle-b</styleUrl>
+      <Point>
+        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>2020-01-19T18:01:09Z</when>
       </TimeStamp>
       <styleUrl>#paddle-b</styleUrl>
       <Point>
         <coordinates>35.20662554066413,32.105752253355575,0</coordinates>
       </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.19957563203345,32.105555135608455,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20662554066413,32.105752253355575,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20272664827053,32.10605204828292,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20662554066413,32.105752253355575,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.20692765871651,32.10555080062839,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.2065614635621,32.105794980054135,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19758771177997,32.10515014867077,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19195026064352,32.10282763838161,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#hiker-icon</styleUrl>
-      <Point>
-        <coordinates>35.20710679018325,32.10543135552336,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-a</styleUrl>
-      <Point>
-        <coordinates>35.19195026064352,32.10282763838161,0</coordinates>
-      </Point>
-    </Placemark><Placemark>
-      <TimeStamp>
-        <when>1970-01-01T02:00:00Z</when>
-      </TimeStamp>
-      <styleUrl>#paddle-b</styleUrl>
-      <Point>
-        <coordinates>35.19758771177997,32.10515014867077,0</coordinates>
-      </Point>
-    </Placemark>  </Document>
+    </Placemark>
+  </Document>
 </kml>
